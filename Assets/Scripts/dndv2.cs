@@ -4,25 +4,29 @@ using UnityEngine;
 
 
 
-public class dnd : MonoBehaviour
+public class dndv2 : MonoBehaviour
 {
     int mask;
     bool buttonReleased = true;
-    public float pickUpThreshhold = 0.6f;
     public float catchingDistance;
     public float pickUpHeight;
-    public static Camera currentCamera;
+    public Camera currentCamera;
     public static float forceStrenght = 20f;
     float pickUpSpeed = 10f;
     float cursorSpeed;
+    bool atPickUpHeight = false;
     bool isDragging = false;
+    float dropDistance = 2f;
+    float pickUpDistance;
     Vector3 pickUpScreenPos;
-    public float screenDropDistance = 80f;
+    float screenDropDistance = 80f;
     float mouseVectorDevide = 5;
 
     static GameObject draggingObject;
     Rigidbody DrObj;
-    Vector3 MouseVector;
+    Vector3 MouseVector;    
+    Vector3 MouseDelta = Vector3.zero;
+    private Vector3 lastPos = Vector3.zero;
     
     void Start()
     {
@@ -32,11 +36,12 @@ public class dnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            lastPos = Input.mousePosition;
+        }
 
-        
-
-        if (buttonReleased && Input.GetMouseButton(0) && (!isDragging || Vector3.Distance(pickUpScreenPos, Input.mousePosition) <= screenDropDistance))
+        if (buttonReleased && Input.GetMouseButton(0) && ( !atPickUpHeight && !isDragging || Vector3.Distance(pickUpScreenPos, Input.mousePosition) <= screenDropDistance))
         {
             //start dragging
             if (!isDragging)
@@ -47,6 +52,7 @@ public class dnd : MonoBehaviour
                 {
                     draggingObject.GetComponent<Rigidbody>().gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
                     isDragging = true;
+                    pickUpDistance = Vector3.Distance(MouseVector, draggingObject.GetComponent<Rigidbody>().transform.position);
                     pickUpScreenPos = currentCamera.WorldToScreenPoint(draggingObject.GetComponent<Rigidbody>().position);
                 }
             }
@@ -54,16 +60,30 @@ public class dnd : MonoBehaviour
             //while dragging
             else if (draggingObject != null)
             {
+                MouseDelta = Input.mousePosition - lastPos;
+                Debug.Log("X: " + MouseDelta.x);
+                Debug.Log("Y: " + MouseDelta.y);
 
                 DrObj = draggingObject.GetComponent<Rigidbody>();
                 //Apply force 
                 MouseVector = CalculateMouse3DVector();
-                //DrObj.AddForce((MouseVector - DrObj.transform.position).normalized * forceStrenght, ForceMode.Force);
+                DrObj.AddForce((MouseVector - DrObj.transform.position).normalized * forceStrenght, ForceMode.Force);
                 pickUpScreenPos = currentCamera.WorldToScreenPoint(DrObj.position);
-                DrObj.velocity = pickUpSpeed * ((MouseVector - DrObj.transform.position).normalized) * Vector3.Distance(MouseVector, DrObj.transform.position);
-
-                draggingObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-
+                
+                if (!atPickUpHeight)
+                {
+                    pickUpDistance = Vector3.Distance(MouseVector, DrObj.transform.position);
+                    DrObj.velocity = pickUpSpeed * ((MouseVector - DrObj.transform.position).normalized) * Vector3.Distance(MouseVector, DrObj.transform.position);
+                    if (DrObj.transform.position.y >= pickUpHeight)
+                    {
+                        atPickUpHeight = true;
+                        DrObj.constraints = RigidbodyConstraints.FreezePositionY;                        
+                    }
+                }
+                if (atPickUpHeight)
+                {
+                    DrObj.drag = 1/Vector3.Distance(DrObj.transform.position, MouseVector);
+                }
             }
         }
 
@@ -72,17 +92,16 @@ public class dnd : MonoBehaviour
         {
             if (draggingObject != null)
             {
-                DrObj = draggingObject.GetComponent<Rigidbody>();
-                DrObj.gameObject.layer = LayerMask.NameToLayer("Default");
-                DrObj.constraints = RigidbodyConstraints.None;
-                MouseVector = CalculateMouse3DVector();
-                DrObj.velocity = pickUpSpeed * ((MouseVector - DrObj.transform.position).normalized) * Vector3.Distance(MouseVector, DrObj.transform.position);
-                DrObj.drag = 0;
-                draggingObject = null;
-
+                draggingObject.GetComponent<Rigidbody>().gameObject.layer = LayerMask.NameToLayer("Default");
+                draggingObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                draggingObject.GetComponent<Rigidbody>().drag = 0;
+            }
+            if (!atPickUpHeight && isDragging)
+            {
+                draggingObject.GetComponent<Rigidbody>().velocity = new Vector3(MouseDelta.x / mouseVectorDevide, 0, MouseDelta.y / mouseVectorDevide);
             }
             isDragging = false;
-
+            atPickUpHeight = false;
         }
 
         //Check if the mouse button was released
@@ -94,7 +113,8 @@ public class dnd : MonoBehaviour
         {
             buttonReleased = true;
         }
-        
+
+        lastPos = Input.mousePosition;
     }
 
     private GameObject GetObjectFromMouseRaycast()
@@ -104,16 +124,13 @@ public class dnd : MonoBehaviour
         bool hit = Physics.Raycast(currentCamera.ScreenPointToRay(Input.mousePosition), out hitInfo);
         if (hit)
         {
+            Debug.Log(Vector3.Distance(hitInfo.collider.gameObject.transform.position, currentCamera.transform.position));
             if (hitInfo.collider.gameObject.GetComponent<Rigidbody>() &&
                 Vector3.Distance(hitInfo.collider.gameObject.transform.position, currentCamera.transform.position) <= catchingDistance &&
                 !hitInfo.collider.gameObject.GetComponent<Rigidbody>().isKinematic)
             {
                 gmObj = hitInfo.collider.gameObject;
             }
-        }
-        if (gmObj != null && gmObj.tag != "Interactive")
-        {
-            gmObj = null;
         }
         return gmObj;
     }
@@ -133,6 +150,7 @@ public class dnd : MonoBehaviour
         {
             //point where ray hits the surface
             Vector3 A = hitInfo.point;
+            Debug.Log("RayHit: " + A);
             Vector3 CamPos = currentCamera.gameObject.transform.position;
             float originalDistance = Vector3.Distance(A, CamPos);
 
@@ -142,6 +160,12 @@ public class dnd : MonoBehaviour
             float resutlingDistance = pickUpHeight / Mathf.Cos(Mathf.PI - cosineDegrees);
 
             v3 = Vector3.Lerp(A, CamPos, resutlingDistance / originalDistance);
+            Debug.Log(v3);
+        }
+        else
+        {
+            Debug.Log("no Hit");
+            Debug.Log("Mask: " + mask);
         }
         return v3;
     }
