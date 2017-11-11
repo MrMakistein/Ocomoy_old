@@ -1,4 +1,3 @@
-﻿using System.Collections;
 ﻿
 using System.Collections;
 using System.Collections.Generic;
@@ -12,9 +11,11 @@ public class Player : MonoBehaviour {
     public Image healthBar;
     float hit_cooldown_timer;
     public float hit_cooldown = 10;
+	private int collectibleCount;
 
     // Use this for initialization
     void Start () {
+		collectibleCount = 0;
         healthBar.fillAmount = 1;
         currentHealth = maxHealth;
     }
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
+		if (col.gameObject.tag == "Interactive" && !col.gameObject.GetComponent<InteractiveSettings>().isCollectible && col.gameObject.GetComponent<ThrowObject>().dmg_cooldown >= 1 && hit_cooldown_timer <= 0)
         {
             hit_cooldown_timer = hit_cooldown;
             
@@ -56,8 +58,15 @@ public class Player : MonoBehaviour {
                 currentHealth = currentHealth - 40;
                 healthBar.fillAmount = currentHealth / maxHealth;
             }
+				
+		} else if(col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<InteractiveSettings>().isCollectible){
+			col.gameObject.SetActive (false); //collect/destroy uppon hitting
+			Color[] colors = {Color.red, Color.magenta, Color.cyan, Color.green, Color.gray}; //for testing!
+			GetComponent<Renderer>().material.color = colors[collectibleCount]; //for testing
 
 
+			collectibleCount++;
+		}
     }
 
 
