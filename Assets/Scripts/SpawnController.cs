@@ -15,8 +15,9 @@ public class SpawnController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //SET VARIABLES
-        
+
         // ((InteractiveSettings) interactives[0]);
+        SpawnShrines();
         SpawnInteractives();
         DetermineCollectibles();
         //@TODO: AREALE AUFTEILEN
@@ -132,4 +133,34 @@ public class SpawnController : MonoBehaviour {
         //evtl erst hier die Layer erstellen? Anzahl Layer == Anzahl Collectibles! + 1 Winzone in der Mitte?
         //Keep in mind the Zones! (Zone 1-4, Winzone)
     }
+
+    private void SpawnShrines()
+    {
+        
+        List<int> list = new List<int>(new int[] { 1, 2, 3, 4, 5, 6 });
+        int rand = 0;
+
+        Debug.Log("RandomZahl:" + Math.Round(UnityEngine.Random.value * 3));
+
+        GameObject[] shrines = GameObject.FindGameObjectsWithTag("Shrine");
+
+        foreach (GameObject shrine in shrines)
+        {
+           
+            rand = UnityEngine.Random.Range(0, list.Count);
+            print(rand);
+            shrine.gameObject.GetComponent<Shrine>().shrine_id = list[rand];
+            
+          
+            list.RemoveAt(rand);
+        }
+
+
+
+
+
+    }
 }
+
+
+
