@@ -16,11 +16,11 @@ public class InteractiveSettings : MonoBehaviour
         //isCollectible = false; //default: not a collectible; will be changed by SpawnController	
         //isCollectible = false;
 
-        if (!isCollectible)
-        {
-            GetComponent<Renderer>().material = normalMaterial;
-            GetComponent<Collider>().isTrigger = false;
-        }
+		if (!isCollectible) {
+			GetComponent<Rigidbody> ().isKinematic = false; //disable kinematics -> can be grabbed
+			GetComponent<Renderer> ().material = normalMaterial;
+			GetComponent<Collider> ().isTrigger = false;
+		}
 
 
 
@@ -51,6 +51,7 @@ public class InteractiveSettings : MonoBehaviour
         GetComponent<Collider>().isTrigger = true; //set as trigger => you can enter it to deactivate!
         //for testing
         GetComponent<Renderer>().material = collectibleMaterial;
+		GetComponent<Rigidbody> ().isKinematic = true; //don't fall through floor --> PROBLEM: can't pick up
         
     }
 }
