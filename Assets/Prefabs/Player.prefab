@@ -21,10 +21,11 @@ GameObject:
   - component: {fileID: 4132598314345712}
   - component: {fileID: 33643204354733112}
   - component: {fileID: 136109921837530722}
+  - component: {fileID: 54971476213897910}
   - component: {fileID: 23590101900504614}
   - component: {fileID: 114272032885505328}
   - component: {fileID: 114922976256056448}
-  - component: {fileID: 54971476213897910}
+  - component: {fileID: 114221423364663734}
   - component: {fileID: 114092870215455768}
   m_Layer: 0
   m_Name: Player
@@ -239,6 +240,18 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 114851832883948444}
   hit_cooldown: 10
+--- !u!114 &114221423364663734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005341902680014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78aa1dc656efb684ab86382bd919bf94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!114 &114272032885505328
 MonoBehaviour:
   m_ObjectHideFlags: 1
