@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 2017.2.0f3
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Maki
 <<<<<<< HEAD
 m_EditorVersion: 2017.1.0f3
 =======
@@ -10,4 +13,7 @@ m_EditorVersion: 5.5.2f1
 =======
 m_EditorVersion: 2017.1.1f1
 >>>>>>> master
+<<<<<<< HEAD
+>>>>>>> Maki
+=======
 >>>>>>> Maki

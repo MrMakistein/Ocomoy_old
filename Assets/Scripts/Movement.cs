@@ -13,6 +13,4 @@ public class Movement : MonoBehaviour {
 	}
 	
 	void Update () {
-        transform.Translate(mSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, mSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-	}
 }

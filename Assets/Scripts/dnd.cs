@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class dnd : MonoBehaviour
 {
+
     int mask;
     bool buttonReleased = true;
     public float catchingDistance;
@@ -22,7 +23,6 @@ public class dnd : MonoBehaviour
     float screenDropDistance = 80f;
     float mouseVectorDevide = 5;
 
-    static GameObject draggingObject;
     Rigidbody DrObj;
     Vector3 MouseVector;    
     Vector3 MouseDelta = Vector3.zero;
@@ -61,8 +61,6 @@ public class dnd : MonoBehaviour
             else if (draggingObject != null)
             {
                 MouseDelta = Input.mousePosition - lastPos;
-                Debug.Log("X: " + MouseDelta.x);
-                Debug.Log("Y: " + MouseDelta.y);
 
                 DrObj = draggingObject.GetComponent<Rigidbody>();
                 //Apply force 
@@ -124,7 +122,6 @@ public class dnd : MonoBehaviour
         bool hit = Physics.Raycast(currentCamera.ScreenPointToRay(Input.mousePosition), out hitInfo);
         if (hit)
         {
-            Debug.Log(Vector3.Distance(hitInfo.collider.gameObject.transform.position, currentCamera.transform.position));
             if (hitInfo.collider.gameObject.GetComponent<Rigidbody>() &&
                 Vector3.Distance(hitInfo.collider.gameObject.transform.position, currentCamera.transform.position) <= catchingDistance &&
                 !hitInfo.collider.gameObject.GetComponent<Rigidbody>().isKinematic)
@@ -150,7 +147,6 @@ public class dnd : MonoBehaviour
         {
             //point where ray hits the surface
             Vector3 A = hitInfo.point;
-            Debug.Log("RayHit: " + A);
             Vector3 CamPos = currentCamera.gameObject.transform.position;
             float originalDistance = Vector3.Distance(A, CamPos);
 
@@ -160,12 +156,9 @@ public class dnd : MonoBehaviour
             float resutlingDistance = pickUpHeight / Mathf.Cos(Mathf.PI - cosineDegrees);
 
             v3 = Vector3.Lerp(A, CamPos, resutlingDistance / originalDistance);
-            Debug.Log(v3);
         }
         else
         {
-            Debug.Log("no Hit");
-            Debug.Log("Mask: " + mask);
         }
         return v3;
     }
