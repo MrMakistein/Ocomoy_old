@@ -24,11 +24,13 @@ public class Dash : MonoBehaviour {
 
         if (dashTimer > 0)
         {
+            transform.Translate(dashSpeed* Vector3.forward * Time.deltaTime);
             dashTimer -= Time.deltaTime;
         }
 
 
 
+        if (Input.GetKey(KeyCode.LeftShift) && coolDownTimer <= 0)
         {
            
             dashTimer = dashDuration;

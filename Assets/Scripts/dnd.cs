@@ -23,6 +23,7 @@ public class dnd : MonoBehaviour
     float screenDropDistance = 80f;
     float mouseVectorDevide = 5;
 
+    public static GameObject draggingObject;
     Rigidbody DrObj;
     Vector3 MouseVector;    
     Vector3 MouseDelta = Vector3.zero;
@@ -61,6 +62,7 @@ public class dnd : MonoBehaviour
             else if (draggingObject != null)
             {
                 MouseDelta = Input.mousePosition - lastPos;
+                
 
                 DrObj = draggingObject.GetComponent<Rigidbody>();
                 //Apply force 
@@ -97,6 +99,7 @@ public class dnd : MonoBehaviour
             if (!atPickUpHeight && isDragging)
             {
                 draggingObject.GetComponent<Rigidbody>().velocity = new Vector3(MouseDelta.x / mouseVectorDevide, 0, MouseDelta.y / mouseVectorDevide);
+                draggingObject = null;
             }
             isDragging = false;
             atPickUpHeight = false;
@@ -122,6 +125,7 @@ public class dnd : MonoBehaviour
         bool hit = Physics.Raycast(currentCamera.ScreenPointToRay(Input.mousePosition), out hitInfo);
         if (hit)
         {
+          
             if (hitInfo.collider.gameObject.GetComponent<Rigidbody>() &&
                 Vector3.Distance(hitInfo.collider.gameObject.transform.position, currentCamera.transform.position) <= catchingDistance &&
                 !hitInfo.collider.gameObject.GetComponent<Rigidbody>().isKinematic)
