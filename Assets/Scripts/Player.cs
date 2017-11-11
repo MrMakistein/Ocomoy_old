@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,7 +30,6 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<ThrowObject>().dmg_cooldown >= 1 && hit_cooldown_timer <= 0)
         {
             hit_cooldown_timer = hit_cooldown;
             
@@ -57,8 +58,6 @@ public class Player : MonoBehaviour {
             }
 
 
-
-        }
     }
 
 

@@ -8,7 +8,7 @@ public class InteractiveSettings : MonoBehaviour
     public Material normalMaterial;
 	public Material collectibleMaterial;
 
-	private bool isCollectible = false;
+	public bool isCollectible = false;
 
 
 	// Use this for initialization
@@ -21,26 +21,6 @@ public class InteractiveSettings : MonoBehaviour
 			GetComponent<Renderer> ().material = normalMaterial;
 			GetComponent<Collider> ().isTrigger = false;
 		}
-
-
-
-
-
-            //	if (isCollectible) {
-            //			//renderer.material.mainTexture = collectibleMaterial;
-            //			GetComponent<Renderer> ().material = collectibleMaterial;
-            //            GetComponent<Collider>().isTrigger = true;
-            //        } else {
-            ////			renderer.material.mainTexture = normalMaterial;
-            //			GetComponent<Renderer> ().material = normalMaterial;
-            //            GetComponent<Collider> ().isTrigger = false;
-            //		}		//SpawnController.determineCollectibles (); //geht nicht, warum? --> wann und in welcher reihenfolge wird das ausgeführt? wie kann ich garantieren, dass das nicht nach materialzuweisung passiert?
-
-        }
-
-    // Update is called once per frame
-    void Update () {
-			
 	}
 
     //entweder: ausgehen von boolean isCollectible
@@ -48,10 +28,13 @@ public class InteractiveSettings : MonoBehaviour
     public void SetCollectible()
     {
         isCollectible = true; //mark as collectible
-        GetComponent<Collider>().isTrigger = true; //set as trigger => you can enter it to deactivate!
+        ////GetComponent<Collider> ().isTrigger = true; //set as trigger => you can enter it to deactivate!
+		/// 
+		/// Test as collider:
+
         //for testing
-        GetComponent<Renderer>().material = collectibleMaterial;
-		GetComponent<Rigidbody> ().isKinematic = true; //don't fall through floor --> PROBLEM: can't pick up
+        GetComponent<Renderer> ().material = collectibleMaterial;
+		//GetComponent<Rigidbody> ().isKinematic = true; //don't fall through floor --> PROBLEM: can't pick up
         
     }
 }
