@@ -8,7 +8,7 @@ public class dnd : MonoBehaviour
 {
     int mask;
     bool buttonReleased = true;
-    public float pickUpThreshhold = 0.6f;
+    public float pickUpThreshold = 0.6f;
     public float catchingDistance;
     public float pickUpHeight;
     public static Camera currentCamera;
