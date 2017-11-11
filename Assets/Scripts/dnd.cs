@@ -14,12 +14,16 @@ public class dnd : MonoBehaviour
     public static Camera currentCamera;
     public static float forceStrenght = 20f;
     float pickUpSpeed = 10f;
-    float cursorSpeed;
     bool isDragging = false;
     Vector3 pickUpScreenPos;
     public float screenDropDistance = 80f;
     public float mouseVectorMultiplier = 10f;
     public float upwardVelocityThreshhold = 1f;
+    //These two values are used as there are some gameplay relevant functions that depend on the screen resolution
+    private float editorScreenMean = (1053 + 459) / 2;
+    private float playScreenMean;
+
+    
 
     public static GameObject draggingObject;
     Rigidbody DrObj;
@@ -29,14 +33,16 @@ public class dnd : MonoBehaviour
     {
         currentCamera = Camera.main;
         mask = 1 << LayerMask.NameToLayer("is Ground");
+        playScreenMean = (Screen.width+Screen.height)/ 2;
+        screenDropDistance = (screenDropDistance / editorScreenMean) * playScreenMean;
+        mouseVectorMultiplier = (mouseVectorMultiplier / editorScreenMean) * playScreenMean;
+        Debug.Log("screenDropDistance " + screenDropDistance);
+        Debug.Log("mouseVectorMultiplier " + mouseVectorMultiplier);
     }
     // Update is called once per frame
     void Update()
     {
-
-        
-
-
+       
         if (buttonReleased && Input.GetMouseButton(0) && (!isDragging || Vector3.Distance(pickUpScreenPos, Input.mousePosition) <= screenDropDistance))
         {
             //start dragging
@@ -149,25 +155,3 @@ public class dnd : MonoBehaviour
         return v3;
     }
 }
-
-/* -- Hold for Slider
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine;
-
-public class Slider : MonoBehaviour {
-    public Slider mainSlider;
-
-    // Use this for initialization
-    void Start() {
-        mainSlider = GameObject.Find("Slider").GetComponent<Slider>();
-    }
-
-    // Update is called once per frame
-    void Update(){
-        Debug.Log(mainSlider);
-        mainSlider.V
-    }
-}
-*/
