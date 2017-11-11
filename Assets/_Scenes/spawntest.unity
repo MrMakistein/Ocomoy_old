@@ -683,7 +683,11 @@ Transform:
   - {fileID: 180218739}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+  m_RootOrder: 4
+>>>>>>> parent of 4f0d690... CameraWork
 =======
   m_RootOrder: 4
 >>>>>>> parent of 4f0d690... CameraWork
@@ -701,6 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneLayerNumbers: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &266401732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5514fb4716ced4c971a611cb90826d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> parent of 4f0d690... CameraWork
 =======
 >>>>>>> parent of 4f0d690... CameraWork
 --- !u!1 &445039246
@@ -778,7 +785,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+  m_RootOrder: 3
+>>>>>>> parent of 4f0d690... CameraWork
 =======
   m_RootOrder: 3
 >>>>>>> parent of 4f0d690... CameraWork
@@ -866,7 +877,11 @@ Transform:
   - {fileID: 661894750}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 5
+>>>>>>> parent of 4f0d690... CameraWork
 =======
   m_RootOrder: 5
 >>>>>>> parent of 4f0d690... CameraWork
@@ -1082,7 +1097,11 @@ Transform:
   - {fileID: 1130746035}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+  m_RootOrder: 6
+>>>>>>> parent of 4f0d690... CameraWork
 =======
   m_RootOrder: 6
 >>>>>>> parent of 4f0d690... CameraWork
@@ -1125,7 +1144,11 @@ Prefab:
     - target: {fileID: 4132598314345712, guid: bd307cdaf0b6a5443a0c5db9bf7724f7, type: 2}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 7
+=======
+      value: 8
+>>>>>>> parent of 4f0d690... CameraWork
 =======
       value: 8
 >>>>>>> parent of 4f0d690... CameraWork
@@ -1140,11 +1163,14 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 54971476213897910, guid: bd307cdaf0b6a5443a0c5db9bf7724f7,
         type: 2}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 4f0d690... CameraWork
 =======
 >>>>>>> parent of 4f0d690... CameraWork
     m_RemovedComponents: []
@@ -2019,7 +2045,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+  m_RootOrder: 2
+>>>>>>> parent of 4f0d690... CameraWork
 =======
   m_RootOrder: 2
 >>>>>>> parent of 4f0d690... CameraWork
@@ -2536,7 +2566,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 6
+=======
+  m_RootOrder: 7
+>>>>>>> parent of 4f0d690... CameraWork
 =======
   m_RootOrder: 7
 >>>>>>> parent of 4f0d690... CameraWork
