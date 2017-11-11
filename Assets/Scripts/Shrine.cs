@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Shrine : MonoBehaviour {
 
-    public static 
+    public float shrine_cooldown = 10;
+    public float shrine_cooldown_timer = 0;
 
 	// Use this for initialization
 	void Start () {
