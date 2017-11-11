@@ -18,7 +18,8 @@ public class dnd : MonoBehaviour
     bool isDragging = false;
     Vector3 pickUpScreenPos;
     public float screenDropDistance = 80f;
-    float mouseVectorDevide = 5;
+    public float mouseVectorMultiplier = 10f;
+    public float upwardVelocityThreshhold = 1f;
 
     public static GameObject draggingObject;
     Rigidbody DrObj;
@@ -32,9 +33,9 @@ public class dnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
         
+
 
         if (buttonReleased && Input.GetMouseButton(0) && (!isDragging || Vector3.Distance(pickUpScreenPos, Input.mousePosition) <= screenDropDistance))
         {
@@ -75,9 +76,11 @@ public class dnd : MonoBehaviour
                 DrObj = draggingObject.GetComponent<Rigidbody>();
                 DrObj.gameObject.layer = LayerMask.NameToLayer("Default");
                 DrObj.constraints = RigidbodyConstraints.None;
-                MouseVector = CalculateMouse3DVector();
-                //DrObj.velocity = ((MouseVector - DrObj.transform.position).normalized) * Vector3.Distance(MouseVector, DrObj.transform.position);
                 DrObj.drag = 0;
+                if (DrObj.velocity.y > upwardVelocityThreshhold)
+                {
+                    DrObj.velocity = new Vector3(mouseVectorMultiplier * Input.GetAxis("Mouse X"), 0, mouseVectorMultiplier * Input.GetAxis("Mouse Y"));
+                }
                 draggingObject = null;
 
             }
