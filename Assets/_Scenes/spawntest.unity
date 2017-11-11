@@ -548,7 +548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bea8a429ad77f4c831b82b14a5e82f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!54 &241940190
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -678,7 +677,6 @@ Transform:
   - {fileID: 1483372104}
   - {fileID: 180218739}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &266401731
 MonoBehaviour:
@@ -755,7 +753,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &578264201
 Prefab:
@@ -1050,7 +1047,6 @@ Transform:
   - {fileID: 1160431875}
   - {fileID: 1130746035}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &781266647
 Prefab:
@@ -1919,7 +1915,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 38.675003, y: 0, z: 0}
 --- !u!1001 &1466391779
 Prefab:
@@ -2403,7 +2398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catchingDistance: 100
   pickUpHeight: 1
-  currentCamera: {fileID: 0}
 --- !u!4 &2073381156
 Transform:
   m_ObjectHideFlags: 0
