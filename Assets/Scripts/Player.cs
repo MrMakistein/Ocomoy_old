@@ -69,12 +69,6 @@ public class Player : MonoBehaviour {
 		}
     }
 
-    private void OnTriggerStay(Collider col)
-    {
-        if (col.gameObject.tag == "Shrine" && Input.GetKeyDown("space") && col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer <= 0)
-        {
-            col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer = col.gameObject.GetComponent<Shrine>().shrine_cooldown;
-            print("hi");
-        }
-    }
+
+  
 }
