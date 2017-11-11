@@ -140,18 +140,14 @@ public class SpawnController : MonoBehaviour {
         List<int> list = new List<int>(new int[] { 1, 2, 3, 4, 5, 6 });
         int rand = 0;
 
-        Debug.Log("RandomZahl:" + Math.Round(UnityEngine.Random.value * 3));
+     
 
         GameObject[] shrines = GameObject.FindGameObjectsWithTag("Shrine");
 
         foreach (GameObject shrine in shrines)
         {
-           
             rand = UnityEngine.Random.Range(0, list.Count);
-            print(rand);
             shrine.gameObject.GetComponent<Shrine>().shrine_id = list[rand];
-            
-          
             list.RemoveAt(rand);
         }
 
