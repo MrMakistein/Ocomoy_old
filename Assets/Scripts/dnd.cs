@@ -146,25 +146,3 @@ public class dnd : MonoBehaviour
         return v3;
     }
 }
-
-/* -- Hold for Slider
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine;
-
-public class Slider : MonoBehaviour {
-    public Slider mainSlider;
-
-    // Use this for initialization
-    void Start() {
-        mainSlider = GameObject.Find("Slider").GetComponent<Slider>();
-    }
-
-    // Update is called once per frame
-    void Update(){
-        Debug.Log(mainSlider);
-        mainSlider.V
-    }
-}
-*/
