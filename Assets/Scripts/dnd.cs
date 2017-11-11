@@ -20,6 +20,7 @@ public class dnd : MonoBehaviour
     public float screenDropDistance = 80f;
     float mouseVectorDevide = 5;
 
+    public static GameObject draggingObject;
     Rigidbody DrObj;
     Vector3 MouseVector;
     
