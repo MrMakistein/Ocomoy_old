@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 1041422096}
   m_Layer: 0
   m_Name: Shrine
-  m_TagString: Untagged
+  m_TagString: Shrine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,11 +418,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1041422091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8db51911ef6714d4e9bd064f8b6c69a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 21b8c581dc35f394bb415714c1d1d12e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shrine_cooldown: 10
-  shrine_cooldown_timer: 0
+  shrine_cooldowntimer: 0
 --- !u!1 &1268164100
 GameObject:
   m_ObjectHideFlags: 0
