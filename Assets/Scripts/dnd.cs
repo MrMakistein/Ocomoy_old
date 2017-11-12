@@ -8,9 +8,15 @@ public class dnd : MonoBehaviour
 {
     int mask;
     bool buttonReleased = true;
+<<<<<<< HEAD
     public bool draggingDrag = true;
     public float catchingDistance = 100;
     public float pickUpHeight = 2;
+=======
+    public float pickUpThreshold = 0.6f;
+    public float catchingDistance;
+    public float pickUpHeight;
+>>>>>>> Maki
     public static Camera currentCamera;
 
     //Reduction for the four weight classes
@@ -24,6 +30,7 @@ public class dnd : MonoBehaviour
     float pickUpSpeed = 10f;
     bool isDragging = false;
     Vector3 pickUpScreenPos;
+<<<<<<< HEAD
     float DropDistance;
     public float initialDropDistance = 120f;
     public float DorpDistanceMultiplierFor1 = 2f;
@@ -39,6 +46,16 @@ public class dnd : MonoBehaviour
     public float upwardVelocityThreshhold = 1f;
    
 
+=======
+    public float screenDropDistance = 80f;
+    public float mouseVectorMultiplier = 10f;
+    public float upwardVelocityThreshhold = 1f;
+    //These two values are used as there are some gameplay relevant functions that depend on the screen resolution
+    private float editorScreenMean = (1053 + 459) / 2;
+    private float playScreenMean;
+
+    
+>>>>>>> Maki
 
     public static GameObject draggingObject;
     Rigidbody DrObj;
@@ -48,15 +65,28 @@ public class dnd : MonoBehaviour
     {
         currentCamera = Camera.main;
         mask = 1 << LayerMask.NameToLayer("is Ground");
+<<<<<<< HEAD
         //Every screen dependent variable has to be scaled to fit any resolution
         initialDropDistance = PersonalMath.ScreenSizeCompensation(initialDropDistance);
         mouseVectorMultiplier = PersonalMath.ScreenSizeCompensation(mouseVectorMultiplier);
+=======
+        playScreenMean = (Screen.width+Screen.height)/ 2;
+        screenDropDistance = (screenDropDistance / editorScreenMean) * playScreenMean;
+        mouseVectorMultiplier = (mouseVectorMultiplier / editorScreenMean) * playScreenMean;
+        //Debug.Log("screenDropDistance " + screenDropDistance);
+        //Debug.Log("mouseVectorMultiplier " + mouseVectorMultiplier);
+>>>>>>> Maki
     }
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
 
         if (buttonReleased && Input.GetMouseButton(0) && (!isDragging || Vector3.Distance(pickUpScreenPos, Input.mousePosition) <= DropDistance))
+=======
+       
+        if (buttonReleased && Input.GetMouseButton(0) && (!isDragging || Vector3.Distance(pickUpScreenPos, Input.mousePosition) <= screenDropDistance))
+>>>>>>> Maki
         {
             //start dragging
             if (!isDragging)
@@ -104,7 +134,11 @@ public class dnd : MonoBehaviour
                 DrObj.gameObject.layer = LayerMask.NameToLayer("Default");
                 DrObj.constraints = RigidbodyConstraints.None;
                 DrObj.drag = 0;
+<<<<<<< HEAD
                 if (DrObj.velocity.y > upwardVelocityThreshhold && !draggingDrag)
+=======
+                if (DrObj.velocity.y > upwardVelocityThreshhold)
+>>>>>>> Maki
                 {
                     DrObj.velocity = new Vector3(mouseVectorMultiplier * Input.GetAxis("Mouse X"), 0, mouseVectorMultiplier * Input.GetAxis("Mouse Y"));
                 }
@@ -176,6 +210,10 @@ public class dnd : MonoBehaviour
                     break;
             }
         }
+<<<<<<< HEAD
         return gmObj;
+=======
+        return v3;
+>>>>>>> Maki
     }
 }
