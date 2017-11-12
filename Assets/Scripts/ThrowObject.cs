@@ -9,7 +9,6 @@ public class ThrowObject : MonoBehaviour {
     public float dmg_cooldown_max = 10;
     public int object_damage = 4;
     public bool isclone = false;
-    public float clonehit_timer;
 
     public GameObject clone1;
     public GameObject clone2;

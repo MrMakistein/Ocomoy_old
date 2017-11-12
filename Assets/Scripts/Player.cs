@@ -61,7 +61,7 @@ public class Player : MonoBehaviour {
         // Ability Activation
         if (Input.GetKeyDown("space") && equipped_ability >= 2 && !gameObject.GetComponent<Movement>().move_block)
         {
-            print("BOOM");
+            
 
             if (equipped_ability >= 2)
             {
