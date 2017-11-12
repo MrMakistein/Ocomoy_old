@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  isCollectible: 0
 --- !u!114 &114971706482534970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,3 +139,4 @@ MonoBehaviour:
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
+  object_damage: 4

@@ -24,7 +24,9 @@ public class Dash : MonoBehaviour {
 
         if (dashTimer > 0)
         {
-            transform.Translate(dashSpeed* Vector3.forward * Time.deltaTime);
+            if (!this.GetComponent<Movement>().move_block) {
+                transform.Translate(dashSpeed * Vector3.forward * Time.deltaTime);
+            }
             dashTimer -= Time.deltaTime;
         }
 

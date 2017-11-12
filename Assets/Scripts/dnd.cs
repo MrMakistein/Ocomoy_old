@@ -36,8 +36,8 @@ public class dnd : MonoBehaviour
         playScreenMean = (Screen.width+Screen.height)/ 2;
         screenDropDistance = (screenDropDistance / editorScreenMean) * playScreenMean;
         mouseVectorMultiplier = (mouseVectorMultiplier / editorScreenMean) * playScreenMean;
-        Debug.Log("screenDropDistance " + screenDropDistance);
-        Debug.Log("mouseVectorMultiplier " + mouseVectorMultiplier);
+        //Debug.Log("screenDropDistance " + screenDropDistance);
+        //Debug.Log("mouseVectorMultiplier " + mouseVectorMultiplier);
     }
     // Update is called once per frame
     void Update()
