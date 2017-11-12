@@ -13,11 +13,22 @@ public class Player : MonoBehaviour {
     public float regenSpeed = 10;
 
     //Clone Ability Variables
+    public float clone_timer = 0;
+    public GameObject clone1;
+    public GameObject clone2;
+    public GameObject clone3;
+    public GameObject clone4;
+    public GameObject clone1_hitbox;
+    public GameObject clone2_hitbox;
+    public GameObject clone3_hitbox;
+    public GameObject clone4_hitbox;
+    public float speed = 1.0F;
+    private float startTime;
 
 
 
     // Random Shit
-    public float equipped_ability;
+    public int equipped_ability = 0;
     float hit_cooldown_timer;
     public float hit_cooldown = 10;
 	private int collectibleCount;
@@ -29,9 +40,12 @@ public class Player : MonoBehaviour {
         healthBar.fillAmount = 1;
         currentHealth = maxHealth;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+
+
+    // Update is called once per frame
+    void Update () {
+        //Hit Cooldown Timer
         if (hit_cooldown_timer > 0)
         {
             hit_cooldown_timer -= Time.deltaTime * 10;
@@ -44,11 +58,91 @@ public class Player : MonoBehaviour {
             healthBar.fillAmount = currentHealth / maxHealth;
         }
 
+        // Ability Activation
+        if (Input.GetKeyDown("space") && equipped_ability >= 2 && !gameObject.GetComponent<Movement>().move_block)
+        {
+            print("BOOM");
+
+            if (equipped_ability >= 2)
+            {
+                
+                clone_timer = 1;
+                clone1.SetActive(true);
+                clone1_hitbox.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+                //clone2.SetActive(true);
+                //clone3.SetActive(true);
+                //clone4.SetActive(true);
+
+
+
+
+            }
+
+
+
+            equipped_ability = 0;
+            
+        }
+
+        if (clone_timer >= 1)
+        {
+            Clone_ability();
+        }
 
 
     }
 
+    
 
+    private void Clone_ability()
+    {
+        Vector3 position1 = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
+        if (clone_timer < 1)
+        {
+            clone1_hitbox.transform.position = Vector3.Lerp(clone1_hitbox.transform.position, position1, Time.deltaTime);
+        } else
+        {
+            clone1_hitbox.transform.position = transform.position;
+            clone1_hitbox.transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
+
+        }
+
+
+
+        //clone1.transform.position = transform.position;
+        //clone1.transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
+        //clone1_hitbox.transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
+        clone1_hitbox.transform.position = Vector3.Lerp(clone1_hitbox.transform.position, position1, Time.deltaTime);
+
+        //clone2.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
+        //clone3.transform.position = new Vector3(transform.position.x - 2, transform.position.y, transform.position.z);
+        //clone4.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
+
+        clone1.transform.rotation = transform.rotation;
+        //clone2.transform.rotation = transform.rotation;
+        //clone3.transform.rotation = transform.rotation;
+        //clone4.transform.rotation = transform.rotation;
+
+
+        clone_timer += Time.deltaTime*5;
+
+        
+
+
+
+        if (clone_timer >= 50)
+        {
+            clone_timer = 0;
+            clone1.SetActive(false);
+            clone2.SetActive(false);
+            clone3.SetActive(false);
+            clone4.SetActive(false);
+
+
+        }
+
+    }
 
     private void OnCollisionEnter(Collision col)
     {
@@ -103,7 +197,9 @@ public class Player : MonoBehaviour {
         if (col.gameObject.tag == "Shrine" && Input.GetKeyDown("space") && col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer <= 0 && col.gameObject.GetComponent<Shrine>().blessing_spawn_cooldown_timer <= 0)
         {
             col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer = col.gameObject.GetComponent<Shrine>().shrine_cooldown;
-            
+            equipped_ability = col.gameObject.GetComponent<Shrine>().shrine_id;
+
+
         }
     }
 }

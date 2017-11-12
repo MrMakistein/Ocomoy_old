@@ -8,7 +8,7 @@ public class Shrine : MonoBehaviour {
     [HideInInspector] public float shrine_cooldown_timer = 0;
     public float blessing_spawn_cooldown = 100; // how long the shrine takes to generate a new item after it was picked up
     [HideInInspector] public float blessing_spawn_cooldown_timer = 0;
-    public float shrine_id = 1;
+    public int shrine_id = 1;
 
 	// Use this for initialization
 	void Start () {
