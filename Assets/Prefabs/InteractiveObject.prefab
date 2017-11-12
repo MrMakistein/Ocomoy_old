@@ -54,6 +54,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -69,6 +70,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -98,7 +100,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &65664950733817078
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -124,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  isCollectible: 0
 --- !u!114 &114971706482534970
 MonoBehaviour:
   m_ObjectHideFlags: 1
