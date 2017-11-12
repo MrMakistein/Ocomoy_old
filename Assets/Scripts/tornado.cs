@@ -4,19 +4,34 @@ using UnityEngine;
 
 public class tornado : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
-    public float radius = 19.48f;
-    public float outsideSpeed = 0.7f;
+	
+    public float radius = 12f;
     public float maxPullInLength = 24.96f;
-    public float power = 1;
-    public float spin = 100;
-
+    public float power = 50;
+    public float spin = 50;
+    public float upPower = 50;
+    public float speed = 2;
+    //The time the tronado turns to one direction.
+    public float rotationTime = 1;
+    public float rotationSpeed = 80;
+    public float TimeAlive = 5;
+    private float rotationTimer = 0;
+    private float rotation;
+    //-1 = left, 0 = NULL, 1 = right
+    private int rotationDir = 0;
+    
+    //used to reduce code
+    private Vector3 tempVector;
     Collider[] colliders;
 
+    GameObject tornadoObj = null;
+
+    // Use this for initialization
+    void Start()
+    {
+        tornadoObj = GameObject.Find("Tornado");
+        rotation = Random.Range(0, 360);
+    }
     void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, radius);
@@ -36,12 +51,40 @@ public class tornado : MonoBehaviour {
             {
                 continue;
             }
-            Vector3 Force = new Vector3(transform.position.x - c.transform.position.x, rigidbody.velocity.y / 2, transform.position.z - c.transform.position.z) * power;
-            rigidbody.AddForceAtPosition(Force, transform.position);
-            
-            rigidbody.AddForceAtPosition((transform.position - c.transform.position) * power, transform.position);
-            rigidbody.AddForce((transform.position - c.transform.position).normalized * spin);
+
+            tempVector = (transform.position - c.transform.position) * power / Vector3.Distance(transform.position, c.transform.position);
+            rigidbody.AddForceAtPosition(new Vector3(tempVector.x,0,tempVector.z), transform.position);
+            rigidbody.AddForce(Quaternion.AngleAxis(90, Vector3.up) * (transform.position - c.transform.position).normalized * spin/Vector3.Distance(transform.position, c.transform.position));
+            rigidbody.AddForce(Vector3.up * upPower / Vector3.Distance(transform.position, c.transform.position));
         }
+
+
+        //Calculate the ramdom rotation of the tornado
+        rotationTimer += Time.deltaTime;
+        if (rotationTimer > rotationTime)
+        {
+            rotationDir = 0;
+            rotationTimer = 0;
+        }
+
+        if (rotationDir == 0)
+        {
+            if(Random.Range(0,100) < 50)
+            {
+                rotationDir = -1;
+            }
+            else
+            {
+
+                rotationDir = 1;
+            }
+        }
+
+        rotation += rotationDir * rotationSpeed * Time.deltaTime;
+
+        //move the tornado
+        transform.eulerAngles = new Vector3(0,rotation,0);
+        tornadoObj.transform.position += transform.forward * Time.deltaTime * speed;
     }
 }
 

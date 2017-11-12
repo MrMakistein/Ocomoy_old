@@ -41,7 +41,5 @@ public class Movement : MonoBehaviour {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15F);
             }
         }
-        
-
     }
 }

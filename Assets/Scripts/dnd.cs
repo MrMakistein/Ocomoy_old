@@ -79,7 +79,7 @@ public class dnd : MonoBehaviour
 
                 Debug.Log("Height: " + DrObj.transform.position.y);
                 pickUpScreenPos = currentCamera.WorldToScreenPoint(DrObj.position);
-                MouseVector = CalculateMouse3DVector();
+                MouseVector = PersonalMath.CalculateMouse3DVector(currentCamera, mask, pickUpHeight + heightOffset);
                 //Apply force 
                 if (draggingDrag)
                 {
@@ -178,33 +178,4 @@ public class dnd : MonoBehaviour
         }
         return gmObj;
     }
-
-    //Calculates the point according to the mouse courser in a specified height(using pickUpHeight)
-    private Vector3 CalculateMouse3DVector()
-    {
-        Vector3 v3 = Input.mousePosition;
-        v3 = currentCamera.ScreenToWorldPoint(v3);
-        //raycast to determine the distance from the camera to an object and the angle of the hit
-        RaycastHit hitInfo = new RaycastHit();
-        Ray r = currentCamera.ScreenPointToRay(Input.mousePosition);
-
-        //!!! A distance (3rd Position) is needed, because otherwise Unity behaves buggy !!!
-        bool hit = Physics.Raycast(r, out hitInfo, 100, mask);
-        if (hit)
-        {
-            //point where ray hits the surface
-            Vector3 A = hitInfo.point;
-            Vector3 CamPos = currentCamera.gameObject.transform.position;
-            float originalDistance = Vector3.Distance(A, CamPos);
-
-            //Use trigonometry to calculate the point on the ray, where the height is pickUpHeight
-            float cosine = Vector3.Dot(r.direction, hitInfo.normal);
-            float cosineDegrees = Mathf.Acos(cosine);
-            float resutlingDistance = (pickUpHeight + heightOffset) / Mathf.Cos(Mathf.PI - cosineDegrees);
-
-            v3 = Vector3.Lerp(A, CamPos, resutlingDistance / originalDistance);
-        }
-        return v3;
-    }
-    
 }
