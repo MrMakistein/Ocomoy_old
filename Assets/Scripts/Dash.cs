@@ -7,7 +7,7 @@ public class Dash : MonoBehaviour {
     private float coolDownTimer;
     public float dashSpeed = 10;
     public float dashDuration = 0.3f;
-    private float dashTimer = 0f;
+    public float dashTimer = 0f;
 
     // Use this for initialization
     void Start () {
@@ -25,7 +25,7 @@ public class Dash : MonoBehaviour {
         if (dashTimer > 0)
         {
             if (!this.GetComponent<Movement>().move_block) {
-                transform.Translate(dashSpeed * Vector3.forward * Time.deltaTime);
+                gameObject.GetComponent<Rigidbody>().velocity = transform.forward * dashSpeed;
             }
             dashTimer -= Time.deltaTime;
         }

@@ -8,6 +8,17 @@ public class ThrowObject : MonoBehaviour {
     public float dmg_cooldown = 10;
     public float dmg_cooldown_max = 10;
     public int object_damage = 4;
+    public bool isclone = false;
+
+    public GameObject clone1;
+    public GameObject clone2;
+    public GameObject clone3;
+    public GameObject clone4;
+
+    public GameObject clone1_hitbox;
+    public GameObject clone2_hitbox;
+    public GameObject clone3_hitbox;
+    public GameObject clone4_hitbox;
 
 
     // Use this for initialization
@@ -29,6 +40,24 @@ public class ThrowObject : MonoBehaviour {
         {
             dmg_cooldown -= Time.deltaTime*10;
         }
-        
+
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "CloneHitbox1Trigger")
+        {
+            Invoke("KillClone1", 0.2f);
+            isclone = true;
+            Debug.Log("hit 1");
+        }
+        Debug.Log(other.gameObject.name);
+    }
+
+    void KillClone1()
+    {
+        clone1_hitbox.SetActive(false);
+        clone1.SetActive(false);
+        isclone = false;
     }
 }

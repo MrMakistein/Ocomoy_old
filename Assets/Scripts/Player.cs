@@ -65,14 +65,16 @@ public class Player : MonoBehaviour {
 
             if (equipped_ability >= 2)
             {
-                
+                gameObject.transform.Translate(Vector3.back/6);
                 clone_timer = 1;
                 clone1.SetActive(true);
-                clone1_hitbox.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-
-                //clone2.SetActive(true);
-                //clone3.SetActive(true);
-                //clone4.SetActive(true);
+                clone2.SetActive(true);
+                clone3.SetActive(true);
+                clone4.SetActive(true);
+                clone1_hitbox.SetActive(true);
+                clone2_hitbox.SetActive(true);
+                clone3_hitbox.SetActive(true);
+                clone4_hitbox.SetActive(true);
 
 
 
@@ -97,32 +99,46 @@ public class Player : MonoBehaviour {
 
     private void Clone_ability()
     {
+
+
+        Vector3 original_position1 = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
+        Vector3 original_position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);
+        Vector3 original_position3 = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
+        Vector3 original_position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.1f);
+
+
         Vector3 position1 = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
-        if (clone_timer < 1)
+        Vector3 position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
+        Vector3 position3 = new Vector3(transform.position.x - 2, transform.position.y, transform.position.z);
+        Vector3 position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
+        // Interpolate hitboxes from center to the sides at the start of the ability cast
+        if (clone_timer < 1.1f)
         {
-            clone1_hitbox.transform.position = Vector3.Lerp(clone1_hitbox.transform.position, position1, Time.deltaTime);
-        } else
+            clone1_hitbox.transform.position = Vector3.Lerp(original_position1, position1, Time.deltaTime * 50);
+            clone2_hitbox.transform.position = Vector3.Lerp(original_position2, position2, Time.deltaTime * 50);
+            clone3_hitbox.transform.position = Vector3.Lerp(original_position3, position3, Time.deltaTime * 50);
+            clone4_hitbox.transform.position = Vector3.Lerp(original_position4, position4, Time.deltaTime * 50);
+
+        }
+        else
         {
-            clone1_hitbox.transform.position = transform.position;
-            clone1_hitbox.transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
+         // After the cast their position is set manually   
+            clone1_hitbox.transform.position = position1;
+            clone2_hitbox.transform.position = position2;
+            clone3_hitbox.transform.position = position3;
+            clone4_hitbox.transform.position = position4;
 
         }
 
-
-
-        //clone1.transform.position = transform.position;
-        //clone1.transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
-        //clone1_hitbox.transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
-        clone1_hitbox.transform.position = Vector3.Lerp(clone1_hitbox.transform.position, position1, Time.deltaTime);
-
-        //clone2.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
-        //clone3.transform.position = new Vector3(transform.position.x - 2, transform.position.y, transform.position.z);
-        //clone4.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
+        clone1.transform.position = position1;
+        clone2.transform.position = position2;
+        clone3.transform.position = position3;
+        clone4.transform.position = position4;
 
         clone1.transform.rotation = transform.rotation;
-        //clone2.transform.rotation = transform.rotation;
-        //clone3.transform.rotation = transform.rotation;
-        //clone4.transform.rotation = transform.rotation;
+        clone2.transform.rotation = transform.rotation;
+        clone3.transform.rotation = transform.rotation;
+        clone4.transform.rotation = transform.rotation;
 
 
         clone_timer += Time.deltaTime*5;
@@ -138,6 +154,12 @@ public class Player : MonoBehaviour {
             clone2.SetActive(false);
             clone3.SetActive(false);
             clone4.SetActive(false);
+            clone1_hitbox.SetActive(false);
+            clone2_hitbox.SetActive(false);
+            clone3_hitbox.SetActive(false);
+            clone4_hitbox.SetActive(false);
+
+
 
 
         }
@@ -147,9 +169,15 @@ public class Player : MonoBehaviour {
     private void OnCollisionEnter(Collision col)
     {
         // Test for player/interactive collision and deal the correct amount of damage depening on the weight_class
-		if (col.gameObject.tag == "Interactive" && !col.gameObject.GetComponent<InteractiveSettings>().isCollectible && col.gameObject.GetComponent<ThrowObject>().dmg_cooldown >= 1 && hit_cooldown_timer <= 0 && !this.GetComponent<Movement>().move_block)
+        if (col.gameObject.tag == "Interactive" && 
+            !col.gameObject.GetComponent<InteractiveSettings>().isCollectible && 
+            col.gameObject.GetComponent<ThrowObject>().dmg_cooldown >= 1 && 
+            hit_cooldown_timer <= 0 
+            && !this.GetComponent<Movement>().move_block &&
+            !col.gameObject.GetComponent<ThrowObject>().isclone)
         {
-            
+
+
             hit_cooldown_timer = hit_cooldown;
             if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
             {
