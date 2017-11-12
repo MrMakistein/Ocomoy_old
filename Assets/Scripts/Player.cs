@@ -32,10 +32,7 @@ public class Player : MonoBehaviour {
     public float hit_cooldown_timer;
     public float hit_cooldown = 10;
 	private int collectibleCount;
-<<<<<<< HEAD
-=======
     
->>>>>>> Maki
 
     // Use this for initialization
     void Start () {
@@ -171,9 +168,6 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
-<<<<<<< HEAD
-		if (col.gameObject.tag == "Interactive" && !col.gameObject.GetComponent<InteractiveSettings>().isCollectible && col.gameObject.GetComponent<ThrowObject>().dmg_cooldown >= 1 && hit_cooldown_timer <= 0)
-=======
         // Test for player/interactive collision and deal the correct amount of damage depening on the weight_class
         if (col.gameObject.tag == "Interactive" && 
             !col.gameObject.GetComponent<InteractiveSettings>().isCollectible && 
@@ -181,7 +175,6 @@ public class Player : MonoBehaviour {
             hit_cooldown_timer <= 0 
             && !this.GetComponent<Movement>().move_block &&
             !col.gameObject.GetComponent<ThrowObject>().isclone)
->>>>>>> Maki
         {
 
 
@@ -209,11 +202,6 @@ public class Player : MonoBehaviour {
                 currentHealth = currentHealth - 40;
                 healthBar.fillAmount = currentHealth / maxHealth;
             }
-				
-		} else if(col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<InteractiveSettings>().isCollectible){
-			col.gameObject.SetActive (false); //collect/destroy uppon hitting
-			Color[] colors = {Color.red, Color.magenta, Color.cyan, Color.green, Color.gray}; //for testing!
-			GetComponent<Renderer>().material.color = colors[collectibleCount]; //for testing
 
             //Object Damage
             col.gameObject.GetComponent<ThrowObject>().object_damage -= 1;

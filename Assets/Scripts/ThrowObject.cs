@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThrowObject : MonoBehaviour {
 
-    public float weight_class = 1;
+    public int weight_class = 1;
     public float dmg_cooldown = 10;
     public float dmg_cooldown_max = 10;
     public int object_damage = 4;

@@ -56,12 +56,6 @@ public class SpawnController : MonoBehaviour {
         // Assigns random id from 1 to 6 to all of the shrines (no repeating values)
         List<int> list = new List<int>(new int[] { 1, 2, 3, 4, 5, 6 });
         int rand = 0;
-<<<<<<< HEAD
-
-     
-
-=======
->>>>>>> Maki
         GameObject[] shrines = GameObject.FindGameObjectsWithTag("Shrine");
         foreach (GameObject shrine in shrines)
         {
