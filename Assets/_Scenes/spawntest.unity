@@ -355,7 +355,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 95999960}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -1698,6 +1698,36 @@ Prefab:
       propertyPath: clone1_hitbox
       value: 
       objectReference: {fileID: 1968387446}
+    - target: {fileID: 114971706482534970, guid: 9a9e057e602d503468672cec26321946,
+        type: 2}
+      propertyPath: clone2_hitbox
+      value: 
+      objectReference: {fileID: 1739241718}
+    - target: {fileID: 114971706482534970, guid: 9a9e057e602d503468672cec26321946,
+        type: 2}
+      propertyPath: clone2
+      value: 
+      objectReference: {fileID: 135940918}
+    - target: {fileID: 114971706482534970, guid: 9a9e057e602d503468672cec26321946,
+        type: 2}
+      propertyPath: clone3
+      value: 
+      objectReference: {fileID: 1514242199}
+    - target: {fileID: 114971706482534970, guid: 9a9e057e602d503468672cec26321946,
+        type: 2}
+      propertyPath: clone4
+      value: 
+      objectReference: {fileID: 155785744}
+    - target: {fileID: 114971706482534970, guid: 9a9e057e602d503468672cec26321946,
+        type: 2}
+      propertyPath: clone3_hitbox
+      value: 
+      objectReference: {fileID: 1166132959}
+    - target: {fileID: 114971706482534970, guid: 9a9e057e602d503468672cec26321946,
+        type: 2}
+      propertyPath: clone4_hitbox
+      value: 
+      objectReference: {fileID: 1407384225}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a9e057e602d503468672cec26321946, type: 2}
   m_IsPrefabParent: 0
@@ -2336,7 +2366,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1136945139}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -2554,7 +2584,7 @@ GameObject:
   - component: {fileID: 1166132961}
   m_Layer: 0
   m_Name: CloneHitbox3
-  m_TagString: Untagged
+  m_TagString: CloneHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2579,7 +2609,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1166132959}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -3105,7 +3135,7 @@ GameObject:
   - component: {fileID: 1407384227}
   m_Layer: 0
   m_Name: CloneHitbox4
-  m_TagString: Untagged
+  m_TagString: CloneHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3130,7 +3160,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1407384225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -3722,7 +3752,7 @@ GameObject:
   - component: {fileID: 1739241720}
   m_Layer: 0
   m_Name: CloneHitbox2
-  m_TagString: Untagged
+  m_TagString: CloneHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3747,7 +3777,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1739241718}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -3928,7 +3958,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1881324096}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -4238,7 +4268,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1959553846}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -4297,7 +4327,7 @@ GameObject:
   - component: {fileID: 1968387448}
   m_Layer: 0
   m_Name: CloneHitbox1
-  m_TagString: Untagged
+  m_TagString: CloneHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4322,7 +4352,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1968387446}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1

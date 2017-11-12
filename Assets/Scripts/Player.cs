@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
 
     // Random Shit
     public int equipped_ability = 0;
-    float hit_cooldown_timer;
+    public float hit_cooldown_timer;
     public float hit_cooldown = 10;
 	private int collectibleCount;
     
