@@ -24,7 +24,14 @@ public class Player : MonoBehaviour {
     public GameObject clone4_hitbox;
     public float speed = 1.0F;
     private float startTime;
+    public GameObject CloneSpawnCollider;
 
+    //Shield Ability Variables
+    public float shield_rotation_speed = 200;
+    public float shield_timer = 0;
+    public float shield_duration = 50;
+
+    public GameObject shield;
 
 
     // Random Shit
@@ -33,6 +40,7 @@ public class Player : MonoBehaviour {
     public float hit_cooldown = 10;
 	private int collectibleCount;
     
+
 
     // Use this for initialization
     void Start () {
@@ -63,28 +71,24 @@ public class Player : MonoBehaviour {
         {
             
 
-            if (equipped_ability >= 2)
+            if (equipped_ability == 1)
             {
-                gameObject.transform.Translate(Vector3.back/6);
-                clone_timer = 1;
-                clone1.SetActive(true);
-                clone2.SetActive(true);
-                clone3.SetActive(true);
-                clone4.SetActive(true);
-                clone1_hitbox.SetActive(true);
-                clone2_hitbox.SetActive(true);
-                clone3_hitbox.SetActive(true);
-                clone4_hitbox.SetActive(true);
-
-
-
-
+                //Collider box will grow to push the player away from walls
+                CloneSpawnCollider.SetActive(true);
+                CloneSpawnCollider.GetComponent<BoxCollider>().size = Vector3.Lerp(new Vector3(0.8f, 1.5f, 0.8f), new Vector3(4f, 1.5f, 4f), Time.deltaTime * 1000);
+                // After a short delay the clone ability is started
+                Invoke("Start_clone_ability", 0.2f);
             }
 
 
+            if (equipped_ability == 2)
+            {
+                shield_timer = 1;
+                shield.SetActive(true);
 
+
+            }
             equipped_ability = 0;
-            
         }
 
         if (clone_timer >= 1)
@@ -92,25 +96,40 @@ public class Player : MonoBehaviour {
             Clone_ability();
         }
 
+        if (shield_timer >= 1)
+        {
+            Shield_ability();
+        }
 
     }
 
-    
+    private void Start_clone_ability()
+    {
+        clone_timer = 1;
+        clone1.SetActive(true);
+        clone2.SetActive(true);
+        clone3.SetActive(true);
+        clone4.SetActive(true);
+        clone1_hitbox.SetActive(true);
+        clone2_hitbox.SetActive(true);
+        clone3_hitbox.SetActive(true);
+        clone4_hitbox.SetActive(true);
+    }
 
     private void Clone_ability()
     {
+        //Position to interpolate from
+        Vector3 original_position1 = new Vector3(transform.position.x - 0.35f, transform.position.y, transform.position.z);
+        Vector3 original_position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.35f);
+        Vector3 original_position3 = new Vector3(transform.position.x + 0.35f, transform.position.y, transform.position.z);
+        Vector3 original_position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.35f);
 
-
-        Vector3 original_position1 = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
-        Vector3 original_position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);
-        Vector3 original_position3 = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
-        Vector3 original_position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.1f);
-
-
+        //Position to interpolate to
         Vector3 position1 = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
         Vector3 position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
         Vector3 position3 = new Vector3(transform.position.x - 2, transform.position.y, transform.position.z);
         Vector3 position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
+
         // Interpolate hitboxes from center to the sides at the start of the ability cast
         if (clone_timer < 1.1f)
         {
@@ -127,26 +146,25 @@ public class Player : MonoBehaviour {
             clone2_hitbox.transform.position = position2;
             clone3_hitbox.transform.position = position3;
             clone4_hitbox.transform.position = position4;
+            CloneSpawnCollider.SetActive(false);
 
         }
 
+        // Visual clones are set to the correct position
         clone1.transform.position = position1;
         clone2.transform.position = position2;
         clone3.transform.position = position3;
         clone4.transform.position = position4;
 
+        // Visual clone rotation is matched with the player
         clone1.transform.rotation = transform.rotation;
         clone2.transform.rotation = transform.rotation;
         clone3.transform.rotation = transform.rotation;
         clone4.transform.rotation = transform.rotation;
 
-
         clone_timer += Time.deltaTime*5;
 
-        
-
-
-
+        // If the clone timer reaches 50+ the ability cast is over and everything is reset
         if (clone_timer >= 50)
         {
             clone_timer = 0;
@@ -158,16 +176,28 @@ public class Player : MonoBehaviour {
             clone2_hitbox.SetActive(false);
             clone3_hitbox.SetActive(false);
             clone4_hitbox.SetActive(false);
+        }
+    }
 
+    private void Shield_ability()
+    {
+        shield.transform.position = transform.position;
+        shield.transform.Rotate(Vector3.up * Time.deltaTime* shield_rotation_speed, Space.World);
 
-
+        shield_timer += Time.deltaTime * 5;
+        if (shield_timer >= shield_duration)
+        {
+            shield_timer = 0;
+            shield.SetActive(false);
 
         }
-
     }
 
     private void OnCollisionEnter(Collision col)
     {
+        GameObject god = GameObject.Find("TheosGott");
+        
+
         // Test for player/interactive collision and deal the correct amount of damage depening on the weight_class
         if (col.gameObject.tag == "Interactive" && 
             !col.gameObject.GetComponent<InteractiveSettings>().isCollectible && 
@@ -177,8 +207,9 @@ public class Player : MonoBehaviour {
             !col.gameObject.GetComponent<ThrowObject>().isclone)
         {
 
-
+            god.GetComponent<dnd>().ReleaseObject(); // Makes the god drop the object he's holding
             hit_cooldown_timer = hit_cooldown;
+
             if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
             {
                 currentHealth = currentHealth - 10;
@@ -229,5 +260,8 @@ public class Player : MonoBehaviour {
 
 
         }
+
+
+        
     }
 }
