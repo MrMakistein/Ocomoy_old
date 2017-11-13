@@ -24,6 +24,7 @@ public class Player : MonoBehaviour {
     public GameObject clone4_hitbox;
     public float speed = 1.0F;
     private float startTime;
+    public GameObject CloneSpawnCollider;
 
 
 
@@ -66,16 +67,11 @@ public class Player : MonoBehaviour {
 
             if (equipped_ability >= 2)
             {
-                gameObject.transform.Translate(Vector3.back/6);
-                clone_timer = 1;
-                clone1.SetActive(true);
-                clone2.SetActive(true);
-                clone3.SetActive(true);
-                clone4.SetActive(true);
-                clone1_hitbox.SetActive(true);
-                clone2_hitbox.SetActive(true);
-                clone3_hitbox.SetActive(true);
-                clone4_hitbox.SetActive(true);
+                //gameObject.transform.Translate(Vector3.back/2);
+                CloneSpawnCollider.SetActive(true);
+                CloneSpawnCollider.GetComponent<BoxCollider>().size = Vector3.Lerp(new Vector3(0.8f, 1.5f, 0.8f), new Vector3(4f, 1.5f, 4f), Time.deltaTime * 1000);
+
+                Invoke("Start_clone_ability", 0.2f);
             }
             equipped_ability = 0;
         }
@@ -87,15 +83,28 @@ public class Player : MonoBehaviour {
 
     }
 
+    private void Start_clone_ability()
+    {
+        clone_timer = 1;
+        clone1.SetActive(true);
+        clone2.SetActive(true);
+        clone3.SetActive(true);
+        clone4.SetActive(true);
+        clone1_hitbox.SetActive(true);
+        clone2_hitbox.SetActive(true);
+        clone3_hitbox.SetActive(true);
+        clone4_hitbox.SetActive(true);
+    }
+
     
 
     private void Clone_ability()
     {
         //Position to interpolate from
-        Vector3 original_position1 = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
-        Vector3 original_position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);
-        Vector3 original_position3 = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
-        Vector3 original_position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.1f);
+        Vector3 original_position1 = new Vector3(transform.position.x - 0.35f, transform.position.y, transform.position.z);
+        Vector3 original_position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.35f);
+        Vector3 original_position3 = new Vector3(transform.position.x + 0.35f, transform.position.y, transform.position.z);
+        Vector3 original_position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.35f);
 
         //Position to interpolate to
         Vector3 position1 = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
@@ -119,6 +128,7 @@ public class Player : MonoBehaviour {
             clone2_hitbox.transform.position = position2;
             clone3_hitbox.transform.position = position3;
             clone4_hitbox.transform.position = position4;
+            CloneSpawnCollider.SetActive(false);
 
         }
 
@@ -165,7 +175,6 @@ public class Player : MonoBehaviour {
             !col.gameObject.GetComponent<ThrowObject>().isclone)
         {
 
-            Debug.Log("draggin was set to false");
             god.GetComponent<dnd>().ReleaseObject();
             hit_cooldown_timer = hit_cooldown;
             if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)

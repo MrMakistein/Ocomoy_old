@@ -9,6 +9,7 @@ public class ThrowObject : MonoBehaviour {
     public float dmg_cooldown_max = 10;
     public int object_damage = 4;
     public bool isclone = false;
+    Vector3 finalDirection;
 
     public GameObject clone1;
     public GameObject clone2;
@@ -52,45 +53,46 @@ public class ThrowObject : MonoBehaviour {
     {
         GameObject player = GameObject.Find("Player");
         GameObject god = GameObject.Find("TheosGott");
-        Vector3 deflectDirection = new Vector3(0, 10, 0);
-
-        if (other.name == "CloneHitbox1Trigger" && player.GetComponent<Player>().hit_cooldown_timer <= 0)
+  
+        if (player.GetComponent<Player>().hit_cooldown_timer <= 0 && dmg_cooldown >= 1 && 
+            (other.name == "CloneHitbox1Trigger" || other.name == "CloneHitbox2Trigger" || other.name == "CloneHitbox3Trigger" || other.name == "CloneHitbox4Trigger"))
         {
-            Invoke("KillClone1", 0.2f);
             isclone = true;
             player.GetComponent<Player>().hit_cooldown_timer = player.GetComponent<Player>().hit_cooldown;
             god.GetComponent<dnd>().ReleaseObject();
-            print(transform.forward);
-            print(deflectDirection);
-            print(transform.forward + deflectDirection);
-            this.GetComponent<Rigidbody>().velocity = (transform.forward * 4) + deflectDirection;
-        }
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            Invoke("GiveMotion", 0.02f);
 
-            if (other.name == "CloneHitbox2Trigger" && player.GetComponent<Player>().hit_cooldown_timer <= 0)
-        {
-            Invoke("KillClone2", 0.2f);
-            isclone = true;
-            player.GetComponent<Player>().hit_cooldown_timer = player.GetComponent<Player>().hit_cooldown;
-            god.GetComponent<dnd>().ReleaseObject();
-        }
 
-            if (other.name == "CloneHitbox3Trigger" && player.GetComponent<Player>().hit_cooldown_timer <= 0)
-        {
-            Invoke("KillClone3", 0.2f);
-            isclone = true;
-            player.GetComponent<Player>().hit_cooldown_timer = player.GetComponent<Player>().hit_cooldown;
-            god.GetComponent<dnd>().ReleaseObject();
-        }
+            if (other.name == "CloneHitbox1Trigger")
+            {
+                Invoke("KillClone1", 0.01f);
+            }
 
-            if (other.name == "CloneHitbox4Trigger" && player.GetComponent<Player>().hit_cooldown_timer <= 0)
-        {
-            Invoke("KillClone4", 0.2f);
-            isclone = true;
-            player.GetComponent<Player>().hit_cooldown_timer = player.GetComponent<Player>().hit_cooldown;
-            god.GetComponent<dnd>().ReleaseObject();
+            if (other.name == "CloneHitbox2Trigger")
+            {
+                Invoke("KillClone2", 0.01f);
+            }
+
+            if (other.name == "CloneHitbox3Trigger")
+            {
+                Invoke("KillClone3", 0.01f);
+            }
+
+            if (other.name == "CloneHitbox4Trigger")
+            {
+                Invoke("KillClone4", 0.01f);
+            }
+
         }
+           
 
     }
+    void GiveMotion()
+    {
+        this.GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-10.0F, 10.0F), Random.Range(8.0F, 12.0F), Random.Range(-10.0F, 10.0F));
+    }
+   
 
     void KillClone1()
     {
