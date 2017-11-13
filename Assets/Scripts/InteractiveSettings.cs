@@ -17,11 +17,13 @@ public class InteractiveSettings : MonoBehaviour
         //isCollectible = false;
 
 		if (!isCollectible) {
-			GetComponent<Rigidbody> ().isKinematic = false; //disable kinematics -> can be grabbed
 			GetComponent<Renderer> ().material = normalMaterial;
-			GetComponent<Collider> ().isTrigger = false;
+			
 		}
-	}
+
+        GetComponent<Rigidbody>().isKinematic = false; //disable kinematics -> can be grabbed
+        GetComponent<Collider>().isTrigger = false;
+    }
 
     //entweder: ausgehen von boolean isCollectible
     //oder: extra Methode ausführen von SpawnController aus! Der spawnt die Collectibles und ändert die Settings!

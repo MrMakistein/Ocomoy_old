@@ -26,6 +26,12 @@ public class Player : MonoBehaviour {
     private float startTime;
     public GameObject CloneSpawnCollider;
 
+    //Shield Ability Variables
+    public float shield_rotation_speed = 200;
+    public float shield_timer = 0;
+    public float shield_duration = 50;
+
+    public GameObject shield;
 
 
     // Random Shit
@@ -65,13 +71,22 @@ public class Player : MonoBehaviour {
         {
             
 
-            if (equipped_ability >= 2)
+            if (equipped_ability == 1)
             {
-                //gameObject.transform.Translate(Vector3.back/2);
+                //Collider box will grow to push the player away from walls
                 CloneSpawnCollider.SetActive(true);
                 CloneSpawnCollider.GetComponent<BoxCollider>().size = Vector3.Lerp(new Vector3(0.8f, 1.5f, 0.8f), new Vector3(4f, 1.5f, 4f), Time.deltaTime * 1000);
-
+                // After a short delay the clone ability is started
                 Invoke("Start_clone_ability", 0.2f);
+            }
+
+
+            if (equipped_ability == 2)
+            {
+                shield_timer = 1;
+                shield.SetActive(true);
+
+
             }
             equipped_ability = 0;
         }
@@ -79,6 +94,11 @@ public class Player : MonoBehaviour {
         if (clone_timer >= 1)
         {
             Clone_ability();
+        }
+
+        if (shield_timer >= 1)
+        {
+            Shield_ability();
         }
 
     }
@@ -95,8 +115,6 @@ public class Player : MonoBehaviour {
         clone3_hitbox.SetActive(true);
         clone4_hitbox.SetActive(true);
     }
-
-    
 
     private void Clone_ability()
     {
@@ -146,6 +164,7 @@ public class Player : MonoBehaviour {
 
         clone_timer += Time.deltaTime*5;
 
+        // If the clone timer reaches 50+ the ability cast is over and everything is reset
         if (clone_timer >= 50)
         {
             clone_timer = 0;
@@ -160,11 +179,24 @@ public class Player : MonoBehaviour {
         }
     }
 
+    private void Shield_ability()
+    {
+        shield.transform.position = transform.position;
+        shield.transform.Rotate(Vector3.up * Time.deltaTime* shield_rotation_speed, Space.World);
+
+        shield_timer += Time.deltaTime * 5;
+        if (shield_timer >= shield_duration)
+        {
+            shield_timer = 0;
+            shield.SetActive(false);
+
+        }
+    }
+
     private void OnCollisionEnter(Collision col)
     {
         GameObject god = GameObject.Find("TheosGott");
         
-
 
         // Test for player/interactive collision and deal the correct amount of damage depening on the weight_class
         if (col.gameObject.tag == "Interactive" && 
@@ -175,8 +207,9 @@ public class Player : MonoBehaviour {
             !col.gameObject.GetComponent<ThrowObject>().isclone)
         {
 
-            god.GetComponent<dnd>().ReleaseObject();
+            god.GetComponent<dnd>().ReleaseObject(); // Makes the god drop the object he's holding
             hit_cooldown_timer = hit_cooldown;
+
             if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
             {
                 currentHealth = currentHealth - 10;
@@ -227,5 +260,8 @@ public class Player : MonoBehaviour {
 
 
         }
+
+
+        
     }
 }
