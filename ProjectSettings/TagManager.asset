@@ -8,6 +8,7 @@ TagManager:
   - Shrine
   - Clone
   - CloneHitbox
+  - Area
   layers:
   - Default
   - TransparentFX
