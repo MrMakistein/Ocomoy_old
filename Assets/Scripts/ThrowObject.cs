@@ -50,28 +50,44 @@ public class ThrowObject : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-            if (other.name == "CloneHitbox1Trigger")
-            {
+        GameObject player = GameObject.Find("Player");
+        GameObject god = GameObject.Find("TheosGott");
+        Vector3 deflectDirection = new Vector3(0, 10, 0);
+
+        if (other.name == "CloneHitbox1Trigger" && player.GetComponent<Player>().hit_cooldown_timer <= 0)
+        {
             Invoke("KillClone1", 0.2f);
             isclone = true;
+            player.GetComponent<Player>().hit_cooldown_timer = player.GetComponent<Player>().hit_cooldown;
+            god.GetComponent<dnd>().ReleaseObject();
+            print(transform.forward);
+            print(deflectDirection);
+            print(transform.forward + deflectDirection);
+            this.GetComponent<Rigidbody>().velocity = (transform.forward * 4) + deflectDirection;
         }
 
-            if (other.name == "CloneHitbox2Trigger")
-            {
+            if (other.name == "CloneHitbox2Trigger" && player.GetComponent<Player>().hit_cooldown_timer <= 0)
+        {
             Invoke("KillClone2", 0.2f);
             isclone = true;
+            player.GetComponent<Player>().hit_cooldown_timer = player.GetComponent<Player>().hit_cooldown;
+            god.GetComponent<dnd>().ReleaseObject();
         }
 
-            if (other.name == "CloneHitbox3Trigger")
-            {
+            if (other.name == "CloneHitbox3Trigger" && player.GetComponent<Player>().hit_cooldown_timer <= 0)
+        {
             Invoke("KillClone3", 0.2f);
             isclone = true;
+            player.GetComponent<Player>().hit_cooldown_timer = player.GetComponent<Player>().hit_cooldown;
+            god.GetComponent<dnd>().ReleaseObject();
         }
 
-            if (other.name == "CloneHitbox4Trigger")
-            {
+            if (other.name == "CloneHitbox4Trigger" && player.GetComponent<Player>().hit_cooldown_timer <= 0)
+        {
             Invoke("KillClone4", 0.2f);
             isclone = true;
+            player.GetComponent<Player>().hit_cooldown_timer = player.GetComponent<Player>().hit_cooldown;
+            god.GetComponent<dnd>().ReleaseObject();
         }
 
     }

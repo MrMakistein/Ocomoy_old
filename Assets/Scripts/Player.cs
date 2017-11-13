@@ -34,6 +34,7 @@ public class Player : MonoBehaviour {
 	private int collectibleCount;
     
 
+
     // Use this for initialization
     void Start () {
 		collectibleCount = 0;
@@ -75,16 +76,8 @@ public class Player : MonoBehaviour {
                 clone2_hitbox.SetActive(true);
                 clone3_hitbox.SetActive(true);
                 clone4_hitbox.SetActive(true);
-
-
-
-
             }
-
-
-
             equipped_ability = 0;
-            
         }
 
         if (clone_timer >= 1)
@@ -92,25 +85,24 @@ public class Player : MonoBehaviour {
             Clone_ability();
         }
 
-
     }
 
     
 
     private void Clone_ability()
     {
-
-
+        //Position to interpolate from
         Vector3 original_position1 = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
         Vector3 original_position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);
         Vector3 original_position3 = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
         Vector3 original_position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.1f);
 
-
+        //Position to interpolate to
         Vector3 position1 = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
         Vector3 position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
         Vector3 position3 = new Vector3(transform.position.x - 2, transform.position.y, transform.position.z);
         Vector3 position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
+
         // Interpolate hitboxes from center to the sides at the start of the ability cast
         if (clone_timer < 1.1f)
         {
@@ -130,22 +122,19 @@ public class Player : MonoBehaviour {
 
         }
 
+        // Visual clones are set to the correct position
         clone1.transform.position = position1;
         clone2.transform.position = position2;
         clone3.transform.position = position3;
         clone4.transform.position = position4;
 
+        // Visual clone rotation is matched with the player
         clone1.transform.rotation = transform.rotation;
         clone2.transform.rotation = transform.rotation;
         clone3.transform.rotation = transform.rotation;
         clone4.transform.rotation = transform.rotation;
 
-
         clone_timer += Time.deltaTime*5;
-
-        
-
-
 
         if (clone_timer >= 50)
         {
@@ -158,16 +147,15 @@ public class Player : MonoBehaviour {
             clone2_hitbox.SetActive(false);
             clone3_hitbox.SetActive(false);
             clone4_hitbox.SetActive(false);
-
-
-
-
         }
-
     }
 
     private void OnCollisionEnter(Collision col)
     {
+        GameObject god = GameObject.Find("TheosGott");
+        
+
+
         // Test for player/interactive collision and deal the correct amount of damage depening on the weight_class
         if (col.gameObject.tag == "Interactive" && 
             !col.gameObject.GetComponent<InteractiveSettings>().isCollectible && 
@@ -177,7 +165,8 @@ public class Player : MonoBehaviour {
             !col.gameObject.GetComponent<ThrowObject>().isclone)
         {
 
-
+            Debug.Log("draggin was set to false");
+            god.GetComponent<dnd>().ReleaseObject();
             hit_cooldown_timer = hit_cooldown;
             if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
             {
