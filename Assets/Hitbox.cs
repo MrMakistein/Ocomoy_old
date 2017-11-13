@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShrineSpawner : MonoBehaviour {
-	private List<Shrine> shrines; 
+public class Hitbox : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 		

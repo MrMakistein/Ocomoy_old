@@ -26,12 +26,13 @@ public class Movement : MonoBehaviour {
             }
         }
 
-        if (!move_block)
+        if (!move_block && this.GetComponent<Dash>().dashTimer <= 0)
         {
             // Moves the player forward if WAS or D is pressed
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
-                transform.Translate(mSpeed * Vector3.forward * Time.deltaTime);
+     
+                gameObject.GetComponent<Rigidbody>().velocity = transform.forward * mSpeed;
             }
 
             // Rotates the player into the correct direction
@@ -41,5 +42,7 @@ public class Movement : MonoBehaviour {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15F);
             }
         }
+        
+
     }
 }
