@@ -32,6 +32,7 @@ public class Player : MonoBehaviour {
     public float shield_duration = 50;
 
     public GameObject shield;
+    
 
 
     // Random Shit
@@ -53,6 +54,13 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        // Closest Signpost
+
+
+
+
+
         //Hit Cooldown Timer
         if (hit_cooldown_timer > 0)
         {
@@ -67,10 +75,10 @@ public class Player : MonoBehaviour {
         }
 
         // Ability Activation
-        if (Input.GetKeyDown("space") && equipped_ability >= 2 && !gameObject.GetComponent<Movement>().move_block)
+        if (Input.GetKeyDown("space") && !gameObject.GetComponent<Movement>().move_block)
         {
-            
 
+  
             if (equipped_ability == 1)
             {
                 //Collider box will grow to push the player away from walls
