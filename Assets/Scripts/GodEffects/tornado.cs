@@ -14,7 +14,7 @@ public class tornado : MonoBehaviour {
     //The time the tronado turns to one direction.
     public float rotationTime = 1;
     public float rotationSpeed = 80;
-    public float TimeAlive = 5;
+    public float TimeAlive = 7;
     private float rotationTimer = 0;
     private float rotation;
     //-1 = left, 0 = NULL, 1 = right
@@ -24,13 +24,11 @@ public class tornado : MonoBehaviour {
     private Vector3 tempVector;
     Collider[] colliders;
 
-    GameObject tornadoObj = null;
-
     // Use this for initialization
     void Start()
     {
-        tornadoObj = GameObject.Find("Tornado");
         rotation = Random.Range(0, 360);
+        Destroy(this.gameObject, TimeAlive);
     }
     void OnDrawGizmos()
     {
@@ -83,8 +81,8 @@ public class tornado : MonoBehaviour {
         rotation += rotationDir * rotationSpeed * Time.deltaTime;
 
         //move the tornado
-        transform.eulerAngles = new Vector3(0,rotation,0);
-        tornadoObj.transform.position += transform.forward * Time.deltaTime * speed;
+        this.gameObject.transform.eulerAngles = new Vector3(0,rotation,0);
+        this.gameObject.transform.position += transform.forward * Time.deltaTime * speed;
     }
 }
 

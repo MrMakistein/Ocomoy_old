@@ -37,8 +37,10 @@ public class dnd : MonoBehaviour
     public float HeightOffsetFor4 = 1f;
     public float mouseVectorMultiplier = 10f;
     public float upwardVelocityThreshhold = 1f;
-   
 
+    //needed to update the draggingobject when moving the camera
+    private Vector3 oldCameraPosition;
+    private Vector3 cameraDifference;
 
     public static GameObject draggingObject;
     Rigidbody DrObj;
@@ -47,6 +49,7 @@ public class dnd : MonoBehaviour
     void Start()
     {
         currentCamera = Camera.main;
+        oldCameraPosition = currentCamera.transform.position;
         mask = 1 << LayerMask.NameToLayer("is Ground");
         //Every screen dependent variable has to be scaled to fit any resolution
         initialDropDistance = PersonalMath.ScreenSizeCompensation(initialDropDistance);
@@ -92,6 +95,9 @@ public class dnd : MonoBehaviour
                     DrObj.velocity = pickUpSpeed * ((MouseVector - DrObj.transform.position).normalized) * Vector3.Distance(MouseVector, DrObj.transform.position);
                 }
 
+                //Update Position for camera movement
+                cameraDifference = currentCamera.transform.position - oldCameraPosition;
+                DrObj.transform.position += cameraDifference;
             }
         }
 
@@ -125,6 +131,9 @@ public class dnd : MonoBehaviour
             buttonReleased = true;
         }
 
+
+        oldCameraPosition = currentCamera.transform.position;
+
     }
 
     private GameObject GetObjectFromMouseRaycast()
@@ -136,14 +145,10 @@ public class dnd : MonoBehaviour
         {
             if (hitInfo.collider.gameObject.GetComponent<Rigidbody>() &&
                 Vector3.Distance(hitInfo.collider.gameObject.transform.position, currentCamera.transform.position) <= catchingDistance &&
-                !hitInfo.collider.gameObject.GetComponent<Rigidbody>().isKinematic)
+                (hitInfo.collider.gameObject.tag == "Interactive" || hitInfo.collider.gameObject.tag == "GodObject"))
             {
                 gmObj = hitInfo.collider.gameObject;
             }
-        }
-        if (gmObj != null && gmObj.tag != "Interactive")
-        {
-            gmObj = null;
         }
 
         //Assign the correct weightclass

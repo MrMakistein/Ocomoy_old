@@ -59,3 +59,4 @@ MonoBehaviour:
   speed: 2
   rotationTime: 1
   rotationSpeed: 80
+  TimeAlive: 7
