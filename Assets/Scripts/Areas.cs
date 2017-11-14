@@ -5,7 +5,6 @@ using UnityEngine;
 public class Areas : MonoBehaviour {
 	private List<GameObject> areaInteractives; //all interactives within the area object
 	private static int numberOfAreaObjects = 0; //for unique area id
-	public string name;
 	public bool isWinZone = false;
 
 	// Use this for initialization
@@ -24,11 +23,11 @@ public class Areas : MonoBehaviour {
 		if(other.gameObject.CompareTag("Interactive")){ //is it an interactive?
 			if (!this.areaInteractives.Contains(other.gameObject)) { //if not already inside list:
 				this.areaInteractives.Add (other.gameObject); //add!
-				print(name + ": interactive added"); //TESTING
+				//print(name + ": interactive added"); //TESTING
 			}
 		}
 
-		print (name +": TriggerEnter Executed!"); //TESTING
+		//print (name +": TriggerEnter Executed!"); //TESTING
 	} //end onTriggerEnter
 
 	public void setWinZone(){ //for Player spawn and end goal
