@@ -54,6 +54,9 @@ public class SpawnController : MonoBehaviour {
         foreach (GameObject go in signposts)
         {
             go.GetComponent<Signpost>().FindWinShrine();
+            go.GetComponent<Signpost>().GetCollectiblesArray();
+            go.GetComponent<Signpost>().UpdateSignpostDetection();
+
         }
 
 

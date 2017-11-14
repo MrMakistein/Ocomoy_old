@@ -9,7 +9,7 @@ public class Signpost : MonoBehaviour {
     private Transform target;
     private GameObject[] shrines;
     private GameObject finalDestination;
-    private float angle;
+    public float angle;
     private float wiggle_angle;
     [HideInInspector] public bool collectibleMoving;
     public float wiggleSmooth = 0.2f;           // How smooth the signposts rotation will be smoothed. lower smooth -> rotates slower
