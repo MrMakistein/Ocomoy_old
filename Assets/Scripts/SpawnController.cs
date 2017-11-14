@@ -7,7 +7,8 @@ public class SpawnController : MonoBehaviour {
     //PUBLIC CONSTS & VARIABLES
 	public const int numberOfCollectibles = 3; //constant for number of objects to be searched
     public int[] zoneLayerNumbers; //array, numbers of the layers with the zones --> without win zone
-	public GameObject[] collectibles;
+	public static GameObject[] collectibles;
+	public static List<GameObject> spawnAreaObjects;
 	public GameObject[] areas; //areas in which collectibles spawn (1 per area)
 
     //PRIVATE VARIABLES
@@ -15,8 +16,10 @@ public class SpawnController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        SpawnShrines();
-        //DetermineCollectibles();
+		DetermineAreas ();
+		SpawnShrines(); //TODO: make Shrine Spawn dependant on WinZone? --> Player Spawn Point is within WinZone
+		Invoke("DetermineCollectibles", 2); //ADJUST: je mehr Zonen/Collectibles desto mehr Zeit lassen bis Execution: Arrays in Areas müssen mit onTriggerEnter erst befüllt werden
+		//DetermineCollectibles();
     }
 	
 	// Update is called once per frame
@@ -24,30 +27,35 @@ public class SpawnController : MonoBehaviour {
 		
 	}
 
-	public void DetermineCollectibles(){
-        //interactives = GameObject.FindGameObjectsWithTag("Interactive"); //get all Interactives
-		List<GameObject> areaObjects = GameObject.FindGameObjectsWithTag("Area");
+	public void DetermineAreas(){
+		spawnAreaObjects = new List<GameObject> (GameObject.FindGameObjectsWithTag("Area"));
+		print ("Number of Areas: " + spawnAreaObjects.Count.ToString());
 
 		//choose a random area as the winzone and exclude it from collectible spawn
 		var rnd1 = new System.Random();
-		int winZoneIndex = rnd1.Next (0, (areaObjects.Count) - 1); 
-		GameObject winZone = areaObjects[winZoneIndex];
-		winZone.GetComponent<Areas> ().setWinZone ();
-		areaObjects.Remove (winZone);
+		int winZoneIndex = rnd1.Next (0, (spawnAreaObjects.Count) - 1);
+		print ("random MAX for spawn areas: " + (spawnAreaObjects.Count - 1).ToString()); //TESTING
+		GameObject winZone = spawnAreaObjects[winZoneIndex];
+		winZone.GetComponent<Areas> ().setWinZone (); //set as winzone
+		spawnAreaObjects.Remove (winZone); //exclude from SpawnaAreas
 
-		//GameObject[] areas = GameObject.FindGameObjectsWithTag("Area"); //get areas
-		List<GameObject> chosenCollectibles; //List for all collectibles
-		//for (int i = 0; i < interactives.Length; i++) {
-		//foreach(int a in areaObjects) {
-		for (int a = 0; a < areaObjects.Count; a++){
+		print ("Number of Areas without Winzone: " + spawnAreaObjects.Count.ToString()); //TESTING
+	}
+
+	public void DetermineCollectibles() {
+		List<GameObject> chosenCollectibles = new List<GameObject>(); //List for all collectibles
+
+		//ITERATE OVER REMAINING ZONES
+		for (int a = 0; a < spawnAreaObjects.Count; a++){
 			
-			//TODO: get interactives in zone array from Zone itself!
-			GameObject zone = areaObjects[a];
-			List<GameObject> interactivesInZone = zone.GetComponent<Areas> ().getAreaInteractives;
+			GameObject zone = spawnAreaObjects[a];
+			List<GameObject> interactivesInZone = zone.GetComponent<Areas>().getAreaInteractives();
+
+			Debug.Log ("Number of Interactives in # "+zone.GetComponent<Areas>().name +" # : " +interactivesInZone.Count); //TESTING
 		
 			//choose one of the interactives in the zone randomly
 			var rnd2 = new System.Random ();
-			int n = numberOfCollectibles;
+			/*int n = numberOfCollectibles;
 			for (int i = 0; n > 0; ++i) {
 				int r = rnd2.Next (0, interactivesInZone.Count - i);
 				if (r < n) {
@@ -55,31 +63,24 @@ public class SpawnController : MonoBehaviour {
 					n--;
 				}
 			} //end set random collectible 
-				
-			//then destroy the zone! (isn't needed anymore)
-			zone.Destroy(); //TODO: check if it works
+			*/
+
+			//CHOOSE A RANDOM INTERACTIVE IN THE ZONE TO SET AS COLLECTIBLE
+			int r = rnd2.Next (0, interactivesInZone.Count - 1); 
+			interactivesInZone[r].GetComponent<InteractiveSettings> ().SetCollectible ();
+
+			//ADD IT TO THE COLLECTIBLE LIST
+			chosenCollectibles.Add(interactivesInZone [r].GetComponent<GameObject>()); //add the game object to the collectibles List
+
+			Destroy(zone); //then destroy the zone! (isn't needed anymore)
 		}
-
-
-        ///GET RANDOM GAME OBJECTS FROM THE INTERACTIVES ARRAY
-        /*var rnd2 = new System.Random();
-        var chosenCollectibles = new List<GameObject>(); //create empty list for the chosen objects
-        int k = numberOfCollectibles;
-        for (int i = 0; k > 0; ++i)
-        {
-            int r = rnd2.Next(0, (interactives.Length)-i);
-            if(r < k)
-            {
-                chosenCollectibles.Add(interactives[i]);
-                k--;
-            }
-        }*/
+			
         collectibles = chosenCollectibles.ToArray(); //to array cuz what r lists
-        //print("Number of collectibles: " +collectibles.Length);
-        for (int i = 0; i < collectibles.Length; i++)
+        /*for (int i = 0; i < collectibles.Length; i++)
         {
-            collectibles[i].GetComponent<InteractiveSettings>().SetCollectible(); //set every item in the list as collectible
+            collectibles[i].gameObject.GetComponent<InteractiveSettings>().SetCollectible(); //set every item in the list as collectible
         }
+        */
 
     }
 
