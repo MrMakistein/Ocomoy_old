@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4350259638863472}
   - component: {fileID: 33308697012714960}
   - component: {fileID: 23853600623192484}
-  - component: {fileID: 114982761940163946}
+  - component: {fileID: 114443703847956278}
   - component: {fileID: 136946942172521070}
   m_Layer: 0
   m_Name: Clone
@@ -156,7 +156,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1927385516458888}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114982761940163946
+--- !u!114 &114443703847956278
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -164,12 +164,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1927385516458888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1e3856b525720c4e8ac81e37688c692, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f3b6309e9418464d82a7fe8d30b52b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 0
   offset: 2
   speed: 10
+  expandTime: 2
 --- !u!136 &136946942172521070
 CapsuleCollider:
   m_ObjectHideFlags: 1

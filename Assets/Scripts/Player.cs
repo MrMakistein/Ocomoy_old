@@ -188,7 +188,7 @@ public class Player : MonoBehaviour {
             clone4_hitbox.SetActive(false);
         }
     }
-
+    
     private void Shield_ability()
     {
         shield.transform.position = transform.position;
@@ -206,8 +206,6 @@ public class Player : MonoBehaviour {
     private void OnCollisionEnter(Collision col)
     {
         GameObject god = GameObject.Find("TheosGott");
-        
-
         // Test for player/interactive collision and deal the correct amount of damage depening on the weight_class
         if (col.gameObject.tag == "Interactive" && 
             !col.gameObject.GetComponent<InteractiveSettings>().isCollectible && 
@@ -282,9 +280,6 @@ public class Player : MonoBehaviour {
             equipped_ability = col.gameObject.GetComponent<Shrine>().shrine_id;
 
 
-        }
-
-
-        
+        }        
     }
 }
