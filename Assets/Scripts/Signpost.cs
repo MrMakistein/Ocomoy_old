@@ -9,26 +9,77 @@ public class Signpost : MonoBehaviour {
 
     public Transform target;
     public float angle;
-    public float angleOpt;
+    public float wiggle_angle;
+    public bool collectibleMoving;
+    public float wiggleSmooth = 0.2f;
+    public float wiggleFrequency = 4.0f;
+    public float wiggle_strength = 40;
+    public float final_angle;
+    public float current_angle;
+
+
 
     // Use this for initialization
     void Start () {
-        Invoke("GetCollectiblesArray", 0.1f);
         collectibles = null;
+        InvokeRepeating("SetNewWiggleRotation", 0.0f, wiggleFrequency);
 
     }
 
-    float Angle360(Vector3 from, Vector3 to, Vector3 right)
+    public void SetNewWiggleRotation()
     {
-        float angle = Vector3.Angle(from, to);
-        return (Vector3.Angle(right, to) > 90f) ? 360f - angle : angle;
+        wiggle_angle = Random.Range((angle - wiggle_strength), (angle + wiggle_strength));
+
     }
+
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
+        float yVelocity = 0.0F;
+        final_angle = Mathf.SmoothDamp(final_angle, wiggle_angle, ref yVelocity, wiggleSmooth);
 
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.down);
+        current_angle = final_angle;
 
+        if (current_angle > 360.0F)
+        {
+            current_angle -= 360;
+        }
+        if (current_angle < 0.0F)
+        {
+            current_angle += 360;
+        }
+        //transform.rotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(current_angle, Vector3.down), Time.time);
+        //transform.rotation.y = final_angle;  
+        // Quaternion.AngleAxis(angle, Vector3.down);
+        //transform.rotation = Quaternion.Euler(new Vector3(0, 185, 0));
+
+
+
+
+        // Sets collectible moving to true if an active collectible is being moved.
+        collectibleMoving = false;
+        GetCollectiblesArray();
+
+        foreach (GameObject g in collectibles)
+        {
+            Rigidbody rb = g.GetComponent<Rigidbody>();
+            if (rb.velocity != Vector3.zero && g.activeSelf)
+            {
+                collectibleMoving = true;
+            }
+
+        }
+        // Signpost Rotation is only updated when a collectible is moving.
+        if (collectibleMoving)
+        {
+            UpdateSignpostDetection();
+        }
+    }
+
+    public void UpdateSignpostDetection() // Updates the all fenceposts to face toward the closest collectible
+    {
+       
 
         if (collectibles != null)
         {
@@ -46,52 +97,13 @@ public class Signpost : MonoBehaviour {
         Vector3 toOther = (myPos - targetPos).normalized;
 
         angle = Mathf.Atan2(toOther.z, toOther.x) * Mathf.Rad2Deg + 180;
-        angleOpt = Atan2Approximation(toOther.z, toOther.x) * Mathf.Rad2Deg + 180;
-
-        Debug.DrawLine(myPos, targetPos, Color.yellow);
-
-
-
-
-        if (Input.GetKeyDown("j"))
-        {
-            Vector3 to = transform.position - GetClosestCollectible().transform.position;
-            Vector3 from = new Vector3(0, 0, 1);
-            print("Player Position Vector: " + transform.position);
-            print("Collectible Position Vector: " + GetClosestCollectible().transform.position);
-            print("Vector between: " + (transform.position - GetClosestCollectible().transform.position));
-            print("Vector from" + from);
-            float angle = Vector3.Angle(transform.forward, (transform.position - GetClosestCollectible().transform.position));
-            //print(angle);
-            print(Quaternion.FromToRotation(Vector3.up, to - from).eulerAngles.z);
-        }
-
-        //Vector3 targetDir = GetClosestCollectible().transform.position - transform.position;
-
-        /*
-        Vector3 targetDir = GetClosestCollectible().transform.position - transform.position;
-        float step = 5 * Time.deltaTime;
-        Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
-        Debug.DrawRay(transform.position, newDir, Color.red);
-        transform.rotation = Quaternion.LookRotation(newDir); */
-        //print(GetClosestCollectible().gameObject.name);
-        // print("Signpost Vector: " + transform.position);
-        //print("Collectible Vector: " + (transform.position + GetClosestCollectible().transform.position));
-
-        //Vector3 collectibleVector = transform.position + GetClosestCollectible().transform.position;
-        //float angle = Vector3.Angle(transform.forward, GetClosestCollectible().transform.position);
-        //print(angle);
-
-
-
-
 
 
     }
 
-    float Atan2Approximation(float y, float x) // http://http.developer.nvidia.com/Cg/atan2.html
+    float Atan2Approximation(float y, float x)
     {
-        float t0, t1, t2, t3, t4;
+        float t0, t1, t3, t4;
         t3 = Mathf.Abs(x);
         t1 = Mathf.Abs(y);
         t0 = Mathf.Max(t3, t1);
@@ -113,7 +125,7 @@ public class Signpost : MonoBehaviour {
     }
 
 
-    void GetCollectiblesArray()
+    public void GetCollectiblesArray()
     {
         arena = GameObject.Find("Arena");
         collectibles = arena.GetComponent<SpawnController>().collectibles;
@@ -128,12 +140,18 @@ public class Signpost : MonoBehaviour {
         foreach (GameObject g in collectibles)
         {
             float dist = Vector3.Distance(g.transform.position, currentPos);
-            if (dist < minDist)
+            if (dist < minDist && g.gameObject.activeSelf)
             {
+                print(g.name);
                 gMin = g;
                 minDist = dist;
             }
         }
         return gMin;
+    }
+
+    public void InitializeSignpostRotation()
+    {
+        UpdateSignpostDetection();
     }
 }

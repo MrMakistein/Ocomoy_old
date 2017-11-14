@@ -50,6 +50,14 @@ public class SpawnController : MonoBehaviour {
             collectibles[i].GetComponent<InteractiveSettings>().SetCollectible(); //set every item in the list as collectible
         }
 
+        GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
+        foreach (GameObject go in signposts)
+        {
+            go.GetComponent<Signpost>().GetCollectiblesArray();
+            go.GetComponent<Signpost>().UpdateSignpostDetection();
+        }
+
+
     }
 
     private void SpawnShrines()

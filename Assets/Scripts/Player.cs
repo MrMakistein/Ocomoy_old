@@ -249,12 +249,19 @@ public class Player : MonoBehaviour {
                 Destroy(col.gameObject);
             }
 				
-		} else if(col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<InteractiveSettings>().isCollectible){
-			col.gameObject.SetActive (false); //collect/destroy uppon hitting
-			Color[] colors = {Color.red, Color.magenta, Color.cyan, Color.green, Color.gray}; //for testing!
+		} else if(col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<InteractiveSettings>().isCollectible && col.gameObject.activeSelf){
+			col.gameObject.SetActive (false);
+
+            Color[] colors = {Color.red, Color.magenta, Color.cyan, Color.green, Color.gray}; //for testing!
 			GetComponent<Renderer>().material.color = colors[collectibleCount]; //for testing
 
-			collectibleCount++;
+            GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
+            foreach (GameObject go in signposts)
+            {
+                go.GetComponent<Signpost>().UpdateSignpostDetection();
+            }
+
+            collectibleCount++;
 		}
     }
 
