@@ -4,27 +4,29 @@ using UnityEngine;
 
 public class Signpost : MonoBehaviour {
 
-    public GameObject[] collectibles;
+    [HideInInspector] public GameObject[] collectibles;
     private GameObject arena;
-
-    public Transform target;
-    public float angle;
-    public float wiggle_angle;
-    public bool collectibleMoving;
-    public float wiggleSmooth = 0.2f;
-    public float wiggleFrequency = 4.0f;
-    public float wiggle_strength = 40;
-    public float final_angle;
-    public float current_angle;
+    private Transform target;
+    private GameObject[] shrines;
+    private GameObject finalDestination;
+    private float angle;
+    private float wiggle_angle;
+    [HideInInspector] public bool collectibleMoving;
+    public float wiggleSmooth = 0.2f;           // How smooth the signposts rotation will be smoothed. lower smooth -> rotates slower
+    public float wiggleFrequency = 10.0f;       // How often the signpost will change direction. lower frequency -> faster wiggle
+    public float wiggleFrequencyRange = 5.0f;   // how much the frequency fluctuates.
+    float wiggleTimer = 2;
+    public float wiggle_strength = 40;  // How many degrees the signpost will fluctuate
+ 
 
 
 
     // Use this for initialization
     void Start () {
+        arena = GameObject.Find("Arena");
         collectibles = null;
-        InvokeRepeating("SetNewWiggleRotation", 0.0f, wiggleFrequency);
-
     }
+
 
     public void SetNewWiggleRotation()
     {
@@ -33,30 +35,35 @@ public class Signpost : MonoBehaviour {
     }
 
 
+    public void FindWinShrine()
+    {
+        shrines = GameObject.FindGameObjectsWithTag("Shrine");
+        foreach (GameObject shrine in shrines)
+        {
+            if (shrine.GetComponent<Shrine>().shrine_id == 1)
+            {
+                finalDestination = shrine;
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        float yVelocity = 0.0F;
-        final_angle = Mathf.SmoothDamp(final_angle, wiggle_angle, ref yVelocity, wiggleSmooth);
-
-        current_angle = final_angle;
-
-        if (current_angle > 360.0F)
+      if (wiggleTimer > 0)
         {
-            current_angle -= 360;
+            wiggleTimer -= Time.deltaTime * 2f;
         }
-        if (current_angle < 0.0F)
+      if (wiggleTimer <= 0)
         {
-            current_angle += 360;
+            wiggleTimer = Random.Range((wiggleFrequency - wiggleFrequencyRange), (wiggleFrequency + wiggleFrequencyRange));
+            SetNewWiggleRotation();
         }
-        //transform.rotation = Quaternion.Lerp(transform.localRotation, Quaternion.AngleAxis(current_angle, Vector3.down), Time.time);
-        //transform.rotation.y = final_angle;  
-        // Quaternion.AngleAxis(angle, Vector3.down);
-        //transform.rotation = Quaternion.Euler(new Vector3(0, 185, 0));
 
 
+        transform.rotation = Quaternion.SlerpUnclamped(transform.rotation, Quaternion.Euler(0, 360-wiggle_angle, 0), wiggleSmooth/100);
 
-
+        
         // Sets collectible moving to true if an active collectible is being moved.
         collectibleMoving = false;
         GetCollectiblesArray();
@@ -79,10 +86,10 @@ public class Signpost : MonoBehaviour {
 
     public void UpdateSignpostDetection() // Updates the all fenceposts to face toward the closest collectible
     {
-       
 
-        if (collectibles != null)
-        {
+        if (arena.GetComponent<SpawnController>().allCollected) {
+            target = finalDestination.transform;
+        } else {
             target = GetClosestCollectible().transform;
         }
 
@@ -98,8 +105,8 @@ public class Signpost : MonoBehaviour {
 
         angle = Mathf.Atan2(toOther.z, toOther.x) * Mathf.Rad2Deg + 180;
 
-
-    }
+        }
+   
 
     float Atan2Approximation(float y, float x)
     {
@@ -142,7 +149,6 @@ public class Signpost : MonoBehaviour {
             float dist = Vector3.Distance(g.transform.position, currentPos);
             if (dist < minDist && g.gameObject.activeSelf)
             {
-                print(g.name);
                 gMin = g;
                 minDist = dist;
             }

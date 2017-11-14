@@ -40,12 +40,14 @@ public class Player : MonoBehaviour {
     public float hit_cooldown_timer;
     public float hit_cooldown = 10;
 	private int collectibleCount;
-    
+    private GameObject arena;
+
 
 
     // Use this for initialization
     void Start () {
-		collectibleCount = 0;
+        arena = GameObject.Find("Arena");
+        collectibleCount = 0;
         healthBar.fillAmount = 1;
         currentHealth = maxHealth;
     }
@@ -256,12 +258,18 @@ public class Player : MonoBehaviour {
 			GetComponent<Renderer>().material.color = colors[collectibleCount]; //for testing
 
             GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
+
+            collectibleCount++;
+            if (collectibleCount >= arena.GetComponent<SpawnController>().numberOfCollectibles)
+            {
+                arena.GetComponent<SpawnController>().allCollected = true;
+            }
+
             foreach (GameObject go in signposts)
             {
                 go.GetComponent<Signpost>().UpdateSignpostDetection();
             }
-
-            collectibleCount++;
+            
 		}
     }
 
