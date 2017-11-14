@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GodEffects : MonoBehaviour {
+public class GodEffects : MonoBehaviour
+{
     public enum GodEffectType
     {
         tornado, rain, earthshatter, thunder, avalanche, blizzard
@@ -20,18 +21,20 @@ public class GodEffects : MonoBehaviour {
 
     public GodEffectType CurrentType = 0;
     // Use this for initialization
-    void Start () {
-       
+    void Start()
+    {
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		if(!charged && dnd.draggingObject == this.gameObject && Input.GetMouseButton(1))
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!charged && dnd.draggingObject == this.gameObject && Input.GetMouseButton(1))
         {
             charged = true;
             GetComponent<Renderer>().material = chargeMaterial;
         }
-	}
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour {
+public class Movement : MonoBehaviour
+{
     //movement Speed
     public float mSpeed = 7f;
     public float slideTime = 3;
@@ -34,8 +35,9 @@ public class Movement : MonoBehaviour {
         initalDrag = GetComponent<Rigidbody>().drag;
         initialmSpeed = mSpeed;
     }
-        
-	void Update () {
+
+    void Update()
+    {
 
         move_block = false;
 
@@ -60,7 +62,7 @@ public class Movement : MonoBehaviour {
                 if (sliding)
                 {
                     //check if the character has already the maximum spped
-                    if(gameObject.GetComponent<Rigidbody>().velocity.magnitude < mSpeed)
+                    if (gameObject.GetComponent<Rigidbody>().velocity.magnitude < mSpeed)
                     {
                         //Add Force to the character --> floaty feel
                         gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * forceMultiplier * GetComponent<Rigidbody>().mass);
@@ -99,7 +101,7 @@ public class Movement : MonoBehaviour {
         if (slow && slowTime < slowTimer)
         {
             slow = false;
-            
+
         }
         else
         {
@@ -108,9 +110,9 @@ public class Movement : MonoBehaviour {
         }
 
     }
-    
+
     public void SetSliding()
-    {        
+    {
         sliding = true;
         slideTimer = 0;
         GetComponent<Rigidbody>().drag = 0;
@@ -120,5 +122,5 @@ public class Movement : MonoBehaviour {
     {
         slow = true;
         slowTimer = 0;
-    }    
+    }
 }

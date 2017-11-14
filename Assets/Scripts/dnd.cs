@@ -58,6 +58,7 @@ public class dnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (buttonReleased && Input.GetMouseButton(0) && (!isDragging || Vector3.Distance(pickUpScreenPos, Input.mousePosition) <= DropDistance))
         {
@@ -136,6 +137,11 @@ public class dnd : MonoBehaviour
 
     }
 
+    public void ReleaseObject()
+    {
+        buttonReleased = false;
+    }
+
     private GameObject GetObjectFromMouseRaycast()
     {
         GameObject gmObj = null;
@@ -152,7 +158,7 @@ public class dnd : MonoBehaviour
         }
 
         //Assign the correct weightclass
-        if(gmObj != null)
+        if (gmObj != null)
         {
             switch (gmObj.GetComponent<ThrowObject>().weight_class)
             {

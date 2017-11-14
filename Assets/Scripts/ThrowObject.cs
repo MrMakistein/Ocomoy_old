@@ -9,6 +9,7 @@ public class ThrowObject : MonoBehaviour {
     public float dmg_cooldown_max = 10;
     public int object_damage = 4;
     public bool isclone = false;
+    Vector3 finalDirection;
 
     public GameObject clone1;
     public GameObject clone2;
@@ -50,31 +51,48 @@ public class ThrowObject : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
+        GameObject player = GameObject.Find("Player");
+        GameObject god = GameObject.Find("TheosGott");
+  
+        if (player.GetComponent<Player>().hit_cooldown_timer <= 0 && dmg_cooldown >= 1 && 
+            (other.name == "CloneHitbox1Trigger" || other.name == "CloneHitbox2Trigger" || other.name == "CloneHitbox3Trigger" || other.name == "CloneHitbox4Trigger"))
+        {
+            isclone = true;
+            player.GetComponent<Player>().hit_cooldown_timer = player.GetComponent<Player>().hit_cooldown;
+            god.GetComponent<dnd>().ReleaseObject();
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            Invoke("GiveMotion", 0.02f);
+
+
             if (other.name == "CloneHitbox1Trigger")
             {
-            Invoke("KillClone1", 0.2f);
-            isclone = true;
-        }
+                Invoke("KillClone1", 0.01f);
+            }
 
             if (other.name == "CloneHitbox2Trigger")
             {
-            Invoke("KillClone2", 0.2f);
-            isclone = true;
-        }
+                Invoke("KillClone2", 0.01f);
+            }
 
             if (other.name == "CloneHitbox3Trigger")
             {
-            Invoke("KillClone3", 0.2f);
-            isclone = true;
-        }
+                Invoke("KillClone3", 0.01f);
+            }
 
             if (other.name == "CloneHitbox4Trigger")
             {
-            Invoke("KillClone4", 0.2f);
-            isclone = true;
+                Invoke("KillClone4", 0.01f);
+            }
+
         }
+           
 
     }
+    void GiveMotion()
+    {
+        this.GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-10.0F, 10.0F), Random.Range(8.0F, 12.0F), Random.Range(-10.0F, 10.0F));
+    }
+   
 
     void KillClone1()
     {

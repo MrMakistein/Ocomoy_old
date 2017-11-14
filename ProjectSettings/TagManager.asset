@@ -8,7 +8,7 @@ TagManager:
   - Shrine
   - Clone
   - CloneHitbox
-  - GodObject
+  - Signpost
   layers:
   - Default
   - TransparentFX

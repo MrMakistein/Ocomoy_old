@@ -10,6 +10,7 @@ public class SpawnController : MonoBehaviour {
 
     //PRIVATE VARIABLES
     private GameObject[] interactives; //all interactive GameObjects in the scene
+    public GameObject[] collectibles;
 
 
 	// Use this for initialization
@@ -42,12 +43,20 @@ public class SpawnController : MonoBehaviour {
         }
 
 
-        GameObject[] collectibles = chosenCollectibles.ToArray(); //to array cuz what r lists
+        collectibles = chosenCollectibles.ToArray(); //to array cuz what r lists
         //print("Number of collectibles: " +collectibles.Length);
         for (int i = 0; i < collectibles.Length; i++)
         {
             collectibles[i].GetComponent<InteractiveSettings>().SetCollectible(); //set every item in the list as collectible
         }
+
+        GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
+        foreach (GameObject go in signposts)
+        {
+            go.GetComponent<Signpost>().GetCollectiblesArray();
+            go.GetComponent<Signpost>().UpdateSignpostDetection();
+        }
+
 
     }
 

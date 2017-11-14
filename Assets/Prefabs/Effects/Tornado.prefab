@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4007341833918852}
-  - component: {fileID: 114182742469789206}
+  - component: {fileID: 114672496872441828}
   m_Layer: 0
   m_Name: Tornado
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114182742469789206
+--- !u!114 &114672496872441828
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,11 +48,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1463362446688468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5d086f8922a9304a801ba22b5e8aee4, type: 3}
+  m_Script: {fileID: 11500000, guid: 56935f02a620dbf4890e14d66030d868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 12.23
-  maxPullInLength: 25
+  radius: 12
+  maxPullInLength: 24.96
   power: 50
   spin: 50
   upPower: 50
