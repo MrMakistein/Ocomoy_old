@@ -5,50 +5,78 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour {
     //PUBLIC CONSTS & VARIABLES
-	public int numberOfCollectibles = 3; //constant for number of objects to be searched
-    public int[] zoneLayerNumbers; //array, numbers of the layers with the zones --> without win zone
+	public int numberOfCollectibles = 3; //ADJUST constant for number of objects to be searched
+	public GameObject[] collectibles;
+	public List<GameObject> spawnAreaObjects;
+	public GameObject[] areas; //areas in which collectibles spawn (1 per area)
+    public List<GameObject> chosenCollectibles; //List for all collectibles
 
     //PRIVATE VARIABLES
     private GameObject[] interactives; //all interactive GameObjects in the scene
-    public GameObject[] collectibles;
     public bool allCollected = false;
 
-	// Use this for initialization
-	void Start () {
-        SpawnShrines();
-        DetermineCollectibles();
+
+    // Use this for initialization
+    void Start () {		
+		SpawnShrines(); //TODO: make Shrine Spawn dependant on WinZone? --> Player Spawn Point is within WinZone
+        Invoke("DetermineAreas", 0.0f);
+        Invoke("DetermineCollectibles", 0.0f); //ADJUST: je mehr Zonen/Collectibles desto mehr Zeit lassen bis Execution: Arrays in Areas müssen mit onTriggerEnter erst befüllt werden
+		//DetermineCollectibles();
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
+
 	}
 
-	void DetermineCollectibles(){
-        interactives = GameObject.FindGameObjectsWithTag("Interactive"); //get all Interactives
-      
+	public void DetermineAreas(){
+        
+		spawnAreaObjects = new List<GameObject> (GameObject.FindGameObjectsWithTag("Area"));
 
-        ///GET RANDOM GAME OBJECTS FROM THE INTERACTIVES ARRAY    V2
-        var rnd = new System.Random();
-        var chosenCollectibles = new List<GameObject>(); //create empty list for the chosen objects
-        int k = numberOfCollectibles;
-        for (int i = 0; k > 0; ++i)
+        int winZoneIndex = 0;
+        for (int a = 0; a < spawnAreaObjects.Count; a++)
         {
-            int r = rnd.Next(0, (interactives.Length)-i);
-            if(r < k)
+            if (spawnAreaObjects[a].gameObject.GetComponent<Areas>().isWinZone == true)
             {
-                chosenCollectibles.Add(interactives[i]);
-                k--;
+                winZoneIndex = a;  
             }
         }
 
+		GameObject winZone = spawnAreaObjects[winZoneIndex];
+		winZone.GetComponent<Areas>().setWinZone(); //set as winzone
+		spawnAreaObjects.Remove (winZone); //exclude from SpawnAreas
+        Destroy(winZone);
+        
+	}
+
+	public void DetermineCollectibles() {
+		chosenCollectibles = new List<GameObject>(); //List for all collectibles
+
+		//ITERATE OVER REMAINING ZONES
+		for (int a = 0; a < spawnAreaObjects.Count; a++){
+			
+			GameObject zone = spawnAreaObjects[a];
+			List<GameObject> interactivesInZone = zone.GetComponent<Areas>().getAreaInteractives();
+
+			//Debug.Log ("Number of Interactives in # "+zone.GetComponent<Areas>().name +" # : " +interactivesInZone.Count); //TESTING
+		
+			//choose one of the interactives in the zone randomly
+			var rnd2 = new System.Random ();
+			
+
+			//CHOOSE A RANDOM INTERACTIVE IN THE ZONE TO SET AS COLLECTIBLE
+			int r = rnd2.Next (0, interactivesInZone.Count - 1); 
+			interactivesInZone[r].GetComponent<InteractiveSettings> ().SetCollectible();
+
+			//ADD IT TO THE COLLECTIBLE LIST
+			chosenCollectibles.Add(interactivesInZone[r]); //add the game object to the collectibles List
+
+			Destroy(zone); //then destroy the zone! (isn't needed anymore)
+		}
 
         collectibles = chosenCollectibles.ToArray(); //to array cuz what r lists
-        //print("Number of collectibles: " +collectibles.Length);
-        for (int i = 0; i < collectibles.Length; i++)
-        {
-            collectibles[i].GetComponent<InteractiveSettings>().SetCollectible(); //set every item in the list as collectible
-        }
+
 
         GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
         foreach (GameObject go in signposts)
@@ -56,31 +84,25 @@ public class SpawnController : MonoBehaviour {
             go.GetComponent<Signpost>().FindWinShrine();
             go.GetComponent<Signpost>().GetCollectiblesArray();
             go.GetComponent<Signpost>().UpdateSignpostDetection();
-
         }
-
 
     }
 
     private void SpawnShrines()
     {
         // Assigns random id from 1 to 6 to all of the shrines (no repeating values)
-        List<int> list = new List<int>(new int[] { 1, 2, 3, 4, 5, 6 });
+        List<int> list = new List<int>(new int[] { 1, 2, 3, 4});
         int rand = 0;
         GameObject[] shrines = GameObject.FindGameObjectsWithTag("Shrine");
-        foreach (GameObject shrine in shrines)
-        {
-            rand = UnityEngine.Random.Range(0, list.Count);
-            shrine.gameObject.GetComponent<Shrine>().shrine_id = list[rand];
-            list.RemoveAt(rand);
-        }
-
-
-
-
-
+		foreach (GameObject shrine in shrines) {
+			rand = UnityEngine.Random.Range (0, list.Count);
+			shrine.gameObject.GetComponent<Shrine> ().shrine_id = list [rand];
+			list.RemoveAt (rand);
+		}
     }
-}
+
+
+} //END SpawnController
 
 
 

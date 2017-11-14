@@ -9,7 +9,7 @@ public class Signpost : MonoBehaviour {
     private Transform target;
     private GameObject[] shrines;
     private GameObject finalDestination;
-    public float angle;
+    private float angle;
     private float wiggle_angle;
     [HideInInspector] public bool collectibleMoving;
     public float wiggleSmooth = 0.2f;           // How smooth the signposts rotation will be smoothed. lower smooth -> rotates slower
@@ -71,6 +71,7 @@ public class Signpost : MonoBehaviour {
         foreach (GameObject g in collectibles)
         {
             Rigidbody rb = g.GetComponent<Rigidbody>();
+            
             if (rb.velocity != Vector3.zero && g.activeSelf)
             {
                 collectibleMoving = true;
