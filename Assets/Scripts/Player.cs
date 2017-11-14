@@ -32,6 +32,7 @@ public class Player : MonoBehaviour {
     public float shield_duration = 50;
 
     public GameObject shield;
+    
 
 
     // Random Shit
@@ -39,12 +40,14 @@ public class Player : MonoBehaviour {
     public float hit_cooldown_timer;
     public float hit_cooldown = 10;
 	private int collectibleCount;
-    
+    private GameObject arena;
+
 
 
     // Use this for initialization
     void Start () {
-		collectibleCount = 0;
+        arena = GameObject.Find("Arena");
+        collectibleCount = 0;
         healthBar.fillAmount = 1;
         currentHealth = maxHealth;
     }
@@ -53,6 +56,13 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        // Closest Signpost
+
+
+
+
+
         //Hit Cooldown Timer
         if (hit_cooldown_timer > 0)
         {
@@ -67,10 +77,10 @@ public class Player : MonoBehaviour {
         }
 
         // Ability Activation
-        if (Input.GetKeyDown("space") && equipped_ability >= 2 && !gameObject.GetComponent<Movement>().move_block)
+        if (Input.GetKeyDown("space") && !gameObject.GetComponent<Movement>().move_block)
         {
-            
 
+  
             if (equipped_ability == 1)
             {
                 //Collider box will grow to push the player away from walls
@@ -241,12 +251,25 @@ public class Player : MonoBehaviour {
                 Destroy(col.gameObject);
             }
 				
-		} else if(col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<InteractiveSettings>().isCollectible){
-			col.gameObject.SetActive (false); //collect/destroy uppon hitting
-			Color[] colors = {Color.red, Color.magenta, Color.cyan, Color.green, Color.gray}; //for testing!
+		} else if(col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<InteractiveSettings>().isCollectible && col.gameObject.activeSelf){
+			col.gameObject.SetActive (false);
+
+            Color[] colors = {Color.red, Color.magenta, Color.cyan, Color.green, Color.gray}; //for testing!
 			GetComponent<Renderer>().material.color = colors[collectibleCount]; //for testing
 
-			collectibleCount++;
+            GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
+
+            collectibleCount++;
+            if (collectibleCount >= arena.GetComponent<SpawnController>().numberOfCollectibles)
+            {
+                arena.GetComponent<SpawnController>().allCollected = true;
+            }
+
+            foreach (GameObject go in signposts)
+            {
+                go.GetComponent<Signpost>().UpdateSignpostDetection();
+            }
+            
 		}
     }
 
