@@ -71,6 +71,7 @@ public class Signpost : MonoBehaviour {
         foreach (GameObject g in collectibles)
         {
             Rigidbody rb = g.GetComponent<Rigidbody>();
+            
             if (rb.velocity != Vector3.zero && g.activeSelf)
             {
                 collectibleMoving = true;
