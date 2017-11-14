@@ -55,15 +55,7 @@ public class SpawnController : MonoBehaviour {
 		
 			//choose one of the interactives in the zone randomly
 			var rnd2 = new System.Random ();
-			/*int n = numberOfCollectibles;
-			for (int i = 0; n > 0; ++i) {
-				int r = rnd2.Next (0, interactivesInZone.Count - i);
-				if (r < n) {
-					chosenCollectibles.Add (interactivesInZone [i]);
-					n--;
-				}
-			} //end set random collectible 
-			*/
+		
 
 			//CHOOSE A RANDOM INTERACTIVE IN THE ZONE TO SET AS COLLECTIBLE
 			int r = rnd2.Next (0, interactivesInZone.Count - 1); 
@@ -76,11 +68,7 @@ public class SpawnController : MonoBehaviour {
 		}
 			
         collectibles = chosenCollectibles.ToArray(); //to array cuz what r lists
-        /*for (int i = 0; i < collectibles.Length; i++)
-        {
-            collectibles[i].gameObject.GetComponent<InteractiveSettings>().SetCollectible(); //set every item in the list as collectible
-        }
-        */
+
 
     }
 
