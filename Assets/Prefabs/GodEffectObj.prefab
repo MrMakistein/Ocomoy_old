@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276747627741412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2746537, y: 0, z: 0.09985018}
+  m_LocalPosition: {x: -5.0462103, y: 0.5, z: -5.7589083}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,12 +125,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chargeMaterial: {fileID: 2100000, guid: aa7204107ca4fb344b36b3117d3b551c, type: 2}
-  tornadoEffect: {fileID: 1056955089193344, guid: a99eb72165813e84caddc5176380d823,
+  tornadoEffect: {fileID: 1463362446688468, guid: c45aef76c73797b41b31bae51aa9d795,
     type: 2}
   rainEffect: {fileID: 1646268115875576, guid: e9e08ae388dfd834ab0cf43bbe925e85, type: 2}
   earthshatterEffect: {fileID: 1236769182008364, guid: 7678d3a3e8287894e912eb3032d876b1,
     type: 2}
-  thunderEffect: {fileID: 1463362446688468, guid: c45aef76c73797b41b31bae51aa9d795,
+  thunderEffect: {fileID: 1056955089193344, guid: a99eb72165813e84caddc5176380d823,
     type: 2}
   avalancheEffect: {fileID: 1056955089193344, guid: 816274ca59402344ba6d066e0014e828,
     type: 2}

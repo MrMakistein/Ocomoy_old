@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour {
     //PUBLIC CONSTS & VARIABLES
-	public const int numberOfCollectibles = 3; //constant for number of objects to be searched
+	public int numberOfCollectibles = 3; //constant for number of objects to be searched
     public int[] zoneLayerNumbers; //array, numbers of the layers with the zones --> without win zone
 
     //PRIVATE VARIABLES
     private GameObject[] interactives; //all interactive GameObjects in the scene
     public GameObject[] collectibles;
-
+    public bool allCollected = false;
 
 	// Use this for initialization
 	void Start () {
@@ -53,8 +53,7 @@ public class SpawnController : MonoBehaviour {
         GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
         foreach (GameObject go in signposts)
         {
-            go.GetComponent<Signpost>().GetCollectiblesArray();
-            go.GetComponent<Signpost>().UpdateSignpostDetection();
+            go.GetComponent<Signpost>().FindWinShrine();
         }
 
 
