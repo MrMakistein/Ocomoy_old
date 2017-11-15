@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 0
+  rotation_speed: 100
   offset: 2
   speed: 10
   expandTime: 2

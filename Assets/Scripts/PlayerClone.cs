@@ -7,13 +7,14 @@ public class PlayerClone : MonoBehaviour {
     private GameObject player;
 
     public float rotation;
-    public float rotation_speed;
+    public float rotation_speed = 10;
     public float offset = 2;
     public float speed = 10;
     public float expandTime = 2;
     private float expandTimer = 0;
     private float cloneTime;
     private float cloneTimer = 0;
+    private int cloneAmount = 0;
 
     private GameObject god;
     // Use this for initialization
@@ -56,13 +57,18 @@ public class PlayerClone : MonoBehaviour {
         this.transform.rotation = player.transform.rotation;
 
         Clones = GameObject.FindGameObjectsWithTag("Clone");
-        for (int i = 0; i < Clones.Length; i++)
+        if(cloneAmount != Clones.Length)
         {
-            if( Clones[i] == this.gameObject)
+            for (int i = 0; i < Clones.Length; i++)
             {
-                rotation = (360.0f / Clones.Length) * i ;
+                if (Clones[i] == this.gameObject)
+                {
+                    rotation = (360.0f / Clones.Length) * i;
+                }
             }
+            cloneAmount = Clones.Length;
         }
+         rotation += rotation_speed * Time.deltaTime;
     }
     
 }
