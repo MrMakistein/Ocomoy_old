@@ -81,7 +81,11 @@ public class Player : MonoBehaviour {
         {
 
   
+<<<<<<< HEAD
             if (equipped_ability == 1)
+=======
+            if (equipped_ability == 2)
+>>>>>>> Leo
             {
                 //Collider box will grow to push the player away from walls
                 CloneSpawnCollider.SetActive(true);
@@ -91,7 +95,11 @@ public class Player : MonoBehaviour {
             }
 
 
+<<<<<<< HEAD
             if (equipped_ability == 2)
+=======
+            if (equipped_ability == 3)
+>>>>>>> Leo
             {
                 shield_timer = 1;
                 shield.SetActive(true);
