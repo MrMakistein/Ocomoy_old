@@ -76,13 +76,13 @@ public class Player : MonoBehaviour {
         {
 
 
-            if (equipped_ability == 1)
+            if (equipped_ability == 2)
             {
                 Start_clone_ability();
             }
 
 
-            if (equipped_ability == 2)
+            if (equipped_ability == 3)
             {
                 shield_timer = 1;
                 shield.SetActive(true);
