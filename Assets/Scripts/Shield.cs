@@ -27,6 +27,8 @@ public class Shield : MonoBehaviour {
             !other.gameObject.GetComponent<InteractiveSettings>().isCollectible)
         {
             Destroy(other.gameObject);
+
+
         }
 
         

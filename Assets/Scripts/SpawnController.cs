@@ -17,20 +17,18 @@ public class SpawnController : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {		
-		SpawnShrines(); //TODO: make Shrine Spawn dependant on WinZone? --> Player Spawn Point is within WinZone
+    void Start () {
+        SpawnShrines();
         Invoke("DetermineAreas", 0.0f);
-        Invoke("DetermineCollectibles", 0.0f); //ADJUST: je mehr Zonen/Collectibles desto mehr Zeit lassen bis Execution: Arrays in Areas müssen mit onTriggerEnter erst befüllt werden
-		//DetermineCollectibles();
+        Invoke("DetermineCollectibles", 0.0f);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
 	public void DetermineAreas(){
-        
 		spawnAreaObjects = new List<GameObject> (GameObject.FindGameObjectsWithTag("Area"));
 
         int winZoneIndex = 0;
@@ -38,16 +36,16 @@ public class SpawnController : MonoBehaviour {
         {
             if (spawnAreaObjects[a].gameObject.GetComponent<Areas>().isWinZone == true)
             {
-                winZoneIndex = a;  
+                winZoneIndex = a;
             }
         }
 
-		GameObject winZone = spawnAreaObjects[winZoneIndex];
-		winZone.GetComponent<Areas>().setWinZone(); //set as winzone
-		spawnAreaObjects.Remove (winZone); //exclude from SpawnAreas
+        GameObject winZone = spawnAreaObjects[winZoneIndex];
+        winZone.GetComponent<Areas>().setWinZone(); //set as winzone
+        spawnAreaObjects.Remove(winZone); //exclude from SpawnAreas
         Destroy(winZone);
-        
-	}
+
+    }
 
 	public void DetermineCollectibles() {
 		chosenCollectibles = new List<GameObject>(); //List for all collectibles
@@ -90,7 +88,7 @@ public class SpawnController : MonoBehaviour {
     private void SpawnShrines()
     {
         // Assigns random id from 1 to 6 to all of the shrines (no repeating values)
-        List<int> list = new List<int>(new int[] { 1, 2, 3, 4});
+        List<int> list = new List<int>(new int[] { 1, 2, 3, 4, 5, 6 });
         int rand = 0;
         GameObject[] shrines = GameObject.FindGameObjectsWithTag("Shrine");
 		foreach (GameObject shrine in shrines) {
@@ -101,7 +99,7 @@ public class SpawnController : MonoBehaviour {
     }
 
 
-} //END SpawnController
+}
 
 
 

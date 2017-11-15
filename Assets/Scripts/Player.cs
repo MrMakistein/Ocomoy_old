@@ -13,60 +13,62 @@ public class Player : MonoBehaviour {
     public float regenSpeed = 10;
 
     //Clone Ability Variables
-    public float clone_timer = 0;
-    public GameObject clone1;
-    public GameObject clone2;
-    public GameObject clone3;
-    public GameObject clone4;
-    public GameObject clone1_hitbox;
-    public GameObject clone2_hitbox;
-    public GameObject clone3_hitbox;
-    public GameObject clone4_hitbox;
-    public float speed = 1.0F;
-    private float startTime;
-    public GameObject CloneSpawnCollider;
+    public float clone_time = 0;
+    public int CloneAmount = 4;
+    public GameObject cloneObj;
 
     //Shield Ability Variables
     public float shield_rotation_speed = 200;
     public float shield_timer = 0;
     public float shield_duration = 50;
-
     public GameObject shield;
+
+    //Slippery Hands Ability Variables
+    public int slip_uses = 5;
+    private int slips_left = 0;
 
     //Compass Ability Variables
     public float compass_timer = 0;
     public float compass_duration = 50;
     public GameObject compass;
 
-
-    //Slippery Hands Ability Variables
-    public int slip_uses = 5;
-    private int slips_left = 0;
-
     // Random Shit
     public int equipped_ability = 0;
     public float hit_cooldown_timer;
     public float hit_cooldown = 10;
-	private int collectibleCount;
+    private int collectibleCount;
     private GameObject arena;
     private GameObject god;
+    public GameObject healthbar;
+    public GameObject display_shield;
+    public GameObject display_compass;
+    public GameObject display_slippy;
+    public GameObject display_clone;
+
 
 
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         arena = GameObject.Find("Arena");
+        
         collectibleCount = 0;
         healthBar.fillAmount = 1;
         currentHealth = maxHealth;
         god = GameObject.Find("TheosGott");
+
+        if (cloneObj == null)
+        {
+            Debug.LogError("No clone specified in player!");
+        }
     }
 
 
 
     // Update is called once per frame
-    void Update () {
+    void Update() {
 
+        healthbar.transform.position = transform.position;
         //Hit Cooldown Timer
         if (hit_cooldown_timer > 0)
         {
@@ -76,48 +78,43 @@ public class Player : MonoBehaviour {
         // Health Regeneration
         if (currentHealth < maxHealth)
         {
-            currentHealth = currentHealth + (regenSpeed/200);
+            currentHealth = currentHealth + (regenSpeed / 200);
             healthBar.fillAmount = currentHealth / maxHealth;
         }
 
         // Ability Activation
         if (Input.GetKeyDown("space") && !gameObject.GetComponent<Movement>().move_block)
         {
-
-  
-            if (equipped_ability == 1)
-            {
-                //Collider box will grow to push the player away from walls
-                CloneSpawnCollider.SetActive(true);
-                CloneSpawnCollider.GetComponent<BoxCollider>().size = Vector3.Lerp(new Vector3(0.8f, 1.5f, 0.8f), new Vector3(4f, 1.5f, 4f), Time.deltaTime * 1000);
-                // After a short delay the clone ability is started
-                Invoke("Start_clone_ability", 0.2f);
-            }
+            display_shield.SetActive(false);
+            display_compass.SetActive(false);
+            display_slippy.SetActive(false);
+            display_clone.SetActive(false);
 
 
             if (equipped_ability == 2)
+            {
+                Start_clone_ability();
+            }
+
+
+            if (equipped_ability == 3)
             {
                 shield_timer = 1;
                 shield.SetActive(true);
             }
 
-            if (equipped_ability == 3)
+            if (equipped_ability == 4)
             {
                 compass_timer = 1;
                 compass.SetActive(true);
             }
 
-            if (equipped_ability == 4)
+            if (equipped_ability == 5)
             {
                 slips_left = slip_uses;
             }
 
             equipped_ability = 0;
-        }
-
-        if (clone_timer >= 1)
-        {
-            Clone_ability();
         }
 
         if (shield_timer >= 1)
@@ -134,6 +131,7 @@ public class Player : MonoBehaviour {
         {
             Slipperyhands_ability();
         }
+
 
     }
 
@@ -172,84 +170,18 @@ public class Player : MonoBehaviour {
 
     private void Start_clone_ability()
     {
-        clone_timer = 1;
-        clone1.SetActive(true);
-        clone2.SetActive(true);
-        clone3.SetActive(true);
-        clone4.SetActive(true);
-        clone1_hitbox.SetActive(true);
-        clone2_hitbox.SetActive(true);
-        clone3_hitbox.SetActive(true);
-        clone4_hitbox.SetActive(true);
-    }
-
-    private void Clone_ability()
-    {
-        //Position to interpolate from
-        Vector3 original_position1 = new Vector3(transform.position.x - 0.35f, transform.position.y, transform.position.z);
-        Vector3 original_position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.35f);
-        Vector3 original_position3 = new Vector3(transform.position.x + 0.35f, transform.position.y, transform.position.z);
-        Vector3 original_position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.35f);
-
-        //Position to interpolate to
-        Vector3 position1 = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
-        Vector3 position2 = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
-        Vector3 position3 = new Vector3(transform.position.x - 2, transform.position.y, transform.position.z);
-        Vector3 position4 = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
-
-        // Interpolate hitboxes from center to the sides at the start of the ability cast
-        if (clone_timer < 1.1f)
+        for (int i = 0; i < CloneAmount; i++)
         {
-            clone1_hitbox.transform.position = Vector3.Lerp(original_position1, position1, Time.deltaTime * 50);
-            clone2_hitbox.transform.position = Vector3.Lerp(original_position2, position2, Time.deltaTime * 50);
-            clone3_hitbox.transform.position = Vector3.Lerp(original_position3, position3, Time.deltaTime * 50);
-            clone4_hitbox.transform.position = Vector3.Lerp(original_position4, position4, Time.deltaTime * 50);
-
-        }
-        else
-        {
-         // After the cast their position is set manually   
-            clone1_hitbox.transform.position = position1;
-            clone2_hitbox.transform.position = position2;
-            clone3_hitbox.transform.position = position3;
-            clone4_hitbox.transform.position = position4;
-            CloneSpawnCollider.SetActive(false);
-
-        }
-
-        // Visual clones are set to the correct position
-        clone1.transform.position = position1;
-        clone2.transform.position = position2;
-        clone3.transform.position = position3;
-        clone4.transform.position = position4;
-
-        // Visual clone rotation is matched with the player
-        clone1.transform.rotation = transform.rotation;
-        clone2.transform.rotation = transform.rotation;
-        clone3.transform.rotation = transform.rotation;
-        clone4.transform.rotation = transform.rotation;
-
-        clone_timer += Time.deltaTime*5;
-
-        // If the clone timer reaches 50+ the ability cast is over and everything is reset
-        if (clone_timer >= 50)
-        {
-            clone_timer = 0;
-            clone1.SetActive(false);
-            clone2.SetActive(false);
-            clone3.SetActive(false);
-            clone4.SetActive(false);
-            clone1_hitbox.SetActive(false);
-            clone2_hitbox.SetActive(false);
-            clone3_hitbox.SetActive(false);
-            clone4_hitbox.SetActive(false);
+            GameObject currentSpawn = Instantiate(cloneObj, transform.position, Quaternion.identity);
+            currentSpawn.transform.parent = gameObject.transform;
         }
     }
+
 
     private void Shield_ability()
     {
         shield.transform.position = transform.position;
-        shield.transform.Rotate(Vector3.up * Time.deltaTime* shield_rotation_speed, Space.World);
+        shield.transform.Rotate(Vector3.up * Time.deltaTime * shield_rotation_speed, Space.World);
 
         shield_timer += Time.deltaTime * 5;
         if (shield_timer >= shield_duration)
@@ -263,42 +195,59 @@ public class Player : MonoBehaviour {
     private void OnCollisionEnter(Collision col)
     {
         GameObject god = GameObject.Find("TheosGott");
-        
-
         // Test for player/interactive collision and deal the correct amount of damage depening on the weight_class
-        if (col.gameObject.tag == "Interactive" && 
-            !col.gameObject.GetComponent<InteractiveSettings>().isCollectible && 
-            col.gameObject.GetComponent<ThrowObject>().dmg_cooldown >= 1 && 
-            hit_cooldown_timer <= 0 
-            && !this.GetComponent<Movement>().move_block &&
-            !col.gameObject.GetComponent<ThrowObject>().isclone)
+
+        GameObject selectedClone = null;
+        foreach (ContactPoint c in col.contacts)
+        {
+            if (c.thisCollider.gameObject.tag == "Clone")
+            {
+                selectedClone = c.thisCollider.gameObject;
+            }
+        }
+
+        if (col.gameObject.tag == "Interactive" &&
+        !col.gameObject.GetComponent<InteractiveSettings>().isCollectible &&
+        col.gameObject.GetComponent<ThrowObject>().dmg_cooldown >= 1 &&
+        hit_cooldown_timer <= 0 &&
+        !this.GetComponent<Movement>().move_block)
         {
 
             god.GetComponent<dnd>().ReleaseObject(); // Makes the god drop the object he's holding
             hit_cooldown_timer = hit_cooldown;
-
-            if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
+            if (selectedClone == null)
             {
-                currentHealth = currentHealth - 10;
-                healthBar.fillAmount = currentHealth/maxHealth;
+                if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
+                {
+                    currentHealth = currentHealth - 10;
+                    healthBar.fillAmount = currentHealth / maxHealth;
+                }
+
+                if (col.gameObject.GetComponent<ThrowObject>().weight_class == 2)
+                {
+                    currentHealth = currentHealth - 20;
+                    healthBar.fillAmount = currentHealth / maxHealth;
+                }
+
+                if (col.gameObject.GetComponent<ThrowObject>().weight_class == 3)
+                {
+                    currentHealth = currentHealth - 30;
+                    healthBar.fillAmount = currentHealth / maxHealth;
+                }
+
+                if (col.gameObject.GetComponent<ThrowObject>().weight_class == 4)
+                {
+                    currentHealth = currentHealth - 40;
+                    healthBar.fillAmount = currentHealth / maxHealth;
+                }
             }
-
-            if (col.gameObject.GetComponent<ThrowObject>().weight_class == 2)
+            else
             {
-                currentHealth = currentHealth - 20;
-                healthBar.fillAmount = currentHealth / maxHealth;
-            }
+                //trow the object in a random direction
+                col.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-10.0F, 10.0F), Random.Range(8.0F, 12.0F), Random.Range(-10.0F, 10.0F));
 
-            if (col.gameObject.GetComponent<ThrowObject>().weight_class == 3)
-            {
-                currentHealth = currentHealth - 30;
-                healthBar.fillAmount = currentHealth / maxHealth;
-            }
-
-            if (col.gameObject.GetComponent<ThrowObject>().weight_class == 4)
-            {
-                currentHealth = currentHealth - 40;
-                healthBar.fillAmount = currentHealth / maxHealth;
+                //if a clone was hit, destroy him
+                Destroy(selectedClone, 0.1f);
             }
 
             //Object Damage
@@ -307,12 +256,15 @@ public class Player : MonoBehaviour {
             {
                 Destroy(col.gameObject);
             }
-				
-		} else if(col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<InteractiveSettings>().isCollectible && col.gameObject.activeSelf){
-			col.gameObject.SetActive (false);
 
-            Color[] colors = {Color.red, Color.magenta, Color.cyan, Color.green, Color.gray}; //for testing!
-			GetComponent<Renderer>().material.color = colors[collectibleCount]; //for testing
+        }
+
+        else if (col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<InteractiveSettings>().isCollectible && col.gameObject.activeSelf)
+        {
+            col.gameObject.SetActive(false);
+
+            Color[] colors = { Color.red, Color.magenta, Color.cyan, Color.green, Color.gray }; //for testing!
+            GetComponent<Renderer>().material.color = colors[collectibleCount]; //for testing
 
             GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
 
@@ -326,8 +278,8 @@ public class Player : MonoBehaviour {
             {
                 go.GetComponent<Signpost>().UpdateSignpostDetection();
             }
-            
-		}
+
+        }        
     }
 
     private void OnTriggerStay(Collider col)
@@ -337,11 +289,23 @@ public class Player : MonoBehaviour {
         {
             col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer = col.gameObject.GetComponent<Shrine>().shrine_cooldown;
             equipped_ability = col.gameObject.GetComponent<Shrine>().shrine_id;
-
-
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 2)
+            {
+                display_clone.SetActive(true);
+            }
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 3)
+            {
+                display_shield.SetActive(true);
+            }
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 4)
+            {
+                display_compass.SetActive(true);
+            }
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 5)
+            {
+                display_slippy.SetActive(true);
+            }
+            
         }
-
-
-        
     }
 }

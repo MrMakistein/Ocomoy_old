@@ -9,21 +9,20 @@ public class Areas : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//FOR UNIQUE NAME	
 		numberOfAreaObjects++; //count up id
 
 		//INITIALIZE LIST
 		areaInteractives = new List<GameObject>();
 	}
 
-	private void OnTriggerStay(Collider other){ //something entered my area trigger...
+	private void OnTriggerEnter(Collider other){ //something entered my area trigger...
 		//FILL ARRAY/LIST FOR INTERACTIVES ON STARTUP
 		if(other.gameObject.CompareTag("Interactive")){ //is it an interactive?
 			if (!this.areaInteractives.Contains(other.gameObject)) { //if not already inside list:
 				this.areaInteractives.Add (other.gameObject); //add!
-
 			}
 		}
+
         if (other.gameObject.tag == "Shrine")
         {
             if (other.GetComponent<Shrine>().shrine_id == 1)
@@ -31,10 +30,7 @@ public class Areas : MonoBehaviour {
                 isWinZone = true;
             }
         }
-
-
-
-        } //end onTriggerEnter
+    } //end onTriggerEnter
 
 	public void setWinZone(){ //for Player spawn and end goal
 		isWinZone = true;

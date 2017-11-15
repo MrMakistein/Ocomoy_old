@@ -10,6 +10,9 @@ TagManager:
   - CloneHitbox
   - Signpost
   - Shrines
+  - GodObject
+  - Area
+  - Compass
   layers:
   - Default
   - TransparentFX
