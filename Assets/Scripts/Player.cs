@@ -39,6 +39,7 @@ public class Player : MonoBehaviour {
     private int collectibleCount;
     private GameObject arena;
     private GameObject god;
+    public GameObject healthbar;
 
 
 
@@ -48,7 +49,6 @@ public class Player : MonoBehaviour {
         collectibleCount = 0;
         healthBar.fillAmount = 1;
         currentHealth = maxHealth;
-        compass = GameObject.Find("Compass");
         god = GameObject.Find("TheosGott");
 
         if (cloneObj == null)
@@ -62,6 +62,7 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        healthbar.transform.position = transform.position;
         //Hit Cooldown Timer
         if (hit_cooldown_timer > 0)
         {

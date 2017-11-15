@@ -51,7 +51,6 @@ public class PlayerClone : MonoBehaviour {
         else
         {
             this.transform.position = (player.transform.position + new Vector3(offset * Mathf.Sin(Mathf.Deg2Rad * rotation), 0, offset * Mathf.Cos(Mathf.Deg2Rad * rotation)));
-            Debug.Log("Velocity: " + (player.transform.position + (new Vector3(offset * Mathf.Sin(Mathf.Deg2Rad * rotation), 0, offset * Mathf.Cos(Mathf.Deg2Rad * rotation))) - new Vector3(this.transform.position.x, 0, this.transform.position.z)));     
         }
 
         this.transform.rotation = player.transform.rotation;
