@@ -10,8 +10,6 @@ public class Areas : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//FOR UNIQUE NAME	
-		string id = numberOfAreaObjects.ToString();
-		name = "area" + (numberOfAreaObjects.ToString()); 
 		numberOfAreaObjects++; //count up id
 
 		//INITIALIZE LIST
@@ -23,7 +21,7 @@ public class Areas : MonoBehaviour {
 		if(other.gameObject.CompareTag("Interactive")){ //is it an interactive?
 			if (!this.areaInteractives.Contains(other.gameObject)) { //if not already inside list:
 				this.areaInteractives.Add (other.gameObject); //add!
-				//print(name + ": interactive added"); //TESTING
+
 			}
 		}
         if (other.gameObject.tag == "Shrine")
@@ -36,7 +34,6 @@ public class Areas : MonoBehaviour {
 
 
 
-            //print (name +": TriggerEnter Executed!"); //TESTING
         } //end onTriggerEnter
 
 	public void setWinZone(){ //for Player spawn and end goal

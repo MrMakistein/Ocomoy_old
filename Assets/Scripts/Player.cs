@@ -32,7 +32,13 @@ public class Player : MonoBehaviour {
     public float shield_duration = 50;
 
     public GameObject shield;
-    
+
+    //Compass Ability Variables
+    public float compass_timer = 0;
+    public float compass_duration = 50;
+    public GameObject compass;
+
+
 
 
     // Random Shit
@@ -95,9 +101,14 @@ public class Player : MonoBehaviour {
             {
                 shield_timer = 1;
                 shield.SetActive(true);
-
-
             }
+
+            if (equipped_ability == 3)
+            {
+                compass_timer = 1;
+                compass.SetActive(true);
+            }
+
             equipped_ability = 0;
         }
 
@@ -111,7 +122,31 @@ public class Player : MonoBehaviour {
             Shield_ability();
         }
 
+        if (compass_timer >= 1)
+        {
+            Compass_ability();
+        }
+
     }
+    private void Compass_ability()
+    {
+        compass.transform.position = transform.position;
+        compass.GetComponent<Compass>().UpdateCompassDetection();
+
+        if (arena.GetComponent<SpawnController>().allCollected)
+        {
+            compass_timer = compass_duration;
+        }
+
+        compass_timer += Time.deltaTime * 5;
+        if (compass_timer >= compass_duration)
+        {
+            compass_timer = 0;
+            compass.SetActive(false);
+
+        }
+    }
+
 
     private void Start_clone_ability()
     {

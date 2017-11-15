@@ -81,13 +81,11 @@ public class dnd : MonoBehaviour
 
                 DrObj = draggingObject.GetComponent<Rigidbody>();
 
-                Debug.Log("Height: " + DrObj.transform.position.y);
                 pickUpScreenPos = currentCamera.WorldToScreenPoint(DrObj.position);
                 MouseVector = PersonalMath.CalculateMouse3DVector(currentCamera, mask, pickUpHeight + heightOffset);
                 //Apply force 
                 if (draggingDrag)
                 {
-                    Debug.Log("WeightInfluence: " + currentWeightInfluence);
                     DrObj.AddForce((MouseVector - DrObj.transform.position).normalized * forceStrenght, ForceMode.Force);
                     DrObj.drag = (currentWeightInfluence * 1) / Vector3.Distance(DrObj.transform.position, MouseVector);
                 }
@@ -183,7 +181,6 @@ public class dnd : MonoBehaviour
                     heightOffset = HeightOffsetFor4;
                     break;
                 default:
-                    Debug.LogError("Unknown WeightClass assigned");
                     break;
             }
         }
