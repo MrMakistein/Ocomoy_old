@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,7 +66,7 @@ LightmapSettings:
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
-    m_TextureCompression: 1
+    m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
@@ -86,7 +86,8 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: d392f7d7b46bbc84996c53456bcfa28e,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -142,7 +143,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 662114303}
-  m_RootOrder: 10
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &16409581
 MonoBehaviour:
@@ -673,7 +674,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 662114303}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &79360772
 MonoBehaviour:
@@ -1590,7 +1591,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 662114303}
-  m_RootOrder: 8
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &307268291
 MonoBehaviour:
@@ -2625,7 +2626,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 662114303}
-  m_RootOrder: 1
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &445872549
 MonoBehaviour:
@@ -3436,16 +3437,16 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1631200722}
-  - {fileID: 445872548}
-  - {fileID: 79360771}
+  - {fileID: 16409580}
+  - {fileID: 307268290}
   - {fileID: 1744140731}
   - {fileID: 534786372}
+  - {fileID: 79360771}
   - {fileID: 918024671}
   - {fileID: 1097227326}
   - {fileID: 1458037357}
-  - {fileID: 307268290}
   - {fileID: 34717711}
-  - {fileID: 16409580}
+  - {fileID: 445872548}
   - {fileID: 653340952}
   - {fileID: 1218678833}
   - {fileID: 1361146139}
@@ -4190,7 +4191,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 662114303}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &918024672
 MonoBehaviour:
@@ -4859,7 +4860,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 662114303}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1097227327
 MonoBehaviour:
@@ -6142,7 +6143,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 662114303}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1458037358
 MonoBehaviour:
@@ -7115,6 +7116,16 @@ Prefab:
       propertyPath: compass
       value: 
       objectReference: {fileID: 1630309960}
+    - target: {fileID: 114826451893895236, guid: bd307cdaf0b6a5443a0c5db9bf7724f7,
+        type: 2}
+      propertyPath: equipped_ability
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114826451893895236, guid: bd307cdaf0b6a5443a0c5db9bf7724f7,
+        type: 2}
+      propertyPath: god
+      value: 
+      objectReference: {fileID: 2073381154}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd307cdaf0b6a5443a0c5db9bf7724f7, type: 2}
   m_IsPrefabParent: 0

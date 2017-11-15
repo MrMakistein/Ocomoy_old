@@ -39,7 +39,9 @@ public class Player : MonoBehaviour {
     public GameObject compass;
 
 
-
+    //Slippery Hands Ability Variables
+    public int slip_uses = 5;
+    private int slips_left = 0;
 
     // Random Shit
     public int equipped_ability = 0;
@@ -47,6 +49,7 @@ public class Player : MonoBehaviour {
     public float hit_cooldown = 10;
 	private int collectibleCount;
     private GameObject arena;
+    private GameObject god;
 
 
 
@@ -56,18 +59,13 @@ public class Player : MonoBehaviour {
         collectibleCount = 0;
         healthBar.fillAmount = 1;
         currentHealth = maxHealth;
+        god = GameObject.Find("TheosGott");
     }
 
 
 
     // Update is called once per frame
     void Update () {
-
-        // Closest Signpost
-
-
-
-
 
         //Hit Cooldown Timer
         if (hit_cooldown_timer > 0)
@@ -109,6 +107,11 @@ public class Player : MonoBehaviour {
                 compass.SetActive(true);
             }
 
+            if (equipped_ability == 4)
+            {
+                slips_left = slip_uses;
+            }
+
             equipped_ability = 0;
         }
 
@@ -127,7 +130,26 @@ public class Player : MonoBehaviour {
             Compass_ability();
         }
 
+        if (slips_left >= 1)
+        {
+            Slipperyhands_ability();
+        }
+
     }
+
+
+    private void Slipperyhands_ability()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            god.GetComponent<dnd>().ReleaseObject();
+            slips_left--;
+        }
+
+    }
+
+
+
     private void Compass_ability()
     {
         compass.transform.position = transform.position;
