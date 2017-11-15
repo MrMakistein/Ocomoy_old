@@ -21,10 +21,16 @@ public class Player : MonoBehaviour {
     public float shield_rotation_speed = 200;
     public float shield_timer = 0;
     public float shield_duration = 50;
-
     public GameObject shield;
 
+    //Slippery Hands Ability Variables
+    public int slip_uses = 5;
+    private int slips_left = 0;
 
+    //Compass Ability Variables
+    public float compass_timer = 0;
+    public float compass_duration = 50;
+    public GameObject compass;
 
     // Random Shit
     public int equipped_ability = 0;
@@ -32,6 +38,7 @@ public class Player : MonoBehaviour {
     public float hit_cooldown = 10;
     private int collectibleCount;
     private GameObject arena;
+    private GameObject god;
 
 
 
@@ -41,6 +48,9 @@ public class Player : MonoBehaviour {
         collectibleCount = 0;
         healthBar.fillAmount = 1;
         currentHealth = maxHealth;
+        compass = GameObject.Find("Compass");
+        god = GameObject.Find("TheosGott");
+
         if (cloneObj == null)
         {
             Debug.LogError("No clone specified in player!");
@@ -51,12 +61,6 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
-        // Closest Signpost
-
-
-
-
 
         //Hit Cooldown Timer
         if (hit_cooldown_timer > 0)
@@ -86,9 +90,19 @@ public class Player : MonoBehaviour {
             {
                 shield_timer = 1;
                 shield.SetActive(true);
-
-
             }
+
+            if (equipped_ability == 3)
+            {
+                compass_timer = 1;
+                compass.SetActive(true);
+            }
+
+            if (equipped_ability == 4)
+            {
+                slips_left = slip_uses;
+            }
+
             equipped_ability = 0;
         }
 
@@ -97,7 +111,51 @@ public class Player : MonoBehaviour {
             Shield_ability();
         }
 
+        if (compass_timer >= 1)
+        {
+            Compass_ability();
+        }
+
+        if (slips_left >= 1)
+        {
+            Slipperyhands_ability();
+        }
+
+
     }
+
+
+    private void Slipperyhands_ability()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            god.GetComponent<dnd>().ReleaseObject();
+            slips_left--;
+        }
+
+    }
+
+
+
+    private void Compass_ability()
+    {
+        compass.transform.position = transform.position;
+        compass.GetComponent<Compass>().UpdateCompassDetection();
+
+        if (arena.GetComponent<SpawnController>().allCollected)
+        {
+            compass_timer = compass_duration;
+        }
+
+        compass_timer += Time.deltaTime * 5;
+        if (compass_timer >= compass_duration)
+        {
+            compass_timer = 0;
+            compass.SetActive(false);
+
+        }
+    }
+
 
     private void Start_clone_ability()
     {
