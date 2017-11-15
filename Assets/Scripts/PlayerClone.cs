@@ -7,12 +7,12 @@ public class PlayerClone : MonoBehaviour {
     private GameObject player;
 
     public float rotation;
+    public float rotation_speed;
     public float offset = 2;
     public float speed = 10;
     public float expandTime = 2;
     private float expandTimer = 0;
-
-    public float cloneTime = 20;
+    private float cloneTime;
     private float cloneTimer = 0;
 
     private GameObject god;
@@ -25,6 +25,7 @@ public class PlayerClone : MonoBehaviour {
         player = GameObject.Find("Player");
         this.transform.position = (player.transform.position + new Vector3(offset * Mathf.Sin(Mathf.Deg2Rad * rotation), player.transform.position.y, offset * Mathf.Cos(Mathf.Deg2Rad * rotation)));
         god = GameObject.Find("TheosGott");
+        cloneTime = player.GetComponent<Player>().clone_time;
     }
 
     // Update is called once per frame
@@ -32,7 +33,7 @@ public class PlayerClone : MonoBehaviour {
 
         if (cloneTimer > cloneTime)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -51,6 +52,9 @@ public class PlayerClone : MonoBehaviour {
             this.transform.position = (player.transform.position + new Vector3(offset * Mathf.Sin(Mathf.Deg2Rad * rotation), 0, offset * Mathf.Cos(Mathf.Deg2Rad * rotation)));
             Debug.Log("Velocity: " + (player.transform.position + (new Vector3(offset * Mathf.Sin(Mathf.Deg2Rad * rotation), 0, offset * Mathf.Cos(Mathf.Deg2Rad * rotation))) - new Vector3(this.transform.position.x, 0, this.transform.position.z)));     
         }
+
+        this.transform.rotation = player.transform.rotation;
+
         Clones = GameObject.FindGameObjectsWithTag("Clone");
         for (int i = 0; i < Clones.Length; i++)
         {
@@ -59,6 +63,7 @@ public class PlayerClone : MonoBehaviour {
                 rotation = (360.0f / Clones.Length) * i ;
             }
         }
-    }    
+    }
+    
 }
     
