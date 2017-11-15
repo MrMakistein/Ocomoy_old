@@ -16,7 +16,6 @@ public class PlayerClone : MonoBehaviour {
     private float cloneTimer = 0;
     private int cloneAmount = 0;
 
-    private GameObject god;
     // Use this for initialization
 
     private GameObject[] Clones;
@@ -25,7 +24,7 @@ public class PlayerClone : MonoBehaviour {
     {
         player = GameObject.Find("Player");
         this.transform.position = (player.transform.position + new Vector3(offset * Mathf.Sin(Mathf.Deg2Rad * rotation), player.transform.position.y, offset * Mathf.Cos(Mathf.Deg2Rad * rotation)));
-        god = GameObject.Find("TheosGott");
+
         cloneTime = player.GetComponent<Player>().clone_time;
     }
 

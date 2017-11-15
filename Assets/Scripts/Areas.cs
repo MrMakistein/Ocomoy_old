@@ -9,8 +9,6 @@ public class Areas : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//FOR UNIQUE NAME	
-		string id = numberOfAreaObjects.ToString();
 		numberOfAreaObjects++; //count up id
 
 		//INITIALIZE LIST

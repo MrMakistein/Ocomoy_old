@@ -40,12 +40,18 @@ public class Player : MonoBehaviour {
     private GameObject arena;
     private GameObject god;
     public GameObject healthbar;
+    public GameObject display_shield;
+    public GameObject display_compass;
+    public GameObject display_slippy;
+    public GameObject display_clone;
+
 
 
 
     // Use this for initialization
     void Start() {
         arena = GameObject.Find("Arena");
+        
         collectibleCount = 0;
         healthBar.fillAmount = 1;
         currentHealth = maxHealth;
@@ -79,6 +85,10 @@ public class Player : MonoBehaviour {
         // Ability Activation
         if (Input.GetKeyDown("space") && !gameObject.GetComponent<Movement>().move_block)
         {
+            display_shield.SetActive(false);
+            display_compass.SetActive(false);
+            display_slippy.SetActive(false);
+            display_clone.SetActive(false);
 
 
             if (equipped_ability == 2)
@@ -93,13 +103,13 @@ public class Player : MonoBehaviour {
                 shield.SetActive(true);
             }
 
-            if (equipped_ability == 3)
+            if (equipped_ability == 4)
             {
                 compass_timer = 1;
                 compass.SetActive(true);
             }
 
-            if (equipped_ability == 4)
+            if (equipped_ability == 5)
             {
                 slips_left = slip_uses;
             }
@@ -279,8 +289,23 @@ public class Player : MonoBehaviour {
         {
             col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer = col.gameObject.GetComponent<Shrine>().shrine_cooldown;
             equipped_ability = col.gameObject.GetComponent<Shrine>().shrine_id;
-
-
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 2)
+            {
+                display_clone.SetActive(true);
+            }
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 3)
+            {
+                display_shield.SetActive(true);
+            }
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 4)
+            {
+                display_compass.SetActive(true);
+            }
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 5)
+            {
+                display_slippy.SetActive(true);
+            }
+            
         }
     }
 }
