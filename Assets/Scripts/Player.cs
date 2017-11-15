@@ -103,7 +103,7 @@ public class Player : MonoBehaviour {
 
         if (clone_timer >= 1)
         {
-            Clone_ability();
+            //Clone_ability();
         }
 
         if (shield_timer >= 1)
@@ -115,15 +115,6 @@ public class Player : MonoBehaviour {
 
     private void Start_clone_ability()
     {
-        clone_timer = 1;
-        clone1.SetActive(true);
-        clone2.SetActive(true);
-        clone3.SetActive(true);
-        clone4.SetActive(true);
-        clone1_hitbox.SetActive(true);
-        clone2_hitbox.SetActive(true);
-        clone3_hitbox.SetActive(true);
-        clone4_hitbox.SetActive(true);
     }
 
     private void Clone_ability()
@@ -269,6 +260,7 @@ public class Player : MonoBehaviour {
             }
             
 		}
+        
     }
 
     private void OnTriggerStay(Collider col)

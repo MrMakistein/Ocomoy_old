@@ -31,4 +31,18 @@ public class cloneControl : MonoBehaviour {
             active = false;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Interactive")
+        {
+            foreach (ContactPoint c in collision.contacts)
+            {
+                if(c.thisCollider.gameObject.tag == "Clone")
+                {
+                    Destroy(c.thisCollider.gameObject);             
+                }                
+            }
+        }       
+    }
 }

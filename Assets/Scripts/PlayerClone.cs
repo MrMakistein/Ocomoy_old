@@ -12,6 +12,9 @@ public class PlayerClone : MonoBehaviour {
     public float expandTime = 2;
     private float expandTimer = 0;
 
+    public float cloneTime = 20;
+    private float cloneTimer = 0;
+
     private GameObject god;
     // Use this for initialization
 
@@ -26,6 +29,15 @@ public class PlayerClone : MonoBehaviour {
 
     // Update is called once per frame
     void LateUpdate () {
+
+        if (cloneTimer > cloneTime)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            cloneTimer += Time.deltaTime;
+        }
 
         //position update
 
@@ -47,12 +59,6 @@ public class PlayerClone : MonoBehaviour {
                 rotation = (360.0f / Clones.Length) * i ;
             }
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        god.GetComponent<dnd>().ReleaseObject(); // Makes the god drop the object he's holding
-        Destroy(this, 0.2f);
-    }
+    }    
 }
     
