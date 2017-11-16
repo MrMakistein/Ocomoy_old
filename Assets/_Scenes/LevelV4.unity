@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -556,6 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -816,6 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -1076,6 +1079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -1336,6 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -2206,6 +2211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -2344,6 +2350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -2482,6 +2489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -2620,6 +2628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -3054,6 +3063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -3723,6 +3733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -3861,6 +3872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -4117,6 +4129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -4255,6 +4268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -4633,6 +4647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -5015,6 +5030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -5153,6 +5169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -5291,6 +5308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -5429,6 +5447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -5567,6 +5586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -5705,6 +5725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -5843,6 +5864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -5981,6 +6003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -6119,6 +6142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -6379,6 +6403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -6795,6 +6820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -7180,6 +7206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -7436,6 +7463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -7696,6 +7724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -8133,6 +8162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -8271,6 +8301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -8527,6 +8558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -9027,6 +9059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -9893,6 +9926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -10091,6 +10125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -10469,6 +10504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -10725,6 +10761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -10863,6 +10900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -11197,6 +11235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -11830,6 +11869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -11968,6 +12008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -12106,6 +12147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -12244,6 +12286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -12509,6 +12552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -12896,6 +12940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -13034,6 +13079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -13210,6 +13256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -13470,6 +13517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -13608,6 +13656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -13746,6 +13795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -13884,6 +13934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -14498,6 +14549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -14636,6 +14688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -14896,6 +14949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -15034,6 +15088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -15294,6 +15349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -15432,6 +15488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -15861,6 +15918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -16150,6 +16208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -16288,6 +16347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -16607,6 +16667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -16745,6 +16806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -16883,6 +16945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -17021,6 +17084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -17333,6 +17397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -17471,6 +17536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -18093,6 +18159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -18231,6 +18298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -18613,6 +18681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -18751,6 +18820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -19138,6 +19208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -19276,6 +19347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -19414,6 +19486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -19552,6 +19625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -19690,6 +19764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -19828,6 +19903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -20188,6 +20264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -20570,6 +20647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -20826,6 +20904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -21086,6 +21165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -21224,6 +21304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -21362,6 +21443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -21970,7 +22052,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 60, y: 10}
+  m_SizeDelta: {x: 40, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490139206
 MonoBehaviour:
@@ -22415,6 +22497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -22553,6 +22636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -22691,6 +22775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -22951,6 +23036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -23089,6 +23175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -23585,6 +23672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -23723,6 +23811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -23861,6 +23950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -24121,6 +24211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -24259,6 +24350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -24799,6 +24891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -25299,6 +25392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -25423,6 +25517,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &568225956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 568225957}
+  - component: {fileID: 568225959}
+  - component: {fileID: 568225958}
+  m_Layer: 0
+  m_Name: CollectiblesGUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &568225957
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568225956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1031051667}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -412.8, y: 238.5}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &568225958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568225956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Collectibles: 0'
+--- !u!222 &568225959
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568225956}
 --- !u!1 &570093792
 GameObject:
   m_ObjectHideFlags: 0
@@ -25631,6 +25799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -25960,6 +26129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -26338,6 +26508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -26476,6 +26647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -26736,6 +26908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -27186,6 +27359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -27324,6 +27498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -27462,6 +27637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -27600,6 +27776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -27738,6 +27915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -28502,7 +28680,7 @@ Prefab:
     - target: {fileID: 114286491901741004, guid: bd307cdaf0b6a5443a0c5db9bf7724f7,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114826451893895236, guid: bd307cdaf0b6a5443a0c5db9bf7724f7,
         type: 2}
@@ -28559,6 +28737,16 @@ Prefab:
       propertyPath: display_slip_uses
       value: 
       objectReference: {fileID: 1873837508}
+    - target: {fileID: 114826451893895236, guid: bd307cdaf0b6a5443a0c5db9bf7724f7,
+        type: 2}
+      propertyPath: display_slow
+      value: 
+      objectReference: {fileID: 1938642381}
+    - target: {fileID: 114826451893895236, guid: bd307cdaf0b6a5443a0c5db9bf7724f7,
+        type: 2}
+      propertyPath: collectibles_gui
+      value: 
+      objectReference: {fileID: 568225956}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd307cdaf0b6a5443a0c5db9bf7724f7, type: 2}
   m_IsPrefabParent: 0
@@ -28610,6 +28798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -28753,6 +28942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -28891,6 +29081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -29273,6 +29464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -29529,6 +29721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -29911,6 +30104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -30049,6 +30243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -30314,6 +30509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -30696,6 +30892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -30834,6 +31031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -31149,6 +31347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -31287,6 +31486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -31425,6 +31625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -31563,6 +31764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -31823,6 +32025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -32083,6 +32286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -32592,6 +32796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -33291,6 +33496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -33702,6 +33908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -33958,6 +34165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -34096,6 +34304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -34234,6 +34443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -34372,6 +34582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -35360,6 +35571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -35498,6 +35710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -35963,6 +36176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -36345,6 +36559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -36483,6 +36698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -36621,6 +36837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -37172,6 +37389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -37554,6 +37772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -37848,6 +38067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -37986,6 +38206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -38246,6 +38467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -38384,6 +38606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -38522,6 +38745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -38904,6 +39128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -39414,6 +39639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -39552,6 +39778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -39690,6 +39917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -39828,6 +40056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -39971,6 +40200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -40237,6 +40467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -40375,6 +40606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -40513,6 +40745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -40651,6 +40884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -40967,6 +41201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 3
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -41349,6 +41584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -41609,6 +41845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -41747,6 +41984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -42154,6 +42392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -42436,6 +42675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -42874,6 +43114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -43012,6 +43253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -43989,6 +44231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -44127,6 +44370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -44644,6 +44888,100 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027651856}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1031051666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1031051667}
+  - component: {fileID: 1031051670}
+  - component: {fileID: 1031051669}
+  - component: {fileID: 1031051668}
+  m_Layer: 0
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1031051667
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031051666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 568225957}
+  m_Father: {fileID: 2117570857}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1031051668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031051666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1031051669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031051666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1031051670
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031051666}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1033315667
 Prefab:
   m_ObjectHideFlags: 0
@@ -44948,6 +45286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -45562,6 +45901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -45700,6 +46040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -45838,6 +46179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -45976,6 +46318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -46232,6 +46575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -46370,6 +46714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -46807,6 +47152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -46945,6 +47291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -47083,6 +47430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -47394,6 +47742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -47654,6 +48003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -48362,6 +48712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -48500,6 +48851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -48756,6 +49108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -48894,6 +49247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -49320,6 +49674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -49458,6 +49813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -49596,6 +49952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -50100,6 +50457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -50238,6 +50596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -50376,6 +50735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -50636,6 +50996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -50792,7 +51153,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073486}
-  m_SizeDelta: {x: 60, y: 10}
+  m_SizeDelta: {x: 40, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1170589444
 Prefab:
@@ -50913,6 +51274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -51451,6 +51813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -52002,6 +52365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -52262,6 +52626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -52400,6 +52765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -52538,6 +52904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -52676,6 +53043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -52819,6 +53187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -52957,6 +53326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -53537,6 +53907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -53793,6 +54164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -53931,6 +54303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -54798,6 +55171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -54936,6 +55310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -55074,6 +55449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -55578,6 +55954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -55916,6 +56293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -56420,6 +56798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -56558,6 +56937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -57569,6 +57949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -57834,6 +58215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -57972,6 +58354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -58409,6 +58792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -58547,6 +58931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -59102,6 +59487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -59240,6 +59626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -59795,6 +60182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -59933,6 +60321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -60071,6 +60460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -60277,6 +60667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -60415,6 +60806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -60675,6 +61067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -60935,6 +61328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -61140,6 +61534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -61278,6 +61673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -61416,6 +61812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -61798,6 +62195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -61936,6 +62334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -62074,6 +62473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -62334,6 +62734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -62424,6 +62825,68 @@ MeshFilter:
   m_PrefabInternal: {fileID: 294597167}
   m_GameObject: {fileID: 1492976226}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1496053399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1496053402}
+  - component: {fileID: 1496053401}
+  - component: {fileID: 1496053400}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1496053400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1496053399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1496053401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1496053399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &1496053402
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1496053399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1498337820
 GameObject:
   m_ObjectHideFlags: 0
@@ -62472,6 +62935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -62610,6 +63074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -62748,6 +63213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -63008,6 +63474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -63748,6 +64215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -64619,6 +65087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -64879,6 +65348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -65139,6 +65609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -65399,6 +65870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -65537,6 +66009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -65919,6 +66392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -66057,6 +66531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -66195,6 +66670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -67499,6 +67975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -67637,6 +68114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -68231,6 +68709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -68442,6 +68921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -68698,6 +69178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -68836,6 +69317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -68974,6 +69456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -69112,6 +69595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -69372,6 +69856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -69632,6 +70117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -69770,6 +70256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -70030,6 +70517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -70168,6 +70656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -70306,6 +70795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -70444,6 +70934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -70704,6 +71195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -70964,6 +71456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -71220,6 +71713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -71598,6 +72092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -71736,6 +72231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -72110,6 +72606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -72492,6 +72989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -72630,6 +73128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -72768,6 +73267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -72906,6 +73406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -73042,6 +73543,11 @@ Prefab:
     - target: {fileID: 23414792856086818, guid: 54dfd343b5b1c13449a12d51886e0bf3,
         type: 2}
       propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114163032464156280, guid: 54dfd343b5b1c13449a12d51886e0bf3,
+        type: 2}
+      propertyPath: shrine_swap
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -73222,6 +73728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -73360,6 +73867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -74434,6 +74942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -74763,6 +75272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -74901,6 +75411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -75161,6 +75672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -75363,6 +75875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -75501,6 +76014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -75817,6 +76331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -75955,6 +76470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -76144,6 +76660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -76282,6 +76799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -76538,6 +77056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -76676,6 +77195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -76932,6 +77452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -77070,6 +77591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -77208,6 +77730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -77952,6 +78475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -78743,6 +79267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -78999,6 +79524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -79381,6 +79907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -79519,6 +80046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -79657,6 +80185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -79991,6 +80520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -80204,6 +80734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -80464,6 +80995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -80602,6 +81134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -80740,6 +81273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -80878,6 +81412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -81016,6 +81551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -81642,6 +82178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -82024,6 +82561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -82162,6 +82700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 4
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -82422,6 +82961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -82560,6 +83100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -82650,6 +83191,73 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1620845653}
   m_GameObject: {fileID: 1937431694}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1938642381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1938642382}
+  - component: {fileID: 1938642384}
+  - component: {fileID: 1938642383}
+  m_Layer: 5
+  m_Name: Slow_Display
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1938642382
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938642381}
+  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 2093845622}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000019073486, y: 59.10002}
+  m_SizeDelta: {x: 100, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1938642383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938642381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: 8e39152db1b078449b7820002ed00a8f, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1938642384
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938642381}
 --- !u!1001 &1940664805
 Prefab:
   m_ObjectHideFlags: 0
@@ -82816,6 +83424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -82954,6 +83563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -83092,6 +83702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -83592,6 +84203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -83730,6 +84342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -83868,6 +84481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -84006,6 +84620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -84521,6 +85136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -84786,6 +85402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -84924,6 +85541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -85062,6 +85680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -85322,6 +85941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -85460,6 +86080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -85663,6 +86284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -85801,6 +86423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -85939,6 +86562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 2
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -86077,6 +86701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -86484,6 +87109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -86744,6 +87370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -86882,6 +87509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -87264,6 +87892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -87577,6 +88206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -87959,6 +88589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -88415,6 +89046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -88675,6 +89307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -88813,6 +89446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -88951,6 +89585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -89197,6 +89832,7 @@ RectTransform:
   - {fileID: 1463171556}
   - {fileID: 1339190452}
   - {fileID: 1873837509}
+  - {fileID: 1938642382}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -89838,6 +90474,39 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a9e057e602d503468672cec26321946, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2117570856 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1511365348624350, guid: ce7bc5b2c4a73754a9da85f8b086b20c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1170589444}
+--- !u!4 &2117570857 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4826930659043418, guid: ce7bc5b2c4a73754a9da85f8b086b20c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1170589444}
+--- !u!114 &2117570862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117570856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6d4281e5d7cd44d8c6e38bc2c1b8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  intensity: 0.423
+  chromaticAberration: 1.48
+  axialAberration: 0
+  blur: 0.128
+  blurSpread: 0.388
+  luminanceDependency: 0.09
+  blurDistance: 1.02
+  vignetteShader: {fileID: 4800000, guid: 627943dc7a9a74286b70a4f694a0acd5, type: 3}
+  separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
+  chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
+    type: 3}
 --- !u!1001 &2121399159
 Prefab:
   m_ObjectHideFlags: 0
@@ -90008,6 +90677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -90146,6 +90816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -90650,6 +91321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -90788,6 +91460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -90926,6 +91599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10
@@ -91430,6 +92104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d22cb00eb0d61c4db66d4bf2f125297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  update_weight: 1
   weight_class: 1
   dmg_cooldown: 0
   dmg_cooldown_max: 10

@@ -55,6 +55,8 @@ public class Player : MonoBehaviour {
     public GameObject display_slow;
     public GameObject display_slip_uses;
     public bool in_shrine;
+    public GameObject collectibles_gui;
+
 
 
 
@@ -78,8 +80,22 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        
-       
+
+        //Update Collectibles Display
+        if (collectibleCount == 1)
+        {
+            collectibles_gui.GetComponent<Text>().text = "Collectibles: 1";
+        }
+        if (collectibleCount == 2)
+        {
+            collectibles_gui.GetComponent<Text>().text = "Collectibles: 2";
+        }
+        if (collectibleCount == 3)
+        {
+            collectibles_gui.GetComponent<Text>().text = "Collectibles: 3";
+        }
+
+
 
         healthbar.transform.position = transform.position;
         //Hit Cooldown Timer
