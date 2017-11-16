@@ -37,8 +37,7 @@ public class InteractiveSettings : MonoBehaviour
 		/// Test as collider:
 
         //for testing
-        GetComponent<Renderer> ().material = collectibleMaterial;
-		//GetComponent<Rigidbody> ().isKinematic = true; //don't fall through floor --> PROBLEM: can't pick up
+        //GetComponent<Renderer> ().material = collectibleMaterial;
         
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.PostProcessing;
 
 
 
@@ -56,7 +57,9 @@ public class Player : MonoBehaviour {
     public GameObject display_slip_uses;
     public bool in_shrine;
     public GameObject collectibles_gui;
-
+    public GameObject Camera;
+    public PostProcessingProfile m_Profile;
+    public GameObject[] collectibles;
 
 
 
@@ -74,12 +77,14 @@ public class Player : MonoBehaviour {
         {
             Debug.LogError("No clone specified in player!");
         }
-    }
 
+    }
 
 
     // Update is called once per frame
     void Update() {
+
+        UpdateVignette();
 
         //Update Collectibles Display
         if (collectibleCount == 1)
@@ -182,6 +187,58 @@ public class Player : MonoBehaviour {
         {
             slow_timer += Time.deltaTime;
         }
+
+
+    }
+
+    public GameObject GetClosestCollectible()
+    {
+        collectibles = arena.GetComponent<SpawnController>().collectibles;
+        GameObject gMin = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = transform.position;
+        foreach (GameObject g in collectibles)
+        {
+            float dist = Vector3.Distance(g.transform.position, currentPos);
+            if (dist < minDist && g.gameObject.activeSelf)
+            {
+                gMin = g;
+                minDist = dist;
+            }
+        }
+        return gMin;
+    }
+
+
+
+
+    private void UpdateVignette() //ADJUST
+    {
+
+        GameObject closest_collectible = GetClosestCollectible();
+       
+        if (closest_collectible != null)
+        {
+            float intensity = 0;
+            float distance = Vector3.Distance(transform.position, closest_collectible.transform.position);
+            //print(distance);
+
+            if (distance < 45f)
+            {
+                intensity = + ((45 - distance) / 72);
+                if (intensity > 0.65f)
+                {
+                    intensity = 0.65f;
+                }
+
+            }
+            var vignette = m_Profile.vignette.settings;
+            vignette.intensity = intensity;
+            m_Profile.vignette.settings = vignette;
+        }
+        
+
+        
 
 
     }
