@@ -28,7 +28,6 @@ public class earthshatter : MonoBehaviour {
                 else
                 {
                     player.GetComponent<Movement>().reversed = true;
-                    Debug.Log("Time Reversed: " + destroyTime());
                     Destroy(this, destroyTime());
                 }
             }

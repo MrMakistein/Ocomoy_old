@@ -16,6 +16,7 @@ public class GodEffects : MonoBehaviour
     public GameObject thunderEffect;
     public GameObject avalancheEffect;
     public GameObject blizzardEffect;
+    public int uid;
 
     private bool charged = false;
 
@@ -23,8 +24,9 @@ public class GodEffects : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        CurrentType = (GodEffectType) Random.Range(0, 6);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -47,6 +49,20 @@ public class GodEffects : MonoBehaviour
 
     private void SpawnEffect(GodEffectType effectType, Vector3 pos)
     {
+        GameObject[] godObjectSpawnPositions = GameObject.FindGameObjectsWithTag("GodObjectSpawnPosition");
+
+        foreach (GameObject godObjectSpawnPosition in godObjectSpawnPositions)
+        {
+            if (uid == godObjectSpawnPosition.GetComponent<GodEffectSpawnPosition>().uid)
+            {
+                godObjectSpawnPosition.GetComponent<GodEffectSpawnPosition>().new_spawn_timer = godObjectSpawnPosition.GetComponent<GodEffectSpawnPosition>().new_spawn_duration;
+            }
+
+        }
+
+
+
+
         switch (effectType)
         {
             case GodEffectType.tornado:

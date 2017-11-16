@@ -10,6 +10,9 @@ public class SpawnController : MonoBehaviour {
 	public List<GameObject> spawnAreaObjects;
 	public GameObject[] areas; //areas in which collectibles spawn (1 per area)
     public List<GameObject> chosenCollectibles; //List for all collectibles
+    public GameObject[] godObjectSpawnPositions;
+    public int initialGodObjects = 3;
+    public GameObject godObject;
 
     //PRIVATE VARIABLES
     private GameObject[] interactives; //all interactive GameObjects in the scene
@@ -19,6 +22,7 @@ public class SpawnController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         SpawnShrines();
+        SpawnGodObjects();
         Invoke("DetermineAreas", 0.1f);
         Invoke("DetermineCollectibles", 0.2f);
     }
@@ -27,6 +31,52 @@ public class SpawnController : MonoBehaviour {
     void Update () {
 		
 	}
+
+    public static string GetUniqueID()
+    {
+        string key = "ID";
+
+        var random = new System.Random();
+        DateTime epochStart = new System.DateTime(1970, 1, 1, 8, 0, 0, System.DateTimeKind.Utc);
+        double timestamp = (System.DateTime.UtcNow - epochStart).TotalSeconds;
+
+        string uniqueID = String.Format("{0:X}", Convert.ToInt32(timestamp))                //Time
+                +  String.Format("{0:X}", Convert.ToInt32(Time.time * 1000000))        //Time in game
+                + String.Format("{0:X}", random.Next(1000000000));                //random number
+
+        if (PlayerPrefs.HasKey(key))
+        {
+            uniqueID = PlayerPrefs.GetString(key);
+        }
+        else
+        {
+            PlayerPrefs.SetString(key, uniqueID);
+            PlayerPrefs.Save();
+        }
+
+        return uniqueID;
+    }
+
+
+    public void SpawnGodObjects()
+    {
+        godObjectSpawnPositions = GameObject.FindGameObjectsWithTag("GodObjectSpawnPosition");
+
+        while (initialGodObjects > 0)
+        {
+            int rand = UnityEngine.Random.Range(0, godObjectSpawnPositions.Length);
+            if (!godObjectSpawnPositions[rand].GetComponent<GodEffectSpawnPosition>().in_use)
+            {
+                int uid = godObjectSpawnPositions[rand].gameObject.GetInstanceID();
+                godObjectSpawnPositions[rand].GetComponent<GodEffectSpawnPosition>().uid = uid;
+                initialGodObjects--;
+                godObjectSpawnPositions[rand].GetComponent<GodEffectSpawnPosition>().in_use = true;
+                GameObject godItem = Instantiate(godObject) as GameObject;
+                godItem.transform.position = godObjectSpawnPositions[rand].transform.position;
+                godItem.GetComponent<GodEffects>().uid = uid;
+            }
+        }
+    }
 
 	public void DetermineAreas(){
 		spawnAreaObjects = new List<GameObject> (GameObject.FindGameObjectsWithTag("Area"));

@@ -13,6 +13,7 @@ TagManager:
   - GodObject
   - Area
   - Compass
+  - GodObjectSpawnPosition
   layers:
   - Default
   - TransparentFX

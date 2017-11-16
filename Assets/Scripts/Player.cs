@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class Player : MonoBehaviour {
@@ -81,6 +83,11 @@ public class Player : MonoBehaviour {
         {
             currentHealth = currentHealth + (regenSpeed / 200);
             healthBar.fillAmount = currentHealth / maxHealth;
+        }
+        if ( currentHealth <= 0)
+        {
+            print("Arena wins");
+            SceneManager.LoadScene("Menu");
         }
 
         // Ability Activation
@@ -328,6 +335,11 @@ public class Player : MonoBehaviour {
             if (col.gameObject.GetComponent<Shrine>().shrine_id == 5)
             {
                 display_slippy.SetActive(true);
+            }
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 1 && arena.GetComponent<SpawnController>().allCollected)
+            {
+                print("Player wins");
+                SceneManager.LoadScene("Menu");
             }
             
         }
