@@ -34,6 +34,12 @@ public class Player : MonoBehaviour {
     public float compass_duration = 50;
     public GameObject compass;
 
+    //Slowdown Ability Variables
+    public static bool slowEffect = false;
+    private float slow_timer = 0;
+    public float slow_duration = 15;
+    public static float slow_mass = 15;
+
     // Random Shit
     public int equipped_ability = 0;
     public float hit_cooldown_timer;
@@ -46,7 +52,9 @@ public class Player : MonoBehaviour {
     public GameObject display_compass;
     public GameObject display_slippy;
     public GameObject display_clone;
+    public GameObject display_slow;
     public GameObject display_slip_uses;
+    public bool in_shrine;
 
 
 
@@ -70,6 +78,8 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        
+       
 
         healthbar.transform.position = transform.position;
         //Hit Cooldown Timer
@@ -91,12 +101,14 @@ public class Player : MonoBehaviour {
         }
 
         // Ability Activation
-        if (Input.GetKeyDown("space") && !gameObject.GetComponent<Movement>().move_block)
+        if (Input.GetKeyDown("space") && !gameObject.GetComponent<Movement>().move_block && !in_shrine)
         {
             display_shield.SetActive(false);
             display_compass.SetActive(false);
             display_slippy.SetActive(false);
             display_clone.SetActive(false);
+            display_slow.SetActive(false);
+
 
 
             if (equipped_ability == 2)
@@ -122,6 +134,12 @@ public class Player : MonoBehaviour {
                 slips_left = slip_uses;
             }
 
+            if (equipped_ability == 6)
+            {
+                slow_timer = 0;
+                slowEffect = true;
+            }
+
             equipped_ability = 0;
         }
 
@@ -138,6 +156,15 @@ public class Player : MonoBehaviour {
         if (slips_left >= 1)
         {
             Slipperyhands_ability();
+        }
+
+        if (slow_timer > slow_duration)
+        {
+            slowEffect = false;
+        }
+        else
+        {
+            slow_timer += Time.deltaTime;
         }
 
 
@@ -313,13 +340,58 @@ public class Player : MonoBehaviour {
         }        
     }
 
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Shrine") { 
+
+            in_shrine = false;
+        }
+    }
+
     private void OnTriggerStay(Collider col)
     {
-        // Tests for players pressing spacebar while standing in shrine
-        if (col.gameObject.tag == "Shrine" && Input.GetKeyDown("space") && col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer <= 0 && col.gameObject.GetComponent<Shrine>().blessing_spawn_cooldown_timer <= 0)
-        {
-            col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer = col.gameObject.GetComponent<Shrine>().shrine_cooldown;
-            equipped_ability = col.gameObject.GetComponent<Shrine>().shrine_id;
+            if (col.gameObject.tag == "Shrine" && col.gameObject.GetComponent<Shrine>().shrine_id > 1)
+            {
+                if (col.gameObject.GetComponent<Shrine>().blessing_spawn_cooldown_timer <= 0)
+                {
+                    in_shrine = true;
+                } else
+                {
+                    in_shrine = false;
+                }
+            
+            }
+            // Tests for players pressing spacebar while standing in shrine
+            if (col.gameObject.tag == "Shrine" && Input.GetKeyDown("space") && col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer <= 0 && col.gameObject.GetComponent<Shrine>().blessing_spawn_cooldown_timer <= 0)
+            {
+            if (col.gameObject.GetComponent<Shrine>().shrine_id > 1) { 
+                col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer = col.gameObject.GetComponent<Shrine>().shrine_cooldown;
+                equipped_ability = col.gameObject.GetComponent<Shrine>().shrine_id;
+            
+                // Reset Other Abilities before activating new one
+                {
+                    display_shield.SetActive(false);
+                    display_compass.SetActive(false);
+                    display_slippy.SetActive(false);
+                    display_clone.SetActive(false);
+                    display_slow.SetActive(false);
+
+                    slowEffect = false;
+                    slips_left = 0;
+                    compass_timer = 0;
+                    shield_timer = 0;
+                    GameObject[] clones = GameObject.FindGameObjectsWithTag("Clone");
+                    foreach (GameObject clone in clones)
+                    {
+                        Destroy(clone.gameObject);
+                    }
+                    display_slip_uses.GetComponent<Text>().text = "";
+                    compass.SetActive(false);
+                    shield.SetActive(false);
+                }
+            }
+
+
             if (col.gameObject.GetComponent<Shrine>().shrine_id == 2)
             {
                 display_clone.SetActive(true);
@@ -335,6 +407,10 @@ public class Player : MonoBehaviour {
             if (col.gameObject.GetComponent<Shrine>().shrine_id == 5)
             {
                 display_slippy.SetActive(true);
+            }
+            if (col.gameObject.GetComponent<Shrine>().shrine_id == 6)
+            {
+                display_slow.SetActive(true);
             }
             if (col.gameObject.GetComponent<Shrine>().shrine_id == 1 && arena.GetComponent<SpawnController>().allCollected)
             {

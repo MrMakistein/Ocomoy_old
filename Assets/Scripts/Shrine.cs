@@ -5,10 +5,11 @@ using UnityEngine;
 public class Shrine : MonoBehaviour {
 
     public float shrine_cooldown = 10; // how long the player is locked in the shrine while praying
-    [HideInInspector] public float shrine_cooldown_timer = 0;
+    public float shrine_cooldown_timer = 0;
     public float blessing_spawn_cooldown = 100; // how long the shrine takes to generate a new item after it was picked up
     [HideInInspector] public float blessing_spawn_cooldown_timer = 0;
     public int shrine_id = 1;
+    public bool shrine_swap = true;
 
 	// Use this for initialization
 	void Start () {
@@ -25,14 +26,28 @@ public class Shrine : MonoBehaviour {
             GetComponent<Renderer>().material.color = Color.red;
             blessing_spawn_cooldown_timer = blessing_spawn_cooldown;
             shrine_cooldown_timer -= Time.deltaTime * 5;
+
+           
+
         }
         else if (blessing_spawn_cooldown_timer > 0)
         {
             GetComponent<Renderer>().material.color = Color.gray;
+
         }
         else
         {
             GetComponent<Renderer>().material.color = new Color(0.2F, 0.2F, 0.2F, 1);
+        }
+
+        if (blessing_spawn_cooldown_timer < 4 && blessing_spawn_cooldown_timer > 1)
+        {
+            if (shrine_swap && shrine_id != 1)
+            {
+                int new_shrine_id = Random.Range(2, 7);
+                shrine_id = new_shrine_id;
+            }
+            blessing_spawn_cooldown_timer = 0;
         }
 
         // Decreases timer for blessing spawn at shrine

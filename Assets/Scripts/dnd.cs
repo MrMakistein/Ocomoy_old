@@ -50,8 +50,9 @@ public class dnd : MonoBehaviour
     //for math
     private static float editorScreenMean = (1053 + 459) / 2;
     private static float playScreenMean;
+    
 
-    void Start()
+    void Awake  ()
     {
         playScreenMean = (Screen.width + Screen.height) / 2;
         currentCamera = Camera.main;
@@ -63,11 +64,14 @@ public class dnd : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
+    {        
 
 
         if (buttonReleased && Input.GetMouseButton(0) && (!isDragging || Vector3.Distance(pickUpScreenPos, Input.mousePosition) <= DropDistance))
         {
+            //Check and Apply Slow Effect
+            slowEffectCheckAndApply();
+
             //start dragging
             if (!isDragging)
             {
@@ -138,9 +142,8 @@ public class dnd : MonoBehaviour
             buttonReleased = true;
         }
 
-
-        oldCameraPosition = currentCamera.transform.position;
-
+        //Camera Update
+        oldCameraPosition = currentCamera.transform.position;        
     }
 
     public void ReleaseObject()
@@ -192,14 +195,29 @@ public class dnd : MonoBehaviour
                    
                     break;
             }
+            slowEffectCheckAndApply();
         }
         return gmObj;
     }
 
-
-    //Math
-    public static float ScreenSizeCompensation(float toCompensate)
+    //Heavy/Slow Effect
+    private void slowEffectCheckAndApply()
     {
+        if (Player.slowEffect == true)
+        {
+            currentWeightInfluence = InfluenceWeightClass4;
+            DropDistance = initialDropDistance * DorpDistanceMultiplierFor4;
+            if(draggingObject != null)
+            {
+                draggingObject.GetComponent<Rigidbody>().mass = Player.slow_mass;
+            }
+        }
+    }
+
+
+//Math
+public static float ScreenSizeCompensation(float toCompensate)
+    {        
         return (toCompensate / editorScreenMean) * playScreenMean;
     }
 
@@ -230,4 +248,6 @@ public class dnd : MonoBehaviour
         }
         return v3;
     }
+
+
 }
