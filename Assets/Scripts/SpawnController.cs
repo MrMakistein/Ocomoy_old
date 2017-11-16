@@ -17,33 +17,35 @@ public class SpawnController : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {		
-		SpawnShrines(); //TODO: make Shrine Spawn dependant on WinZone? --> Player Spawn Point is within WinZone
-        DetermineAreas();
-        Invoke("DetermineCollectibles", 0.1f); //ADJUST: je mehr Zonen/Collectibles desto mehr Zeit lassen bis Execution: Arrays in Areas müssen mit onTriggerEnter erst befüllt werden
-		//DetermineCollectibles();
+    void Start () {
+        SpawnShrines();
+        Invoke("DetermineAreas", 0.1f);
+        Invoke("DetermineCollectibles", 0.2f);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
 	public void DetermineAreas(){
 		spawnAreaObjects = new List<GameObject> (GameObject.FindGameObjectsWithTag("Area"));
-		//print ("Number of Areas: " + spawnAreaObjects.Count.ToString());
 
-		//choose a random area as the winzone and exclude it from collectible spawn
-		var rnd1 = new System.Random();
-		int winZoneIndex = rnd1.Next (0, (spawnAreaObjects.Count) - 1);
-		//print ("random MAX for spawn areas: " + (spawnAreaObjects.Count - 1).ToString()); //TESTING
-		GameObject winZone = spawnAreaObjects[winZoneIndex];
-        //print(winZone);
-		winZone.GetComponent<Areas>().setWinZone(); //set as winzone
-		spawnAreaObjects.Remove (winZone); //exclude from SpawnaAreas
+        int winZoneIndex = 0;
+        for (int a = 0; a < spawnAreaObjects.Count; a++)
+        {
+            if (spawnAreaObjects[a].gameObject.GetComponent<Areas>().isWinZone == true)
+            {
+                winZoneIndex = a;
+            }
+        }
 
-		//print ("Number of Areas without Winzone: " + spawnAreaObjects.Count.ToString()); //TESTING
-	}
+        GameObject winZone = spawnAreaObjects[winZoneIndex];
+        winZone.GetComponent<Areas>().setWinZone(); //set as winzone
+        spawnAreaObjects.Remove(winZone); //exclude from SpawnAreas
+        Destroy(winZone);
+
+    }
 
 	public void DetermineCollectibles() {
 		chosenCollectibles = new List<GameObject>(); //List for all collectibles
@@ -73,14 +75,6 @@ public class SpawnController : MonoBehaviour {
         collectibles = chosenCollectibles.ToArray(); //to array cuz what r lists
 
 
-
-
-
-
-
-
-
-
         GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
         foreach (GameObject go in signposts)
         {
@@ -105,7 +99,7 @@ public class SpawnController : MonoBehaviour {
     }
 
 
-} //END SpawnController
+}
 
 
 
