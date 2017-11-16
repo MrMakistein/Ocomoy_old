@@ -37,6 +37,7 @@ public class dnd : MonoBehaviour
     public float HeightOffsetFor4 = 1f;
     public float mouseVectorMultiplier = 10f;
     public float upwardVelocityThreshhold = 1f;
+    
 
     //needed to update the draggingobject when moving the camera
     private Vector3 oldCameraPosition;
@@ -46,14 +47,19 @@ public class dnd : MonoBehaviour
     Rigidbody DrObj;
     Vector3 MouseVector;
 
+    //for math
+    private static float editorScreenMean = (1053 + 459) / 2;
+    private static float playScreenMean;
+
     void Start()
     {
+        playScreenMean = (Screen.width + Screen.height) / 2;
         currentCamera = Camera.main;
         oldCameraPosition = currentCamera.transform.position;
         mask = 1 << LayerMask.NameToLayer("is Ground");
         //Every screen dependent variable has to be scaled to fit any resolution
-        initialDropDistance = PersonalMath.ScreenSizeCompensation(initialDropDistance);
-        mouseVectorMultiplier = PersonalMath.ScreenSizeCompensation(mouseVectorMultiplier);
+        initialDropDistance = ScreenSizeCompensation(initialDropDistance);
+        mouseVectorMultiplier = ScreenSizeCompensation(mouseVectorMultiplier);
     }
     // Update is called once per frame
     void Update()
@@ -83,7 +89,7 @@ public class dnd : MonoBehaviour
 
                
                 pickUpScreenPos = currentCamera.WorldToScreenPoint(DrObj.position);
-                MouseVector = PersonalMath.CalculateMouse3DVector(currentCamera, mask, pickUpHeight + heightOffset);
+                MouseVector = CalculateMouse3DVector(currentCamera, mask, pickUpHeight + heightOffset);
                 //Apply force 
                 if (draggingDrag)
                 {
@@ -188,5 +194,40 @@ public class dnd : MonoBehaviour
             }
         }
         return gmObj;
+    }
+
+
+    //Math
+    public static float ScreenSizeCompensation(float toCompensate)
+    {
+        return (toCompensate / editorScreenMean) * playScreenMean;
+    }
+
+    //Calculates the point according to the mouse courser in a specified height(using pickUpHeight)
+    public static Vector3 CalculateMouse3DVector(Camera currentCamera, LayerMask mask, float pickUpHeight)
+    {
+        Vector3 v3 = Input.mousePosition;
+        v3 = currentCamera.ScreenToWorldPoint(v3);
+        //raycast to determine the distance from the camera to an object and the angle of the hit
+        RaycastHit hitInfo = new RaycastHit();
+        Ray r = currentCamera.ScreenPointToRay(Input.mousePosition);
+
+        //!!! A distance (3rd Position) is needed, because otherwise Unity behaves buggy !!!
+        bool hit = Physics.Raycast(r, out hitInfo, 100, mask);
+        if (hit)
+        {
+            //point where ray hits the surface
+            Vector3 A = hitInfo.point;
+            Vector3 CamPos = currentCamera.gameObject.transform.position;
+            float originalDistance = Vector3.Distance(A, CamPos);
+
+            //Use trigonometry to calculate the point on the ray, where the height is pickUpHeight
+            float cosine = Vector3.Dot(r.direction, hitInfo.normal);
+            float cosineDegrees = Mathf.Acos(cosine);
+            float resutlingDistance = (pickUpHeight) / Mathf.Cos(Mathf.PI - cosineDegrees);
+
+            v3 = Vector3.Lerp(A, CamPos, resutlingDistance / originalDistance);
+        }
+        return v3;
     }
 }

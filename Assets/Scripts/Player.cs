@@ -44,6 +44,7 @@ public class Player : MonoBehaviour {
     public GameObject display_compass;
     public GameObject display_slippy;
     public GameObject display_clone;
+    public GameObject display_slip_uses;
 
 
 
@@ -138,10 +139,16 @@ public class Player : MonoBehaviour {
 
     private void Slipperyhands_ability()
     {
+            display_slip_uses.GetComponent<Text>().text = "" + slips_left;
+
         if (Input.GetKeyDown("space"))
         {
             god.GetComponent<dnd>().ReleaseObject();
             slips_left--;
+            if (slips_left == 0)
+            {
+                display_slip_uses.GetComponent<Text>().text = "";
+            }
         }
 
     }
@@ -217,27 +224,44 @@ public class Player : MonoBehaviour {
             hit_cooldown_timer = hit_cooldown;
             if (selectedClone == null)
             {
+                float dmg = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
-                    currentHealth = currentHealth - 10;
+                    while (dmg > 20)
+                    {
+                        dmg = dmg - 1;
+                    }
+                    currentHealth = currentHealth - dmg;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 2)
                 {
-                    currentHealth = currentHealth - 20;
+                    while (dmg > 20)
+                    {
+                        dmg = dmg - 1;
+                    }
+                    currentHealth = currentHealth - dmg*2;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 3)
                 {
-                    currentHealth = currentHealth - 30;
+                    while (dmg > 20)
+                    {
+                        dmg = dmg - 1;
+                    }
+                    currentHealth = currentHealth - dmg*3;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 4)
                 {
-                    currentHealth = currentHealth - 40;
+                    while (dmg > 20)
+                    {
+                        dmg = dmg - 1;
+                    }
+                    currentHealth = currentHealth - dmg*4;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
             }

@@ -19,8 +19,8 @@ public class SpawnController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         SpawnShrines();
-        Invoke("DetermineAreas", 0.0f);
-        Invoke("DetermineCollectibles", 0.0f);
+        Invoke("DetermineAreas", 0.1f);
+        Invoke("DetermineCollectibles", 0.2f);
     }
 
     // Update is called once per frame

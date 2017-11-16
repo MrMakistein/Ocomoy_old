@@ -28,8 +28,8 @@ public class CameraControl : MonoBehaviour {
         dummy = GameObject.Find("CameraDummy");
         currentCamera = Camera.main;
         //Convert screen dependent values, to fitting values for the current game screen.
-        thresholdWidth = PersonalMath.ScreenSizeCompensation(thresholdWidth);
-        thresholdHeight = PersonalMath.ScreenSizeCompensation(thresholdHeight); 
+        thresholdWidth = dnd.ScreenSizeCompensation(thresholdWidth);
+        thresholdHeight = dnd.ScreenSizeCompensation(thresholdHeight); 
     }
 
     // Update is called once per frame
