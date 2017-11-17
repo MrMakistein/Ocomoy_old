@@ -16,8 +16,7 @@ public class ThrowObject : MonoBehaviour {
     private float initialMass;
 
     // Use this for initialization
-    void Start () {
-    initialMass = gameObject.GetComponent<Rigidbody>().mass;
+    void Start () {        
 		if (update_weight == true)
         {
             if(gameObject.GetComponent<Rigidbody>().mass <= weight_class_1_limit)
@@ -61,9 +60,43 @@ public class ThrowObject : MonoBehaviour {
 
         }
 
-        if(initialMass != GetComponent<Rigidbody>().mass && !Player.slowEffect)
+        if(InitialMass != GetComponent<Rigidbody>().mass && !Player.slowEffect)
         {
-            GetComponent<Rigidbody>().mass = initialMass;
+            GetComponent<Rigidbody>().mass = InitialMass;
         }
     }
+
+
+    public float InitialMass
+    {
+        get
+        {
+            return initialMass;
+        }
+
+        //If set, update the weight class and so on
+        set
+        {
+            initialMass = value;
+            gameObject.GetComponent<Rigidbody>().mass = initialMass;
+            if (gameObject.GetComponent<Rigidbody>().mass <= weight_class_1_limit)
+            {
+                weight_class = 1;
+            }
+            else if (gameObject.GetComponent<Rigidbody>().mass <= weight_class_2_limit)
+            {
+                weight_class = 2;
+            }
+            else if (gameObject.GetComponent<Rigidbody>().mass <= weight_class_3_limit)
+            {
+                weight_class = 3;
+            }
+            else
+            {
+                weight_class = 4;
+            }
+            
+        }
+    }
+
 }

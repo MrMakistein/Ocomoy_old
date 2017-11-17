@@ -215,11 +215,11 @@ public class dnd : MonoBehaviour
     }
 
 
-//Math
-public static float ScreenSizeCompensation(float toCompensate)
-    {        
-        return (toCompensate / editorScreenMean) * playScreenMean;
-    }
+    //Math
+    public static float ScreenSizeCompensation(float toCompensate)
+        {        
+            return (toCompensate / editorScreenMean) * playScreenMean;
+        }
 
     //Calculates the point according to the mouse courser in a specified height(using pickUpHeight)
     public static Vector3 CalculateMouse3DVector(Camera currentCamera, LayerMask mask, float pickUpHeight)

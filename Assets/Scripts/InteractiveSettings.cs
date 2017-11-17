@@ -7,8 +7,8 @@ public class InteractiveSettings : MonoBehaviour
 {
     public Material normalMaterial;
 	public Material collectibleMaterial;
-
-	public bool isCollectible = false;
+    public float collectible_weight = 10;
+    public bool isCollectible = false;
 
 
 	// Use this for initialization
@@ -32,12 +32,13 @@ public class InteractiveSettings : MonoBehaviour
 
 
         isCollectible = true; //mark as collectible
-        ////GetComponent<Collider> ().isTrigger = true; //set as trigger => you can enter it to deactivate!
-		/// 
-		/// Test as collider:
+                              ////GetComponent<Collider> ().isTrigger = true; //set as trigger => you can enter it to deactivate!
 
-        //for testing
-        GetComponent<Renderer> ().material = collectibleMaterial;
+        //Update the mass of the collectible
+        this.gameObject.GetComponent<ThrowObject>().InitialMass = collectible_weight;
+
+    //for testing
+    GetComponent<Renderer> ().material = collectibleMaterial;
 		//GetComponent<Rigidbody> ().isKinematic = true; //don't fall through floor --> PROBLEM: can't pick up
         
     }
