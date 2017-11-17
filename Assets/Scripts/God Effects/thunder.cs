@@ -56,7 +56,8 @@ public class thunder : MonoBehaviour {
         {
                 Destroy(child.gameObject);
         }
-        player.GetComponent<Movement>().stunned = false;        
+        player.GetComponent<Movement>().stunned = false;
+        Destroy(this.gameObject);
     }  
 
 }

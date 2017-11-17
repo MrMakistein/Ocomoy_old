@@ -23,6 +23,7 @@ public class tornado : MonoBehaviour {
     //used to reduce code
     private Vector3 tempVector;
     Collider[] colliders;
+    public GameObject[] interactives;
 
     // Use this for initialization
     void Start()
@@ -37,6 +38,17 @@ public class tornado : MonoBehaviour {
 
     void Update()
     {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 15); // ADJUST - Radius in which objects do damage around the tornado center
+        int affected = 0;
+        foreach (Collider hitCollider in hitColliders) if (hitCollider.tag == "Interactive")
+        {
+            if (hitCollider.gameObject.GetComponent<Rigidbody>().velocity.magnitude > 3 && !hitCollider.gameObject.GetComponent<InteractiveSettings>().isCollectible) // ADJUST - velocity needed for objects to deal damage.
+            {
+                hitCollider.gameObject.GetComponent<ThrowObject>().dmg_cooldown = hitCollider.gameObject.GetComponent<ThrowObject>().dmg_cooldown_max;
+            }
+        }
+
+
         colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider c in colliders)
         {

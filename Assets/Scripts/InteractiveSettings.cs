@@ -40,7 +40,7 @@ public class InteractiveSettings : MonoBehaviour
         this.gameObject.GetComponent<ThrowObject>().InitialMass = collectible_weight;
 
         //for testing
-        GetComponent<Renderer>().material = collectibleMaterial;
+        //GetComponent<Renderer>().material = collectibleMaterial;
         //GetComponent<Rigidbody> ().isKinematic = true; //don't fall through floor --> PROBLEM: can't pick up
 
     }

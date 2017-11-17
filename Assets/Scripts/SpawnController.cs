@@ -13,6 +13,7 @@ public class SpawnController : MonoBehaviour {
     public GameObject[] godObjectSpawnPositions;
     public int initialGodObjects = 3;
     public GameObject godObject;
+    public Vector3 player_pos;
 
     //PRIVATE VARIABLES
     private GameObject[] interactives; //all interactive GameObjects in the scene
@@ -24,6 +25,7 @@ public class SpawnController : MonoBehaviour {
         SpawnShrines();
         SpawnGodObjects();
         Invoke("DetermineAreas", 0.1f);
+        Invoke("SetPlayerPosition", 0.15f);
         Invoke("DetermineCollectibles", 0.2f);
     }
 
@@ -31,6 +33,11 @@ public class SpawnController : MonoBehaviour {
     void Update () {
 		
 	}
+    
+    public void setPlayerPosition()
+    {
+
+    }
 
     public static string GetUniqueID()
     {

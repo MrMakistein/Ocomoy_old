@@ -15,7 +15,8 @@ public class avalanche : MonoBehaviour {
         {
             spawnObject = GameObject.FindGameObjectWithTag("Interactive");
             spawnObject.GetComponent<InteractiveSettings>().isCollectible = false;
-            Instantiate(spawnObject, (transform.position + (Vector3.up * height)) + new Vector3(Random.Range(0, radius), Random.Range(0, radius), Random.Range(0, radius)), Quaternion.identity);
+            spawnObject.GetComponent<ThrowObject>().dmg_cooldown = spawnObject.GetComponent<ThrowObject>().dmg_cooldown_max*3;
+            Instantiate(spawnObject, (transform.position + (Vector3.up * height) + new Vector3(-2f, 0f, -2f)) + new Vector3(Random.Range(0, radius), Random.Range(0, radius), Random.Range(0, radius)), Quaternion.identity);
         }
 
     }

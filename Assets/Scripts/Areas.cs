@@ -6,11 +6,13 @@ public class Areas : MonoBehaviour {
 	private List<GameObject> areaInteractives; //all interactives within the area object
 	private static int numberOfAreaObjects = 0; //for unique area id
 	public bool isWinZone = false;
+    public GameObject arena;
+    public int area_id;
 
 	// Use this for initialization
 	void Start () {
 		numberOfAreaObjects++; //count up id
-
+        arena = GameObject.Find("Arena");
 		//INITIALIZE LIST
 		areaInteractives = new List<GameObject>();
 	}
@@ -28,6 +30,40 @@ public class Areas : MonoBehaviour {
             if (other.GetComponent<Shrine>().shrine_id == 1)
             {
                 isWinZone = true;
+                if (area_id == 1)
+                {
+                    print("1");
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                }
+                if (area_id == 2)
+                {
+                    print("2");
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                }
+                if (area_id == 3)
+                {
+                    print("3");
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                }
+                if (area_id == 4)
+                {
+                    print("4");
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                }
+                if (area_id == 5)
+                {
+                    print("5");
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                }
+                if (area_id == 6)
+                {
+                    print("6");
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                }
+                //arena.GetComponent<SpawnController>().player_pos = transform;
+
+
+
             }
         }
     } //end onTriggerEnter
