@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114030349752727450}
   - component: {fileID: 114196483811979046}
   m_Layer: 12
-  m_Name: SmallStoneCollectible
+  m_Name: SmallStoneInteractive
   m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

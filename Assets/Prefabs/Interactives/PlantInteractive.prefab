@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 114635053120142256}
   - component: {fileID: 65525308409339264}
   m_Layer: 12
-  m_Name: PlantCollectible
+  m_Name: PlantInteractive
   m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
