@@ -334,7 +334,7 @@ public class Player : MonoBehaviour {
                 float dmg = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
-                    dmg = dmg / 5;
+                    dmg = dmg / 6;
                     while (dmg > 20)
                     {
                         dmg = dmg - 1;
@@ -345,34 +345,32 @@ public class Player : MonoBehaviour {
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 2)
                 {
-                    dmg = dmg / 5;
                     while (dmg > 20)
                     {
                         dmg = dmg - 1;
                     }
-                    currentHealth = currentHealth - dmg*2;
+                    currentHealth = currentHealth - dmg*2f;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 3)
                 {
-                    dmg = dmg / 5;
-                    while (dmg > 20)
-                    {
-                        dmg = dmg - 1;
-                    }
-                    currentHealth = currentHealth - dmg*3;
-                    healthBar.fillAmount = currentHealth / maxHealth;
-                }
-
-                if (col.gameObject.GetComponent<ThrowObject>().weight_class == 4)
-                {
-                    dmg = dmg / 5;
                     while (dmg > 20)
                     {
                         dmg = dmg - 1;
                     }
                     currentHealth = currentHealth - dmg*4;
+                    healthBar.fillAmount = currentHealth / maxHealth;
+                }
+
+                if (col.gameObject.GetComponent<ThrowObject>().weight_class == 4)
+                {
+                    dmg = dmg / 2;
+                    while (dmg > 20)
+                    {
+                        dmg = dmg - 1;
+                    }
+                    currentHealth = currentHealth - dmg*8;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
             }
