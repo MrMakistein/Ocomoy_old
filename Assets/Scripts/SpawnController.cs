@@ -38,6 +38,8 @@ public class SpawnController : MonoBehaviour {
     public void SetPlayerPosition()
     {
         player.transform.position = player_pos;
+        player.transform.position = new Vector3(19.8f, 2.1f, -21f);
+
     }
 
     public static string GetUniqueID()
