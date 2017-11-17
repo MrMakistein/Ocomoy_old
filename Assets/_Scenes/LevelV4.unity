@@ -299,6 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &9530076
 Rigidbody:
@@ -577,6 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &14868023
 Rigidbody:
@@ -838,6 +840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &21791287
 Rigidbody:
@@ -1099,6 +1102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &23404534
 Rigidbody:
@@ -1360,6 +1364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &31327288
 Rigidbody:
@@ -2231,6 +2236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &45988759
 Rigidbody:
@@ -2370,6 +2376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &56518713
 Rigidbody:
@@ -2509,6 +2516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &60033594
 Rigidbody:
@@ -2648,6 +2656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &61384046
 Rigidbody:
@@ -3083,6 +3092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &72299138
 Rigidbody:
@@ -3753,6 +3763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &93904324
 Rigidbody:
@@ -3892,6 +3903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &97632454
 Rigidbody:
@@ -4149,6 +4161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &100126693
 Rigidbody:
@@ -4288,6 +4301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &101528981
 Rigidbody:
@@ -4667,6 +4681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &111202454
 Rigidbody:
@@ -5050,6 +5065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &114789527
 Rigidbody:
@@ -5189,6 +5205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &116648095
 Rigidbody:
@@ -5328,6 +5345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &117665851
 Rigidbody:
@@ -5467,6 +5485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &117758303
 Rigidbody:
@@ -5606,6 +5625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &121534075
 Rigidbody:
@@ -5745,6 +5765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &122817635
 Rigidbody:
@@ -5884,6 +5905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &126732564
 Rigidbody:
@@ -6023,6 +6045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &135628524
 Rigidbody:
@@ -6162,6 +6185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &142477669
 Rigidbody:
@@ -6423,6 +6447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &144186577
 Rigidbody:
@@ -6840,6 +6865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &155102985
 Rigidbody:
@@ -7226,6 +7252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &170430536
 Rigidbody:
@@ -7483,6 +7510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &178570152
 Rigidbody:
@@ -7744,6 +7772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &183685936
 Rigidbody:
@@ -8182,6 +8211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &200354411
 Rigidbody:
@@ -8321,6 +8351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &200592172
 Rigidbody:
@@ -8578,6 +8609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &202092540
 Rigidbody:
@@ -9079,6 +9111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &216219540
 Rigidbody:
@@ -9946,6 +9979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &237138121
 Rigidbody:
@@ -10145,6 +10179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &245161683
 Rigidbody:
@@ -10524,6 +10559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &248421845
 Rigidbody:
@@ -10781,6 +10817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &259512174
 Rigidbody:
@@ -10920,6 +10957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &261753199
 Rigidbody:
@@ -11255,6 +11293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &264171367
 Rigidbody:
@@ -11889,6 +11928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &278221211
 Rigidbody:
@@ -12028,6 +12068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &279522275
 Rigidbody:
@@ -12167,6 +12208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &281016738
 Rigidbody:
@@ -12306,6 +12348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &281721296
 Rigidbody:
@@ -12572,6 +12615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &291111081
 Rigidbody:
@@ -12960,6 +13004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &295762041
 Rigidbody:
@@ -13099,6 +13144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &296544078
 Rigidbody:
@@ -13276,6 +13322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &309034319
 Rigidbody:
@@ -13537,6 +13584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &309992642
 Rigidbody:
@@ -13676,6 +13724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &311378226
 Rigidbody:
@@ -13815,6 +13864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &312332048
 Rigidbody:
@@ -13954,6 +14004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &315841844
 Rigidbody:
@@ -14569,6 +14620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &327857467
 Rigidbody:
@@ -14708,6 +14760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &337659402
 Rigidbody:
@@ -14969,6 +15022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &339279541
 Rigidbody:
@@ -15108,6 +15162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &341749745
 Rigidbody:
@@ -15369,6 +15424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &343917200
 Rigidbody:
@@ -15508,6 +15564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &345162588
 Rigidbody:
@@ -15938,6 +15995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &354876554
 Rigidbody:
@@ -16228,6 +16286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &364735668
 Rigidbody:
@@ -16367,6 +16426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &367496188
 Rigidbody:
@@ -16687,6 +16747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &374796731
 Rigidbody:
@@ -16826,6 +16887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &382735691
 Rigidbody:
@@ -16965,6 +17027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &382760390
 Rigidbody:
@@ -17104,6 +17167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &385748299
 Rigidbody:
@@ -17417,6 +17481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &388435894
 Rigidbody:
@@ -17556,6 +17621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &394139150
 Rigidbody:
@@ -18179,6 +18245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &427404474
 Rigidbody:
@@ -18318,6 +18385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &429926222
 Rigidbody:
@@ -18701,6 +18769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &434205102
 Rigidbody:
@@ -18840,6 +18909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &438384724
 Rigidbody:
@@ -19228,6 +19298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &447515551
 Rigidbody:
@@ -19367,6 +19438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &448503347
 Rigidbody:
@@ -19506,6 +19578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &449149316
 Rigidbody:
@@ -19645,6 +19718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &453595778
 Rigidbody:
@@ -19784,6 +19858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &455050708
 Rigidbody:
@@ -19923,6 +19998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &457588244
 Rigidbody:
@@ -20284,6 +20360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &465047137
 Rigidbody:
@@ -20667,6 +20744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &469531113
 Rigidbody:
@@ -20924,6 +21002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &473086138
 Rigidbody:
@@ -21185,6 +21264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &474388597
 Rigidbody:
@@ -21324,6 +21404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &476689469
 Rigidbody:
@@ -21463,6 +21544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &482982397
 Rigidbody:
@@ -22517,6 +22599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &504807532
 Rigidbody:
@@ -22656,6 +22739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &515822570
 Rigidbody:
@@ -22795,6 +22879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &520070083
 Rigidbody:
@@ -23056,6 +23141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &531780421
 Rigidbody:
@@ -23195,6 +23281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &533920076
 Rigidbody:
@@ -23692,6 +23779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &537641448
 Rigidbody:
@@ -23831,6 +23919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &537995303
 Rigidbody:
@@ -23970,6 +24059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &538942756
 Rigidbody:
@@ -24231,6 +24321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &544701205
 Rigidbody:
@@ -24370,6 +24461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &548763174
 Rigidbody:
@@ -24911,6 +25003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &560142515
 Rigidbody:
@@ -25412,6 +25505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &563457143
 Rigidbody:
@@ -25819,6 +25913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &581809517
 Rigidbody:
@@ -26149,6 +26244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &595405455
 Rigidbody:
@@ -26528,6 +26624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &606657307
 Rigidbody:
@@ -26667,6 +26764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &608038121
 Rigidbody:
@@ -26928,6 +27026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &609161784
 Rigidbody:
@@ -27379,6 +27478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &624709578
 Rigidbody:
@@ -27518,6 +27618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &633487959
 Rigidbody:
@@ -27657,6 +27758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &634997257
 Rigidbody:
@@ -27796,6 +27898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &635134469
 Rigidbody:
@@ -27935,6 +28038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &636238657
 Rigidbody:
@@ -28835,6 +28939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &668575905
 Rigidbody:
@@ -28979,6 +29084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &671596965
 Rigidbody:
@@ -29118,6 +29224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &673393987
 Rigidbody:
@@ -29501,6 +29608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &678604185
 Rigidbody:
@@ -29758,6 +29866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &683794276
 Rigidbody:
@@ -30141,6 +30250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &694967713
 Rigidbody:
@@ -30280,6 +30390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &695328723
 Rigidbody:
@@ -30546,6 +30657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &698797590
 Rigidbody:
@@ -30929,6 +31041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &710907140
 Rigidbody:
@@ -31068,6 +31181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &711958096
 Rigidbody:
@@ -31384,6 +31498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &718069781
 Rigidbody:
@@ -31523,6 +31638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &724958316
 Rigidbody:
@@ -31662,6 +31778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &727478525
 Rigidbody:
@@ -31801,6 +31918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &727689366
 Rigidbody:
@@ -32062,6 +32180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &738470268
 Rigidbody:
@@ -32323,6 +32442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &746592017
 Rigidbody:
@@ -32833,6 +32953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &764618458
 Rigidbody:
@@ -33533,6 +33654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &782305722
 Rigidbody:
@@ -33945,6 +34067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &789840092
 Rigidbody:
@@ -34202,6 +34325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &795722233
 Rigidbody:
@@ -34341,6 +34465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &796090597
 Rigidbody:
@@ -34480,6 +34605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &798638501
 Rigidbody:
@@ -34619,6 +34745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &802627132
 Rigidbody:
@@ -35608,6 +35735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &819199028
 Rigidbody:
@@ -35747,6 +35875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &820711493
 Rigidbody:
@@ -36213,6 +36342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &833439720
 Rigidbody:
@@ -36596,6 +36726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &837663035
 Rigidbody:
@@ -36735,6 +36866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &840379509
 Rigidbody:
@@ -36874,6 +37006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &841075784
 Rigidbody:
@@ -37426,6 +37559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &865899217
 Rigidbody:
@@ -37809,6 +37943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &872858313
 Rigidbody:
@@ -38012,7 +38147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &874329291
 Transform:
   m_ObjectHideFlags: 0
@@ -38104,6 +38239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &882478545
 Rigidbody:
@@ -38243,6 +38379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &884821540
 Rigidbody:
@@ -38504,6 +38641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &892566602
 Rigidbody:
@@ -38643,6 +38781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &893365434
 Rigidbody:
@@ -38782,6 +38921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &896053316
 Rigidbody:
@@ -39165,6 +39305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &906048666
 Rigidbody:
@@ -39676,6 +39817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &928818798
 Rigidbody:
@@ -39815,6 +39957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &929640673
 Rigidbody:
@@ -39954,6 +40097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &934385005
 Rigidbody:
@@ -40093,6 +40237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &937662478
 Rigidbody:
@@ -40237,6 +40382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &939643178
 Rigidbody:
@@ -40504,6 +40650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &945032636
 Rigidbody:
@@ -40643,6 +40790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &946295400
 Rigidbody:
@@ -40782,6 +40930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &947403394
 Rigidbody:
@@ -40921,6 +41070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &947985492
 Rigidbody:
@@ -41238,6 +41388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &963660250
 Rigidbody:
@@ -41621,6 +41772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &970274072
 Rigidbody:
@@ -41882,6 +42034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &973060205
 Rigidbody:
@@ -42021,6 +42174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &974277019
 Rigidbody:
@@ -42429,6 +42583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &979532548
 Rigidbody:
@@ -42712,6 +42867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &980800305
 Rigidbody:
@@ -43151,6 +43307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &990101432
 Rigidbody:
@@ -43290,6 +43447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1004292677
 Rigidbody:
@@ -44268,6 +44426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1026658612
 Rigidbody:
@@ -44407,6 +44566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1027357913
 Rigidbody:
@@ -45323,6 +45483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1050691849
 Rigidbody:
@@ -45938,6 +46099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1061617874
 Rigidbody:
@@ -46077,6 +46239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1064883673
 Rigidbody:
@@ -46216,6 +46379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1070550092
 Rigidbody:
@@ -46355,6 +46519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1071842020
 Rigidbody:
@@ -46612,6 +46777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1073287543
 Rigidbody:
@@ -46751,6 +46917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1077816596
 Rigidbody:
@@ -47189,6 +47356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1082148564
 Rigidbody:
@@ -47328,6 +47496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1089546931
 Rigidbody:
@@ -47467,6 +47636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1089799569
 Rigidbody:
@@ -47779,6 +47949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1096678484
 Rigidbody:
@@ -48040,6 +48211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1101787908
 Rigidbody:
@@ -48749,6 +48921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1121459427
 Rigidbody:
@@ -48888,6 +49061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1126823566
 Rigidbody:
@@ -49145,6 +49319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1132170261
 Rigidbody:
@@ -49284,6 +49459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1135908955
 Rigidbody:
@@ -49711,6 +49887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1144751959
 Rigidbody:
@@ -49850,6 +50027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1144864597
 Rigidbody:
@@ -49989,6 +50167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1145385820
 Rigidbody:
@@ -50494,6 +50673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1159053656
 Rigidbody:
@@ -50633,6 +50813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1161207605
 Rigidbody:
@@ -50772,6 +50953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1162053442
 Rigidbody:
@@ -51033,6 +51215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1165432979
 Rigidbody:
@@ -51311,6 +51494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1172765306
 Rigidbody:
@@ -51850,6 +52034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1190795686
 Rigidbody:
@@ -52402,6 +52587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1215888727
 Rigidbody:
@@ -52663,6 +52849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1225065465
 Rigidbody:
@@ -52802,6 +52989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1225878001
 Rigidbody:
@@ -52941,6 +53129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1226910503
 Rigidbody:
@@ -53080,6 +53269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1228192021
 Rigidbody:
@@ -53224,6 +53414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1230460684
 Rigidbody:
@@ -53363,6 +53554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1230836726
 Rigidbody:
@@ -53944,6 +54136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1240126104
 Rigidbody:
@@ -54201,6 +54394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1241445855
 Rigidbody:
@@ -54340,6 +54534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1241462438
 Rigidbody:
@@ -55208,6 +55403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1254243114
 Rigidbody:
@@ -55347,6 +55543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1254454987
 Rigidbody:
@@ -55486,6 +55683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1265792995
 Rigidbody:
@@ -55991,6 +56189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1292926033
 Rigidbody:
@@ -56330,6 +56529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1316954937
 Rigidbody:
@@ -56835,6 +57035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1331907712
 Rigidbody:
@@ -56974,6 +57175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1332763266
 Rigidbody:
@@ -57986,6 +58188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1372476289
 Rigidbody:
@@ -58252,6 +58455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1395399640
 Rigidbody:
@@ -58391,6 +58595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1396048617
 Rigidbody:
@@ -58829,6 +59034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1406200942
 Rigidbody:
@@ -58968,6 +59174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1410425242
 Rigidbody:
@@ -59524,6 +59731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1416416572
 Rigidbody:
@@ -59663,6 +59871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1422358927
 Rigidbody:
@@ -60219,6 +60428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1435731992
 Rigidbody:
@@ -60358,6 +60568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1437308756
 Rigidbody:
@@ -60497,6 +60708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1438802623
 Rigidbody:
@@ -60704,6 +60916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1443416716
 Rigidbody:
@@ -60843,6 +61056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1449726829
 Rigidbody:
@@ -61104,6 +61318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1455531672
 Rigidbody:
@@ -61365,6 +61580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1461671498
 Rigidbody:
@@ -61571,6 +61787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1467095497
 Rigidbody:
@@ -61710,6 +61927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1469955253
 Rigidbody:
@@ -61849,6 +62067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1470142177
 Rigidbody:
@@ -62232,6 +62451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1479991308
 Rigidbody:
@@ -62371,6 +62591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1488590946
 Rigidbody:
@@ -62510,6 +62731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1489056599
 Rigidbody:
@@ -62771,6 +62993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1492976230
 Rigidbody:
@@ -62972,6 +63195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1498337824
 Rigidbody:
@@ -63111,6 +63335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1507531217
 Rigidbody:
@@ -63250,6 +63475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1510909712
 Rigidbody:
@@ -63511,6 +63737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1521316347
 Rigidbody:
@@ -64252,6 +64479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1530807063
 Rigidbody:
@@ -65124,6 +65352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1567661820
 Rigidbody:
@@ -65385,6 +65614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1570132702
 Rigidbody:
@@ -65646,6 +65876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1574356068
 Rigidbody:
@@ -65907,6 +66138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1581436536
 Rigidbody:
@@ -66046,6 +66278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1585381616
 Rigidbody:
@@ -66429,6 +66662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1591348940
 Rigidbody:
@@ -66568,6 +66802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1592267511
 Rigidbody:
@@ -66707,6 +66942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1600005634
 Rigidbody:
@@ -68012,6 +68248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1621937572
 Rigidbody:
@@ -68151,6 +68388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1623930106
 Rigidbody:
@@ -68746,6 +68984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1639485249
 Rigidbody:
@@ -68958,6 +69197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1643998848
 Rigidbody:
@@ -69215,6 +69455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1645499370
 Rigidbody:
@@ -69354,6 +69595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1650375412
 Rigidbody:
@@ -69493,6 +69735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1656511481
 Rigidbody:
@@ -69632,6 +69875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1656524438
 Rigidbody:
@@ -69893,6 +70137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1664833366
 Rigidbody:
@@ -70154,6 +70399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1672611925
 Rigidbody:
@@ -70293,6 +70539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1674149541
 Rigidbody:
@@ -70554,6 +70801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1680506141
 Rigidbody:
@@ -70693,6 +70941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1681862263
 Rigidbody:
@@ -70832,6 +71081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1684223771
 Rigidbody:
@@ -70971,6 +71221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1687165702
 Rigidbody:
@@ -71232,6 +71483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1690533683
 Rigidbody:
@@ -71493,6 +71745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1693751544
 Rigidbody:
@@ -71750,6 +72003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1695627966
 Rigidbody:
@@ -72129,6 +72383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1707881500
 Rigidbody:
@@ -72268,6 +72523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1712664730
 Rigidbody:
@@ -72643,6 +72899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1715172203
 Rigidbody:
@@ -73026,6 +73283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1723687701
 Rigidbody:
@@ -73165,6 +73423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1725326608
 Rigidbody:
@@ -73304,6 +73563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1727471374
 Rigidbody:
@@ -73443,6 +73703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1727499335
 Rigidbody:
@@ -73765,6 +74026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1729030240
 Rigidbody:
@@ -73904,6 +74166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1729186574
 Rigidbody:
@@ -74979,6 +75242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1759022587
 Rigidbody:
@@ -75309,6 +75573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1761594841
 Rigidbody:
@@ -75448,6 +75713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1763721876
 Rigidbody:
@@ -75709,6 +75975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1772788435
 Rigidbody:
@@ -75912,6 +76179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1778785362
 Rigidbody:
@@ -76051,6 +76319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1781627977
 Rigidbody:
@@ -76368,6 +76637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1791809304
 Rigidbody:
@@ -76507,6 +76777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1795098342
 Rigidbody:
@@ -76697,6 +76968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1801277957
 Rigidbody:
@@ -76836,6 +77108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1801839576
 Rigidbody:
@@ -77093,6 +77366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1808359016
 Rigidbody:
@@ -77232,6 +77506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1808379178
 Rigidbody:
@@ -77489,6 +77764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1814382320
 Rigidbody:
@@ -77628,6 +77904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1815056907
 Rigidbody:
@@ -77767,6 +78044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1815730282
 Rigidbody:
@@ -78512,6 +78790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1833486297
 Rigidbody:
@@ -79304,6 +79583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1851247700
 Rigidbody:
@@ -79561,6 +79841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1856845388
 Rigidbody:
@@ -79944,6 +80225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1864332457
 Rigidbody:
@@ -80083,6 +80365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1868926363
 Rigidbody:
@@ -80222,6 +80505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1872820111
 Rigidbody:
@@ -80557,6 +80841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1878817595
 Rigidbody:
@@ -80771,6 +81056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1885910916
 Rigidbody:
@@ -81032,6 +81318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1895168204
 Rigidbody:
@@ -81171,6 +81458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1896780413
 Rigidbody:
@@ -81310,6 +81598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1897036679
 Rigidbody:
@@ -81449,6 +81738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1897707513
 Rigidbody:
@@ -81588,6 +81878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1898704071
 Rigidbody:
@@ -82215,6 +82506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1925864776
 Rigidbody:
@@ -82598,6 +82890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1932035460
 Rigidbody:
@@ -82737,6 +83030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1935541145
 Rigidbody:
@@ -82998,6 +83292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1937154863
 Rigidbody:
@@ -83137,6 +83432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1937431698
 Rigidbody:
@@ -83461,6 +83757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1945227818
 Rigidbody:
@@ -83600,6 +83897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1947332434
 Rigidbody:
@@ -83739,6 +84037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1948791905
 Rigidbody:
@@ -84240,6 +84539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1952697777
 Rigidbody:
@@ -84379,6 +84679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1957849955
 Rigidbody:
@@ -84518,6 +84819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1958950798
 Rigidbody:
@@ -84657,6 +84959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1961337142
 Rigidbody:
@@ -85173,6 +85476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1970633184
 Rigidbody:
@@ -85439,6 +85743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1992610563
 Rigidbody:
@@ -85578,6 +85883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1994215687
 Rigidbody:
@@ -85717,6 +86023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &1998276046
 Rigidbody:
@@ -85978,6 +86285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2006889577
 Rigidbody:
@@ -86117,6 +86425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2007531317
 Rigidbody:
@@ -86321,6 +86630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2012715879
 Rigidbody:
@@ -86460,6 +86770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2013438363
 Rigidbody:
@@ -86599,6 +86910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2014323188
 Rigidbody:
@@ -86738,6 +87050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2014785953
 Rigidbody:
@@ -87146,6 +87459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2026587559
 Rigidbody:
@@ -87407,6 +87721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2028679704
 Rigidbody:
@@ -87546,6 +87861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2028847882
 Rigidbody:
@@ -87929,6 +88245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2045407685
 Rigidbody:
@@ -88243,6 +88560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2048721775
 Rigidbody:
@@ -88626,6 +88944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2052166407
 Rigidbody:
@@ -89083,6 +89402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2083527588
 Rigidbody:
@@ -89344,6 +89664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2088048669
 Rigidbody:
@@ -89483,6 +89804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2089088506
 Rigidbody:
@@ -89622,6 +89944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2092562796
 Rigidbody:
@@ -90726,6 +91049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2121819207
 Rigidbody:
@@ -90865,6 +91189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2121869520
 Rigidbody:
@@ -91370,6 +91695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2133647758
 Rigidbody:
@@ -91509,6 +91835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2135995060
 Rigidbody:
@@ -91648,6 +91975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2138881583
 Rigidbody:
@@ -92153,6 +92481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: a2fd8b1a98b06ea45a34da1f7223ff43, type: 2}
   collectibleMaterial: {fileID: 2100000, guid: 74282d535caafc8479a769e26cbc198a, type: 2}
+  collectible_weight: 10
   isCollectible: 0
 --- !u!54 &2146854138
 Rigidbody:

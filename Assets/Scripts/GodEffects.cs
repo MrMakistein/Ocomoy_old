@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.PostProcessing;
 
 public class GodEffects : MonoBehaviour
 {
@@ -17,6 +20,8 @@ public class GodEffects : MonoBehaviour
     public GameObject avalancheEffect;
     public GameObject blizzardEffect;
     public int uid;
+    public GameObject display;
+
 
     private bool charged = false;
 
@@ -25,12 +30,39 @@ public class GodEffects : MonoBehaviour
     void Start()
     {
         CurrentType = (GodEffectType) Random.Range(0, 6);
+        display = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
     }
 
 
     // Update is called once per frame
     void Update()
     {
+
+        if (CurrentType == GodEffectType.tornado)
+        {
+            display.gameObject.GetComponent<Text>().text = "tornado";
+        }
+        if (CurrentType == GodEffectType.rain)
+        {
+            display.gameObject.GetComponent<Text>().text = "rain";
+        }
+        if (CurrentType == GodEffectType.earthshatter)
+        {
+            display.gameObject.GetComponent<Text>().text = "earthshatter";
+        }
+        if (CurrentType == GodEffectType.thunder)
+        {
+            display.gameObject.GetComponent<Text>().text = "thunder";
+        }
+        if (CurrentType == GodEffectType.avalanche)
+        {
+            display.gameObject.GetComponent<Text>().text = "avalanche";
+        }
+        if (CurrentType == GodEffectType.blizzard)
+        {
+            display.gameObject.GetComponent<Text>().text = "blizzard";
+        }
+
         if (!charged && dnd.draggingObject == this.gameObject && Input.GetMouseButton(1))
         {
             charged = true;
