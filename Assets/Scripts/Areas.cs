@@ -32,38 +32,28 @@ public class Areas : MonoBehaviour {
                 isWinZone = true;
                 if (area_id == 1)
                 {
-                    print("1");
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-57.8f, 2.0f, 58.0f); // Top Right
                 }
                 if (area_id == 2)
                 {
-                    print("2");
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(73.4f, 2.0f, -43.1f); // Bottom Right
                 }
                 if (area_id == 3)
                 {
-                    print("3");
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(16.4f, 2.0f, -62.6f); // Bottom
                 }
                 if (area_id == 4)
                 {
-                    print("4");
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(8.6f, 2.0f, 21.2f); //Top
                 }
                 if (area_id == 5)
                 {
-                    print("5");
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-53.7f, 2.0f, 39.2f); //Top Left
                 }
                 if (area_id == 6)
                 {
-                    print("6");
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-32.2f, 2.0f, -6.0f);// Bottom Left
                 }
-                //arena.GetComponent<SpawnController>().player_pos = transform;
-
-
-
             }
         }
     } //end onTriggerEnter

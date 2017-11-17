@@ -14,6 +14,7 @@ public class SpawnController : MonoBehaviour {
     public int initialGodObjects = 3;
     public GameObject godObject;
     public Vector3 player_pos;
+    public GameObject player;
 
     //PRIVATE VARIABLES
     private GameObject[] interactives; //all interactive GameObjects in the scene
@@ -34,9 +35,9 @@ public class SpawnController : MonoBehaviour {
 		
 	}
     
-    public void setPlayerPosition()
+    public void SetPlayerPosition()
     {
-
+        player.transform.position = player_pos;
     }
 
     public static string GetUniqueID()

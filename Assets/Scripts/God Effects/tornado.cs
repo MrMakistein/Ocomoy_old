@@ -39,7 +39,6 @@ public class tornado : MonoBehaviour {
     void Update()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 15); // ADJUST - Radius in which objects do damage around the tornado center
-        int affected = 0;
         foreach (Collider hitCollider in hitColliders) if (hitCollider.tag == "Interactive")
         {
             if (hitCollider.gameObject.GetComponent<Rigidbody>().velocity.magnitude > 3 && !hitCollider.gameObject.GetComponent<InteractiveSettings>().isCollectible) // ADJUST - velocity needed for objects to deal damage.

@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d2a8d629b3c284fbd41ca927e2fa6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 25
-  dashDuration: 0.14
+  dashSpeed: 150
+  dashDuration: 0.25
   dashTimer: 0
 --- !u!114 &114745546930456490
 MonoBehaviour:
@@ -265,15 +265,33 @@ MonoBehaviour:
   shield_rotation_speed: 200
   shield_timer: 0
   shield_duration: 50
-  shield: {fileID: 0}
+  shield: {fileID: 1288889988423382, guid: b88bf341832770440a9fcf640457a2a8, type: 2}
   slip_uses: 5
   compass_timer: 0
-  compass_duration: 50
-  compass: {fileID: 0}
+  compass_duration: 500
+  compass: {fileID: 1787879527040734, guid: b397ac27aa9e6334e98ef7eb203cc2ff, type: 2}
+  slow_duration: 15
   equipped_ability: 0
   hit_cooldown_timer: 0
   hit_cooldown: 10
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 1778989786770838, guid: 540072a884303ce48ad52bcb2bc0bbcc, type: 2}
+  display_shield: {fileID: 1912622508603070, guid: 540072a884303ce48ad52bcb2bc0bbcc,
+    type: 2}
+  display_compass: {fileID: 1340441176643464, guid: 540072a884303ce48ad52bcb2bc0bbcc,
+    type: 2}
+  display_slippy: {fileID: 1092178268955850, guid: 540072a884303ce48ad52bcb2bc0bbcc,
+    type: 2}
+  display_clone: {fileID: 1295335523603664, guid: 540072a884303ce48ad52bcb2bc0bbcc,
+    type: 2}
+  display_slow: {fileID: 1336295782361078, guid: 540072a884303ce48ad52bcb2bc0bbcc,
+    type: 2}
+  display_slip_uses: {fileID: 1969477009331194, guid: 540072a884303ce48ad52bcb2bc0bbcc,
+    type: 2}
+  in_shrine: 0
+  collectibles_gui: {fileID: 0}
+  Camera: {fileID: 0}
+  m_Profile: {fileID: 11400000, guid: a70c798f38caef8418fd4b1944aa84d3, type: 2}
+  collectibles: []
 --- !u!136 &136910657891155650
 CapsuleCollider:
   m_ObjectHideFlags: 1
