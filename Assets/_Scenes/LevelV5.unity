@@ -11973,6 +11973,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 224820216870683730, guid: 540072a884303ce48ad52bcb2bc0bbcc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 44
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 540072a884303ce48ad52bcb2bc0bbcc, type: 2}
   m_IsPrefabParent: 0
@@ -17146,6 +17151,18 @@ Prefab:
       propertyPath: god_win_screen
       value: 
       objectReference: {fileID: 1980261500}
+    - target: {fileID: 4106328961729720, guid: d10c993de1a6ca9499435044de0ab08d, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106328961729720, guid: d10c993de1a6ca9499435044de0ab08d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106328961729720, guid: d10c993de1a6ca9499435044de0ab08d, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d10c993de1a6ca9499435044de0ab08d, type: 2}
   m_IsPrefabParent: 0

@@ -135,7 +135,10 @@ public class Signpost : MonoBehaviour {
 
     public void GetCollectiblesArray()
     {
-        arena = GameObject.Find("Arena");
+        if (arena == null)
+        {
+            arena = GameObject.Find("Arena");
+        }
         collectibles = arena.GetComponent<SpawnController>().collectibles;
     }
 

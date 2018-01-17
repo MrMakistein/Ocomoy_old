@@ -533,6 +533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4106328961729720}
   - component: {fileID: 95682530941635266}
+  - component: {fileID: 114534066955249894}
   m_Layer: 0
   m_Name: Charv1
   m_TagString: Untagged
@@ -1273,6 +1274,18 @@ MonoBehaviour:
   dashSpeed: 150
   dashDuration: 0.25
   dashTimer: 0
+--- !u!114 &114534066955249894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894953583680590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e80987f42f30bf547acc0518ea41db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!114 &114859435300578342
 MonoBehaviour:
   m_ObjectHideFlags: 1
