@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1559368116268460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.999992, y: 2.1, z: 13.3}
+  m_LocalPosition: {x: -5.3, y: 2.1, z: -23.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4644114787422298}
@@ -192,7 +192,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1559368116268460}
   serializedVersion: 2
-  m_Mass: 10000
+  m_Mass: 15
   m_Drag: 10
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -265,28 +265,22 @@ MonoBehaviour:
   shield_rotation_speed: 200
   shield_timer: 0
   shield_duration: 50
-  shield: {fileID: 1288889988423382, guid: b88bf341832770440a9fcf640457a2a8, type: 2}
+  shield: {fileID: 0}
   slip_uses: 5
   compass_timer: 0
-  compass_duration: 500
-  compass: {fileID: 1787879527040734, guid: b397ac27aa9e6334e98ef7eb203cc2ff, type: 2}
+  compass_duration: 50
+  compass: {fileID: 0}
   slow_duration: 15
   equipped_ability: 0
   hit_cooldown_timer: 0
   hit_cooldown: 10
-  healthbar: {fileID: 1778989786770838, guid: 540072a884303ce48ad52bcb2bc0bbcc, type: 2}
-  display_shield: {fileID: 1912622508603070, guid: 540072a884303ce48ad52bcb2bc0bbcc,
-    type: 2}
-  display_compass: {fileID: 1340441176643464, guid: 540072a884303ce48ad52bcb2bc0bbcc,
-    type: 2}
-  display_slippy: {fileID: 1092178268955850, guid: 540072a884303ce48ad52bcb2bc0bbcc,
-    type: 2}
-  display_clone: {fileID: 1295335523603664, guid: 540072a884303ce48ad52bcb2bc0bbcc,
-    type: 2}
-  display_slow: {fileID: 1336295782361078, guid: 540072a884303ce48ad52bcb2bc0bbcc,
-    type: 2}
-  display_slip_uses: {fileID: 1969477009331194, guid: 540072a884303ce48ad52bcb2bc0bbcc,
-    type: 2}
+  healthbar: {fileID: 0}
+  display_shield: {fileID: 0}
+  display_compass: {fileID: 0}
+  display_slippy: {fileID: 0}
+  display_clone: {fileID: 0}
+  display_slow: {fileID: 0}
+  display_slip_uses: {fileID: 0}
   in_shrine: 0
   collectibles_gui: {fileID: 0}
   Camera: {fileID: 0}

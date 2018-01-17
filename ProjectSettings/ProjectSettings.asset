@@ -587,13 +587,15 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Build: 1
+    Build: 0
     Collab: 1
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 969b4c05-8a6f-47ce-95af-33b5b6389495
-  projectName: Character Controller
+  cloudProjectId: e9b8ebbe-a461-4873-8c7a-99abe9757671
+  projectName: Ocomoy
   organizationId: mrmakistein
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

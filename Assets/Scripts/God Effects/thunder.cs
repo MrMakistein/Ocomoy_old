@@ -6,8 +6,10 @@ using UnityEngine;
 public class thunder : MonoBehaviour {
     public float radius = 12;
     public int timeStunned = 2;
-    
+
+    public GameObject lightning;
     private GameObject player;
+    public GameObject bolt;
 
     Collider[] colliders;
 
@@ -18,6 +20,7 @@ public class thunder : MonoBehaviour {
         
         if (player != null)
         {
+            bolt = Instantiate(lightning, new Vector3(transform.position.x, 12.2f, transform.position.z), Quaternion.identity);
             colliders = Physics.OverlapSphere(transform.position, radius);
             foreach (Collider c in colliders)
             {
@@ -27,8 +30,10 @@ public class thunder : MonoBehaviour {
                 }
                 else
                 {
-                    player.GetComponent<Movement>().stunned = true;                  
+                    player.GetComponent<Movement>().stunned = true;
+                    Destroy(bolt, 3);
                     Destroy(this, destroyTime());
+
                 }
             }
         }
@@ -52,6 +57,7 @@ public class thunder : MonoBehaviour {
 
     private void OnDestroy()
     {
+
         foreach (Transform child in transform)
         {
                 Destroy(child.gameObject);

@@ -60,6 +60,8 @@ public class Player : MonoBehaviour {
     public GameObject Camera;
     public PostProcessingProfile m_Profile;
     public GameObject[] collectibles;
+    public GameObject human_win_screen;
+    public GameObject god_win_screen;
 
 
 
@@ -117,8 +119,9 @@ public class Player : MonoBehaviour {
         }
         if ( currentHealth <= 0)
         {
-            print("Arena wins");
-            SceneManager.LoadScene("Menu");
+            //print("Arena wins");
+            god_win_screen.SetActive(true);
+            Invoke("LoadMenu", 5);
         }
 
         // Ability Activation
@@ -489,10 +492,20 @@ public class Player : MonoBehaviour {
             }
             if (col.gameObject.GetComponent<Shrine>().shrine_id == 1 && arena.GetComponent<SpawnController>().allCollected)
             {
-                print("Player wins");
-                SceneManager.LoadScene("Menu");
+                //print("Player wins");
+                human_win_screen.SetActive(true);
+                Invoke("LoadMenu", 5);
             }
             
         }
     }
+
+    public void LoadMenu()
+    {
+        human_win_screen.SetActive(false);
+        god_win_screen.SetActive(false);
+        SceneManager.LoadScene("Menu");
+    }
+
+
 }

@@ -33,8 +33,8 @@ public class CameraControl : MonoBehaviour {
     }
     // Update is called once per frame
     void Update() {
-        
 
+        
         //check for nullpointer
         if (player != null && dummy != null)
         {

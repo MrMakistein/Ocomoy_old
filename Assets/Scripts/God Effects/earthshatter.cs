@@ -57,7 +57,7 @@ public class earthshatter : MonoBehaviour {
                 Destroy(child.gameObject);
         }
         player.GetComponent<Movement>().reversed = false;
-        Destroy(this.gameObject);
+        Destroy(this);
     }  
     
 }

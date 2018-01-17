@@ -10,12 +10,14 @@ public class blizzard : MonoBehaviour {
 
     private GameObject player;    
     Collider[] colliders;
+    float startTime;
 
     // Use this for initialization
     void Start()
     {
-        Destroy(this.gameObject, TimeAlive);
+        Destroy(this.gameObject, 18);
         player = GameObject.Find("Player");
+        startTime = Time.time;
     }
     void OnDrawGizmos()
     {
@@ -34,7 +36,7 @@ public class blizzard : MonoBehaviour {
                 {
                     continue;
                 }
-                else
+                else if (Time.time-startTime <= 13.5)
                 {
                     player.GetComponent<Movement>().SetSlow();
                 }
