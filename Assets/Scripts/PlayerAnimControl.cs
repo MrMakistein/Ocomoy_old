@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlayerAnimControl : MonoBehaviour {
 
     public Animator anim;
+    //Time it takes to transition between running and idle
+    public float transitionTime = 0.1f;
+    //used to blend between running and idle
+    //0 = idle, 1 = running
+    float blendVal = 0;
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -14,11 +19,11 @@ public class PlayerAnimControl : MonoBehaviour {
 	void Update () {
         if (Input.GetButton("Horizontal")  || Input.GetButton("Vertical"))
         {
-            anim.SetBool("run", true);
+            blendVal = blendVal >= 1 ? 1 : blendVal + (Time.deltaTime / transitionTime);
         } else
         {
-
-            anim.SetBool("run", false);
+            blendVal = blendVal <= 0 ? 0 : blendVal - (Time.deltaTime / transitionTime);
         }
-	}
+        anim.SetFloat("Blend", blendVal);
+    }
 }

@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463362446688468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60.635384, y: 1.0756586, z: 49.694946}
+  m_LocalPosition: {x: 0.26, y: 1.0756586, z: 3.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4665659172177556}
@@ -183,7 +183,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -691729931
+  randomSeed: 1488756025
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -272,8 +272,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.7352941, g: 0.75151384, b: 0.75151384, a: 0.203}
-      maxColor: {r: 0.9007353, g: 0.875, b: 0.875, a: 0.453}
+      minColor: {r: 0.8704584, g: 0.8455882, b: 0.8455882, a: 0.272}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.453}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3831,11 +3831,11 @@ ParticleSystem:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 0.39215687}
-        key2: {r: 0.3602941, g: 0.35234645, b: 0.35234645, a: 1}
+        key2: {r: 0.8235294, g: 0.8416955, b: 0.8416955, a: 1}
         key3: {r: 1, g: 1, b: 1, a: 0}
-        key4: {r: 0.007352948, g: 0, b: 0, a: 0}
+        key4: {r: 0.6838235, g: 0.6838235, b: 0.6838235, a: 0}
         key5: {r: 1, g: 1, b: 1, a: 0}
-        key6: {r: 0.014705896, g: 0.000108131695, b: 0.000108131695, a: 0}
+        key6: {r: 0.50735295, g: 0.5222751, b: 0.5222751, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
         ctime1: 13300
@@ -3860,11 +3860,11 @@ ParticleSystem:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 0.5882353}
-        key2: {r: 0.21323532, g: 0.20696369, b: 0.20696369, a: 0.39215687}
+        key2: {r: 0.9007353, g: 0.875, b: 0.8760649, a: 0.39215687}
         key3: {r: 1, g: 1, b: 1, a: 0}
-        key4: {r: 0.5588235, g: 0.57115054, b: 0.57115054, a: 0}
+        key4: {r: 0.7647059, g: 0.76641214, b: 0.77595156, a: 0}
         key5: {r: 1, g: 1, b: 1, a: 0}
-        key6: {r: 0.014705896, g: 0, b: 0, a: 0}
+        key6: {r: 0.47794116, g: 0.49199826, b: 0.49199826, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
         ctime1: 6361

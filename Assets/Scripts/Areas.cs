@@ -32,27 +32,27 @@ public class Areas : MonoBehaviour {
                 isWinZone = true;
                 if (area_id == 1)
                 {
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(57.8f, 2.1f, 58.0f); // Top Right
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(61.8f, 2.1f, 59.2f); // Top Right
                 }
                 if (area_id == 2)
                 {
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(75.4f, 2.1f, -32.1f); // Bottom Right
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(80.23f, 2.1f, -37.3f); // Bottom Right
                 }
                 if (area_id == 3)
                 {
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(27.4f, 2.1f, -34.6f); // Bottom
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(30.55f, 2.1f, -39.7f); // Bottom
                 }
                 if (area_id == 4)
                 {
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(23.6f, 2.1f, 26.2f); //Top
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(30.0f, 2.1f, 27.4f); //Top
                 }
                 if (area_id == 5)
                 {
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-22.7f, 2.1f, 48.2f); //Top Left
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-28.8f, 2.1f, 72.8f); //Top Left
                 }
                 if (area_id == 6)
                 {
-                    arena.GetComponent<SpawnController>().player_pos = new Vector3(-6.2f, 2.1f, 8.0f);// Bottom Left
+                    arena.GetComponent<SpawnController>().player_pos = new Vector3(1.2f, 2.1f, 8.0f);// Bottom Left
                 }
             }
         }

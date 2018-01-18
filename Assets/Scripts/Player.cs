@@ -428,6 +428,7 @@ public class Player : MonoBehaviour {
 
     private void OnTriggerStay(Collider col)
     {
+        
             if (col.gameObject.tag == "Shrine" && col.gameObject.GetComponent<Shrine>().shrine_id > 1)
             {
                 if (col.gameObject.GetComponent<Shrine>().blessing_spawn_cooldown_timer <= 0)
@@ -440,7 +441,7 @@ public class Player : MonoBehaviour {
             
             }
             // Tests for players pressing spacebar while standing in shrine
-            if (col.gameObject.tag == "Shrine" && Input.GetKeyDown("space") && col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer <= 0 && col.gameObject.GetComponent<Shrine>().blessing_spawn_cooldown_timer <= 0)
+            if (col.gameObject.tag == "Shrine" && Input.GetKeyDown(KeyCode.Space) && col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer <= 0 && col.gameObject.GetComponent<Shrine>().blessing_spawn_cooldown_timer <= 0)
             {
             if (col.gameObject.GetComponent<Shrine>().shrine_id > 1) { 
                 col.gameObject.GetComponent<Shrine>().shrine_cooldown_timer = col.gameObject.GetComponent<Shrine>().shrine_cooldown;

@@ -91,6 +91,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -106,6 +107,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -196,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c46fb4860875b4899c0564454bf281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThrowOrClick: 0
   chargeMaterial: {fileID: 2100000, guid: aa7204107ca4fb344b36b3117d3b551c, type: 2}
   tornadoEffect: {fileID: 1463362446688468, guid: c45aef76c73797b41b31bae51aa9d795,
     type: 2}

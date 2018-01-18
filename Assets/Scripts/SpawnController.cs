@@ -153,8 +153,10 @@ public class SpawnController : MonoBehaviour {
         GameObject[] shrines = GameObject.FindGameObjectsWithTag("Shrine");
 		foreach (GameObject shrine in shrines) {
 			rand = UnityEngine.Random.Range (0, list.Count);
-			shrine.gameObject.GetComponent<Shrine> ().shrine_id = list [rand];
-			list.RemoveAt (rand);
+			shrine.gameObject.GetComponent<Shrine>().shrine_id = list [rand];
+            shrine.gameObject.GetComponent<Shrine>().SetMeshes();
+
+            list.RemoveAt (rand);
 		}
     }
 

@@ -172,7 +172,17 @@ ModelImporter:
     13700014: MOUTH_plane
     13700016: NECKLACE
     13700018: RIGHT_SCARF
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red
+    second: {fileID: 2100000, guid: 4d3983217001ac9469cdf7834e98fa87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yellow
+    second: {fileID: 2100000, guid: e854b8a847486454c8f959195ac1b6fc, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

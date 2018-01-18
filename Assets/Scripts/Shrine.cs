@@ -10,6 +10,7 @@ public class Shrine : MonoBehaviour {
     [HideInInspector] public float blessing_spawn_cooldown_timer = 0;
     public int shrine_id = 1;
     public bool shrine_swap = true;
+    public GameObject altar_mesh;
 
 	// Use this for initialization
 	void Start () {
@@ -55,5 +56,17 @@ public class Shrine : MonoBehaviour {
         {
             blessing_spawn_cooldown_timer -= Time.deltaTime * 10;
         }
+    }
+
+    public void SetMeshes()
+    {
+        if (shrine_id == 1)
+        {
+            //altar_mesh.SetActive(false);
+        } else
+        {
+            altar_mesh.SetActive(true);
+        }
+
     }
 }
