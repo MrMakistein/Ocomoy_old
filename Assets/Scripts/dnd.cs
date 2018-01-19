@@ -243,6 +243,8 @@ public class dnd : MonoBehaviour
                 draggingObject = null;
 
             }
+
+            draggingObject = null;
             isDragging = false;
             stopDragging = false;
         }
@@ -268,7 +270,7 @@ public class dnd : MonoBehaviour
     {
         buttonReleased = false;
     }
-
+    
     private GameObject GetObjectFromMouseRaycast()
     {
         GameObject gmObj = null;

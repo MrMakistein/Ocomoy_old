@@ -394,7 +394,6 @@ public class Player : MonoBehaviour {
             }
 
         }
-
         else if (col.gameObject.tag == "Interactive" && col.gameObject.GetComponent<InteractiveSettings>().isCollectible && col.gameObject.activeSelf)
         {
             col.gameObject.SetActive(false);
@@ -405,6 +404,7 @@ public class Player : MonoBehaviour {
             GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
 
             collectibleCount++;
+            
             if (collectibleCount >= arena.GetComponent<SpawnController>().numberOfCollectibles)
             {
                 arena.GetComponent<SpawnController>().allCollected = true;
