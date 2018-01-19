@@ -11,6 +11,7 @@ public class Shrine : MonoBehaviour {
     public int shrine_id = 1;
     public bool shrine_swap = true;
     public GameObject altar_mesh;
+    public GameObject altar_orb;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,7 @@ public class Shrine : MonoBehaviour {
         // changes the color of the shrine depening on its state
         if (shrine_cooldown_timer > 0)
         {
+            
             GetComponent<Renderer>().material.color = Color.red;
             blessing_spawn_cooldown_timer = blessing_spawn_cooldown;
             shrine_cooldown_timer -= Time.deltaTime * 5;
@@ -33,11 +35,13 @@ public class Shrine : MonoBehaviour {
         }
         else if (blessing_spawn_cooldown_timer > 0)
         {
+            altar_orb.SetActive(false);
             GetComponent<Renderer>().material.color = Color.gray;
 
         }
         else
         {
+            altar_orb.SetActive(true);
             GetComponent<Renderer>().material.color = new Color(0.2F, 0.2F, 0.2F, 1);
         }
 
