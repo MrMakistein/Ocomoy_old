@@ -10,7 +10,7 @@ public class dnd : MonoBehaviour
     int mask;
     //prevents picking up another object after a object was dropped without releasing the mouse button
     bool buttonReleased = true;
-    
+
 
     //the maximum distance at which a object can be picked up (needed by the raycast function)
     public float catchingDistance = 100;
@@ -35,11 +35,11 @@ public class dnd : MonoBehaviour
 
 
     public static float DropDistance;
-    public float initialDropDistance = 120f;
+    public float initialDropDistance = 1200f;
     public float DorpDistanceMultiplierFor1 = 2f;
-    public float DorpDistanceMultiplierFor2 = 1f;
-    public float DorpDistanceMultiplierFor3 = 0.6f;
-    public float DorpDistanceMultiplierFor4 = 0.6f;
+    public float DorpDistanceMultiplierFor2 = 2f;
+    public float DorpDistanceMultiplierFor3 = 2f;
+    public float DorpDistanceMultiplierFor4 = 2f;
 
     //modifier for the pick up height, based on weight classes (expected that heavier objects are larger...)
     float heightOffset;
@@ -47,8 +47,18 @@ public class dnd : MonoBehaviour
     public float HeightOffsetFor2 = -0.5f;
     public float HeightOffsetFor3 = 0.2f;
     public float HeightOffsetFor4 = 1f;
-    
-    
+
+    //this is used to compensate a calculation mistake, where i could not find out, where it happens, sould be added to pickupheight, when not calculating the mouse vector
+    public float heightCompensation = 1.1f;
+
+    public float heightThreshhold = 0.1f;
+
+    //should the height be locked on pickup
+    public bool heightLock = false;
+
+    //The point of the ray hit
+    Vector3 RayHitPoint;
+
     //needed to update the draggingobject when moving the camera
     private Vector3 oldCameraPosition;
     private Vector3 cameraDifference;
@@ -101,7 +111,7 @@ public class dnd : MonoBehaviour
     //singelton
     public static dnd instance;
 
-    void Awake  ()
+    void Awake()
     {
         instance = this;
 
@@ -144,7 +154,7 @@ public class dnd : MonoBehaviour
 
                     //used for lockObject = true    
                     //calculate the "mouse position" in the world, with the height pickUpHeight + heightOffset
-                    MouseVector = CalculateMouse3DVector(currentCamera, mask, pickUpHeight + heightOffset);
+                    MouseVector = CalculateMouse3DVector(currentCamera, mask, (pickUpHeight + heightOffset));
                 }
             }
 
@@ -191,10 +201,29 @@ public class dnd : MonoBehaviour
                 screenDistanceRel = Vector3.Distance(pickUpScreenPos, Input.mousePosition) / DropDistance;
 
                 //Apply force and change drag
-                if (wobbleDrag) { 
-                    DrObj.AddForce((MouseVector - DrObj.transform.position).normalized * forceStrenght, ForceMode.Force);
-                    DrObj.drag = (currentWeightInfluence * 1) / Vector3.Distance(DrObj.transform.position, MouseVector);
-                } else
+                if (wobbleDrag)
+                {
+                    if (heightLock)
+                    {
+
+                        DrObj.constraints = RigidbodyConstraints.FreezePositionY;
+                        //uses lerp to get the object fast to the pick up height, but then uses the standard wobble drag at pick up height
+                        if (pickUpHeight + heightOffset + heightCompensation > DrObj.transform.position.y + heightThreshhold || pickUpHeight + heightOffset + heightCompensation > DrObj.transform.position.y + heightThreshhold)
+                        {
+                            DrObj.transform.position = new Vector3(DrObj.transform.position.x, Vector3.Lerp(DrObj.transform.position, MouseVector, Time.deltaTime * pickUpSpeed).y, DrObj.transform.position.z);
+                        }
+                        DrObj.AddForce((MouseVector - DrObj.transform.position).normalized * forceStrenght, ForceMode.Force);
+                        DrObj.drag = (currentWeightInfluence * 1) / Vector3.Distance(DrObj.transform.position, MouseVector);
+                    }
+                    else
+                    {
+
+                        DrObj.AddForce((MouseVector - DrObj.transform.position).normalized * forceStrenght, ForceMode.Force);
+                        DrObj.drag = (currentWeightInfluence * 1) / Vector3.Distance(DrObj.transform.position, MouseVector);
+                    }
+
+                }
+                else
                 {
                     DrObj.constraints = RigidbodyConstraints.FreezeAll;
                     DrObj.transform.position = Vector3.Lerp(DrObj.transform.position, MouseVector, Time.deltaTime * pickUpSpeed);
@@ -217,7 +246,6 @@ public class dnd : MonoBehaviour
         {
             if (draggingObject != null)
             {
-
                 //reset everything
                 DrObj = draggingObject.GetComponent<Rigidbody>();
                 DrObj.constraints = RigidbodyConstraints.None;
@@ -232,8 +260,7 @@ public class dnd : MonoBehaviour
 
                     //Clip Value for Distance Multiplier from 0 - 1
 
-                    float distanceMultiplier =  screenDistanceRel < 1 ? screenDistanceRel : 1;
-                    Debug.Log("Distance rel: " + distanceMultiplier);
+                    float distanceMultiplier = screenDistanceRel < 1 ? screenDistanceRel : 1;
                     float strength = distanceMultiplier * shotStrength;
                     //new vector prefents that the object flies into space...
                     DrObj.AddForce((new Vector3(MouseVector.x, DrObj.transform.position.y, MouseVector.z) - DrObj.transform.position).normalized * strength, ForceMode.Force);
@@ -243,8 +270,6 @@ public class dnd : MonoBehaviour
                 draggingObject = null;
 
             }
-
-            draggingObject = null;
             isDragging = false;
             stopDragging = false;
         }
@@ -270,7 +295,7 @@ public class dnd : MonoBehaviour
     {
         buttonReleased = false;
     }
-    
+
     private GameObject GetObjectFromMouseRaycast()
     {
         GameObject gmObj = null;
@@ -315,7 +340,7 @@ public class dnd : MonoBehaviour
                     heightOffset = HeightOffsetFor4;
                     break;
                 default:
-                   
+
                     break;
             }
             //and check again if the player is currently using a slow effect
@@ -331,7 +356,7 @@ public class dnd : MonoBehaviour
         {
             currentWeightInfluence = InfluenceWeightClass4;
             DropDistance = initialDropDistance * DorpDistanceMultiplierFor4;
-            if(draggingObject != null)
+            if (draggingObject != null)
             {
                 draggingObject.GetComponent<Rigidbody>().mass = Player.slow_mass;
             }
@@ -343,12 +368,12 @@ public class dnd : MonoBehaviour
     //Math
     //as some variables are screen size dependent, compensate it with this function
     public static float ScreenSizeCompensation(float toCompensate)
-    {        
+    {
         return (toCompensate / editorScreenMean) * playScreenMean;
     }
 
     //Calculates the point according to the mouse courser in a specified height(using pickUpHeight)
-    public static Vector3 CalculateMouse3DVector(Camera currentCamera, LayerMask mask, float pickUpHeight)
+    public Vector3 CalculateMouse3DVector(Camera currentCamera, LayerMask mask, float temppickUpHeight)
     {
         Vector3 v3 = Input.mousePosition;
         v3 = currentCamera.ScreenToWorldPoint(v3);
@@ -357,20 +382,20 @@ public class dnd : MonoBehaviour
         Ray r = currentCamera.ScreenPointToRay(Input.mousePosition);
 
         //!!! A distance (3rd Position) is needed, because otherwise Unity behaves buggy !!!
-        bool hit = Physics.Raycast(r, out hitInfo, 1000, mask);
+        bool hit = Physics.Raycast(r, out hitInfo, 2000, mask);
         if (hit)
         {
             //point where ray hits the surface
-            Vector3 A = hitInfo.point;
+            RayHitPoint = hitInfo.point;
             Vector3 CamPos = currentCamera.gameObject.transform.position;
-            float originalDistance = Vector3.Distance(A, CamPos);
+            float originalDistance = Vector3.Distance(RayHitPoint, CamPos);
 
-            //Use trigonometry to calculate the point on the ray, where the height is pickUpHeight
+            //Use trigonometry to calculate the point on the ray, where the height is temppickUpHeight
             float cosine = Vector3.Dot(r.direction, hitInfo.normal);
             float cosineDegrees = Mathf.Acos(cosine);
-            float resutlingDistance = (pickUpHeight) / Mathf.Cos(Mathf.PI - cosineDegrees);
+            float resutlingDistance = (temppickUpHeight) / Mathf.Cos(Mathf.PI - cosineDegrees);
 
-            v3 = Vector3.Lerp(A, CamPos, resutlingDistance / originalDistance);
+            v3 = Vector3.Lerp(RayHitPoint, CamPos, resutlingDistance / originalDistance);
         }
         return v3;
     }

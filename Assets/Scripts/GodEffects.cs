@@ -76,7 +76,7 @@ public class GodEffects : MonoBehaviour
         if(charged && Input.GetMouseButtonUp(1) && !ThrowOrClick)
         {
             //new calculated Position, to spawn the effect on the ground(with a slight offset
-            SpawnEffect(CurrentType, new Vector3(this.gameObject.transform.position.x,1f,this.gameObject.transform.position.z));
+            SpawnEffect(CurrentType, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z));
             Destroy(this.gameObject);
         }
     }

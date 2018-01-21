@@ -11,6 +11,7 @@ public class Shrine : MonoBehaviour {
     public int shrine_id = 1;
     public bool shrine_swap = true;
     public GameObject altar_mesh;
+    public GameObject spawn_mesh;
     public GameObject altar_orb;
 
 	// Use this for initialization
@@ -66,7 +67,7 @@ public class Shrine : MonoBehaviour {
     {
         if (shrine_id == 1)
         {
-            //altar_mesh.SetActive(false);
+            spawn_mesh.SetActive(true);
         } else
         {
             altar_mesh.SetActive(true);

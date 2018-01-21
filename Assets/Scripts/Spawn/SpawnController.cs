@@ -38,7 +38,7 @@ public class SpawnController : MonoBehaviour {
     public void SetPlayerPosition()
     {
         player.transform.position = player_pos;
-        //player.transform.position = new Vector3(41.8f, 2.1f, -30f); // Manually set player position
+        //player.transform.position = new Vector3(59.8f, 7.5f, 27f); // Manually set player position
 
     }
 

@@ -14,10 +14,8 @@ public class customCursor : MonoBehaviour
     public float CursorTextureDivider = 4;
 
     public GameObject LineRender;
-
-    Vector3 p = new Vector3();
+    
     Vector2 objectPoint2D = new Vector2();
-    Vector3 objectPoint = new Vector3();
     Vector3 objectPosition = new Vector3();
     Camera c;
     float Distance;
@@ -34,7 +32,7 @@ public class customCursor : MonoBehaviour
 
     private void OnGUI()
     {
-        if(dnd.draggingObject != null) { 
+        if(dnd.draggingObject != null && dnd.draggingObject.activeInHierarchy) { 
             objectPosition = c.WorldToScreenPoint(dnd.draggingObject.transform.position);
             objectPoint2D = new Vector2(objectPosition.x, objectPosition.y);
 

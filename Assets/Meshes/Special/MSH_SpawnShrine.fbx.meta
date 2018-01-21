@@ -1,28 +1,54 @@
 fileFormatVersion: 2
-guid: 63a1330f50835a2438b35af7d33efba2
-timeCreated: 1512456059
+guid: 996b65df086fdb64ab1a7b81024fc0bf
+timeCreated: 1516553961
 licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 21
   fileIDToRecycleName:
-    100000: pCube3
-    100002: //RootNode
-    400000: pCube3
-    400002: //RootNode
-    2300000: pCube3
-    3300000: pCube3
-    4300000: pCube3
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: efe91ecab45b0f4409c96ac8bf3b5cfa, type: 2}
+    100000: MSH_SpawnShrine_altar01
+    100002: MSH_SpawnShrine_altar02
+    100004: MSH_SpawnShrine_altar03
+    100006: //RootNode
+    100008: MSH_spcl_Spawnshrine_altarGRP
+    100010: MSH_spcl_spawnshrine_base
+    100012: MSH_spcl_spawnShrine_grass_01
+    100014: MSH_spcl_spawnShrine_grass_02
+    100016: MSH_spcl_Spawnshrine_main
+    400000: MSH_SpawnShrine_altar01
+    400002: MSH_SpawnShrine_altar02
+    400004: MSH_SpawnShrine_altar03
+    400006: //RootNode
+    400008: MSH_spcl_Spawnshrine_altarGRP
+    400010: MSH_spcl_spawnshrine_base
+    400012: MSH_spcl_spawnShrine_grass_01
+    400014: MSH_spcl_spawnShrine_grass_02
+    400016: MSH_spcl_Spawnshrine_main
+    2300000: MSH_SpawnShrine_altar01
+    2300002: MSH_SpawnShrine_altar02
+    2300004: MSH_SpawnShrine_altar03
+    2300006: MSH_spcl_spawnshrine_base
+    2300008: MSH_spcl_spawnShrine_grass_01
+    2300010: MSH_spcl_spawnShrine_grass_02
+    2300012: MSH_spcl_Spawnshrine_main
+    3300000: MSH_SpawnShrine_altar01
+    3300002: MSH_SpawnShrine_altar02
+    3300004: MSH_SpawnShrine_altar03
+    3300006: MSH_spcl_spawnshrine_base
+    3300008: MSH_spcl_spawnShrine_grass_01
+    3300010: MSH_spcl_spawnShrine_grass_02
+    3300012: MSH_spcl_Spawnshrine_main
+    4300000: MSH_spcl_spawnshrine_base
+    4300002: MSH_spcl_spawnShrine_grass_02
+    4300004: MSH_spcl_spawnShrine_grass_01
+    4300006: MSH_spcl_Spawnshrine_main
+    4300008: MSH_SpawnShrine_altar01
+    4300010: MSH_SpawnShrine_altar02
+    4300012: MSH_SpawnShrine_altar03
+    9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 0
+    materialSearch: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -35,7 +61,6 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -47,7 +72,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 80
+    globalScale: 50
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -89,7 +114,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

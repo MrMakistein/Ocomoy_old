@@ -5,7 +5,7 @@ using UnityEngine;
 public class ThrowObject : MonoBehaviour
 {
     public bool update_weight = true;
-    public int weight_class = 1;
+    [HideInInspector]public int weight_class = 1;
     public static float weight_class_1_limit = 2;
     public static float weight_class_2_limit = 6;
     public static float weight_class_3_limit = 10;

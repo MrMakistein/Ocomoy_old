@@ -337,7 +337,7 @@ public class Player : MonoBehaviour {
                 float dmg = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
-                    dmg = dmg / 6;
+                    dmg = dmg / 5;
                     while (dmg > 20)
                     {
                         dmg = dmg - 1;
@@ -348,6 +348,7 @@ public class Player : MonoBehaviour {
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 2)
                 {
+                    dmg = dmg / 4;
                     while (dmg > 20)
                     {
                         dmg = dmg - 1;
@@ -358,6 +359,8 @@ public class Player : MonoBehaviour {
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 3)
                 {
+                    dmg = dmg / 3;
+
                     while (dmg > 20)
                     {
                         dmg = dmg - 1;

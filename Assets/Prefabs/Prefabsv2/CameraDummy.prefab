@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e1c938f73a0f848885ff09301765b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thresholdWidth: 50
+  thresholdWidth: 100
   thresholdHeight: 50
   smoothTime: 0.2
   additionToPosition: 5
