@@ -27,7 +27,7 @@ public class dnd : MonoBehaviour
     private float currentWeightInfluence;
 
     //the force at which the pbject is beeing dragged to the cursor
-    public float forceStrenght = 400f;
+    public float forceStrenght = 120f;
 
 
     //dragging a object?
@@ -136,18 +136,6 @@ public class dnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //FPS
-        if(time > 1)
-        {
-            time = 0;
-
-            Debug.Log("FPS: " + frames);
-            frames = 0;
-        } else
-        {
-            frames++;
-            time += Time.deltaTime;
-        }
 
         //main if, if true --> object is beeing picked up.
         //

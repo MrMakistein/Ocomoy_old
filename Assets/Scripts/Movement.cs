@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     public bool reversed = false;
 
     //Used to adjust sliding-force
-    private float forceMultiplier = 100f;
+    private float forceMultiplier = 10f;
 
     //store initial values
     private float initalDrag;
@@ -61,12 +61,10 @@ public class Movement : MonoBehaviour
                 //move differently for sliding and not sliding
                 if (sliding)
                 {
-                    //check if the character has already the maximum spped
-                    if (gameObject.GetComponent<Rigidbody>().velocity.magnitude < mSpeed)
-                    {
-                        //Add Force to the character --> floaty feel
-                        gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * forceMultiplier * GetComponent<Rigidbody>().mass);
-                    }
+                    
+                    //Add Force to the character --> floaty feel
+                    gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * forceMultiplier * GetComponent<Rigidbody>().mass * (1 - (gameObject.GetComponent<Rigidbody>().velocity.magnitude) / mSpeed));
+                    
 
                 }
                 else

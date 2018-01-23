@@ -17,14 +17,24 @@ public class GodEffects : MonoBehaviour
     public bool ThrowOrClick = true; 
 
     public Material chargeMaterial;
+	[Space(10)]
     public GameObject tornadoEffect;
     public GameObject rainEffect;
-    public GameObject earthshatterEffect;
+   	public GameObject earthshatterEffect;
     public GameObject thunderEffect;
     public GameObject avalancheEffect;
     public GameObject blizzardEffect;
+	[Space(10)]
     public int uid;
     public GameObject display;
+
+	[Header("Audio Sources")]
+	//public AudioSource tornadoSound;
+	//public AudioSource rainSound;
+	public AudioSource blizzardSound;
+	public AudioSource thunderSound;
+	//public AudioSource earthshatterSound;
+	//public AudioSource avalancheSound;
 
 
     private bool charged = false;
@@ -57,6 +67,7 @@ public class GodEffects : MonoBehaviour
         if (CurrentType == GodEffectType.thunder)
         {
             display.gameObject.GetComponent<Text>().text = "thunder";
+
         }
         if (CurrentType == GodEffectType.avalanche)
         {
@@ -73,26 +84,51 @@ public class GodEffects : MonoBehaviour
             GetComponent<Renderer>().material = chargeMaterial;
         }
 
+
         if(charged && Input.GetMouseButtonUp(1) && !ThrowOrClick)
         {
-            //new calculated Position, to spawn the effect on the ground(with a slight offset
+			this.gameObject.SetActive (false); //deactivate god object (destroy after Sound has played)
+			//new calculated Position, to spawn the effect on the ground(with a slight offset)
             SpawnEffect(CurrentType, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z));
-            Destroy(this.gameObject);
+			Destroy(this.gameObject);
         }
     }
+
+	private void PlayEffectSound(){
+		//Plays the audio clip for the spawned effect Type
+		switch (CurrentType) {
+		/*case GodEffectType.tornado:
+			tornadoSound.Play ();
+			break;
+		*//*case GodEffectType.rain:
+			rainSound.Play ();
+			break;
+		*/case GodEffectType.thunder:
+			thunderSound.Play ();
+			break;
+		/*case GodEffectType.earthshatter:
+			earthshatterSound.Play();
+			break;
+		*//*case GodEffectType.avalanche:
+			avalancheSound.Play ();
+			break;
+		*/case GodEffectType.blizzard:
+			blizzardSound.Play ();
+			break;
+		}
+	}
 
     private void OnCollisionEnter(Collision collision)
     {
         if (charged && ThrowOrClick)
         {
             SpawnEffect(CurrentType, this.gameObject.transform.position);
-            Destroy(this.gameObject);
+			Destroy(this.gameObject);
         }
     }
 
     private void SpawnEffect(GodEffectType effectType, Vector3 pos)
     {
-
         //used for respawn
         GameObject[] godObjectSpawnPositions = GameObject.FindGameObjectsWithTag("GodObjectSpawnPosition");
 
@@ -119,13 +155,13 @@ public class GodEffects : MonoBehaviour
             case GodEffectType.avalanche:
                 Instantiate(avalancheEffect, pos, Quaternion.identity);
                 break;
-            case GodEffectType.blizzard:
+			case GodEffectType.blizzard:
                 Instantiate(blizzardEffect, pos, Quaternion.identity);
                 break;
             case GodEffectType.earthshatter:
                 Instantiate(earthshatterEffect, pos, Quaternion.identity);
                 break;
-            case GodEffectType.thunder:
+		case GodEffectType.thunder:
                 Instantiate(thunderEffect, pos, Quaternion.identity);
                 break;
             default:

@@ -2670,23 +2670,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Root: {fileID: 4798921548838434}
-  m_UpdateRate: 120
+  m_UpdateRate: 0
   m_UpdateMode: 1
-  m_Damping: 0.1
+  m_Damping: 0
   m_DampingDistrib:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Elasticity: 0.1
+  m_Elasticity: 0.12
   m_ElasticityDistrib:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Stiffness: 0.06
+  m_Stiffness: 0.088
   m_StiffnessDistrib:
     serializedVersion: 2
     m_Curve: []
@@ -2774,6 +2774,13 @@ MonoBehaviour:
   collectibles: []
   human_win_screen: {fileID: 0}
   god_win_screen: {fileID: 0}
+  audio_clips:
+  - {fileID: 8300000, guid: 7206734954f4f2f4ba5945a93fe8b3f3, type: 3}
+  - {fileID: 8300000, guid: 886dcba0f92afcf42845ecd6d4b6e9ba, type: 3}
+  - {fileID: 8300000, guid: 996d2b1aac0dbc74692c8bd31e752687, type: 3}
+  - {fileID: 8300000, guid: 2ec5ce29eff2ff34083e29b64e8973e4, type: 3}
+  - {fileID: 8300000, guid: 079b3d365a7fd474590b1ac5a310078a, type: 3}
+  PlayerAudioSource: {fileID: 82558116596963882}
 --- !u!114 &114488476274304942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2816,8 +2823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mSpeed: 7
-  slideTime: 3
-  slowTime: 2
+  slideTime: 0
+  slowTime: 0
   slowMultiplicator: 2
   move_block: 0
   stunned: 0

@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
     public float maxHealth = 100;
     public float currentHealth;
     public Image healthBar;
-    public float regenSpeed = 10;
+    public float regenSpeed = 2;
 
     //Clone Ability Variables
     public float clone_time = 0;
@@ -63,6 +63,9 @@ public class Player : MonoBehaviour {
     public GameObject human_win_screen;
     public GameObject god_win_screen;
 
+    // Audio 
+    public AudioClip[] audio_clips;
+    public AudioSource PlayerAudioSource;
 
 
 
@@ -239,7 +242,12 @@ public class Player : MonoBehaviour {
             vignette.intensity = intensity;
             m_Profile.vignette.settings = vignette;
         }
-        
+         if (collectibleCount >= 3)
+        {
+            var vignette = m_Profile.vignette.settings;
+            vignette.intensity = 0.0f;
+            m_Profile.vignette.settings = vignette;
+        }
 
         
 
@@ -334,10 +342,15 @@ public class Player : MonoBehaviour {
             hit_cooldown_timer = hit_cooldown;
             if (selectedClone == null)
             {
+                int hit_rand = Random.Range(0, 4);
+                PlayerAudioSource.volume = 0.35f;
                 float velocity = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
                 float dmg = 5;
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
+                    PlayerAudioSource.pitch = 1.0f;
+                    PlayerAudioSource.PlayOneShot(audio_clips[hit_rand]);
+
                     if (velocity < 14)
                     {
                         dmg = 2;
@@ -358,7 +371,8 @@ public class Player : MonoBehaviour {
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 2)
                 {
-                    Debug.Log(velocity);
+                    PlayerAudioSource.pitch = 1.0f;
+                    PlayerAudioSource.PlayOneShot(audio_clips[hit_rand]);
 
                     if (velocity < 8)
                     {
@@ -379,7 +393,8 @@ public class Player : MonoBehaviour {
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 3)
                 {
-                    Debug.Log(velocity);
+                    PlayerAudioSource.pitch = 1.0f;
+                    PlayerAudioSource.PlayOneShot(audio_clips[hit_rand]);
 
                     if (velocity < 4)
                     {
@@ -399,7 +414,8 @@ public class Player : MonoBehaviour {
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 4)
                 {
-                    Debug.Log(velocity);
+                    PlayerAudioSource.pitch = 1f;
+                    PlayerAudioSource.PlayOneShot(audio_clips[hit_rand]);
 
                     if (velocity < 3)
                     {
@@ -438,8 +454,8 @@ public class Player : MonoBehaviour {
         {
             col.gameObject.SetActive(false);
 
-            Color[] colors = { Color.red, Color.magenta, Color.cyan, Color.green, Color.gray }; //for testing!
-            GetComponent<Renderer>().material.color = colors[collectibleCount]; //for testing
+            //Color[] colors = { Color.red, Color.magenta, Color.cyan, Color.green, Color.gray }; //for testing!
+            //GetComponent<Renderer>().material.color = colors[collectibleCount]; //for testing
 
             GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");
 
@@ -494,6 +510,10 @@ public class Player : MonoBehaviour {
                     display_slippy.SetActive(false);
                     display_clone.SetActive(false);
                     display_slow.SetActive(false);
+                    PlayerAudioSource.volume = 0.2f;
+                    PlayerAudioSource.pitch = 1.0f;
+                    PlayerAudioSource.PlayOneShot(audio_clips[5]);
+
 
                     slowEffect = false;
                     slips_left = 0;

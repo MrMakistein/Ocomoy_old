@@ -31,14 +31,11 @@ public class Shrine : MonoBehaviour {
             blessing_spawn_cooldown_timer = blessing_spawn_cooldown;
             shrine_cooldown_timer -= Time.deltaTime * 5;
 
-           
-
         }
         else if (blessing_spawn_cooldown_timer > 0)
         {
             altar_orb.SetActive(false);
             GetComponent<Renderer>().material.color = Color.gray;
-
         }
         else
         {

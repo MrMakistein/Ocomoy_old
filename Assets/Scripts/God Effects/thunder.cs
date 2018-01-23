@@ -10,7 +10,6 @@ public class thunder : MonoBehaviour {
     public GameObject lightning;
     private GameObject player;
     public GameObject bolt;
-
     Collider[] colliders;
 
     // Use this for initialization
@@ -22,6 +21,7 @@ public class thunder : MonoBehaviour {
         {
             bolt = Instantiate(lightning, new Vector3(transform.position.x, 12.2f, transform.position.z), Quaternion.identity);
             colliders = Physics.OverlapSphere(transform.position, radius);
+            //searches if the player was in reach of the lightning
             foreach (Collider c in colliders)
             {
                 if (c.gameObject != player)
@@ -31,11 +31,12 @@ public class thunder : MonoBehaviour {
                 else
                 {
                     player.GetComponent<Movement>().stunned = true;
-                    Destroy(bolt, 3);
-                    Destroy(this, destroyTime());
-
+                    Invoke("unStunnPlayer", LightningTime());
                 }
             }
+
+            Destroy(bolt, 3);
+            Destroy(this, GetComponent<AudioSource>().clip.length);
         }
         else
         {
@@ -43,7 +44,14 @@ public class thunder : MonoBehaviour {
         }
     }
 
-    private float destroyTime()
+    //is used to unstunn the player, if the lightning effect was shorter than the audio signal
+    private void unStunnPlayer()
+    {
+        player.GetComponent<Movement>().stunned = false;
+    }
+
+
+    private float LightningTime()
     {
         //calculates time stunned based on distance to the epicenter
         return timeStunned * (1-(Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(player.transform.position.x, player.transform.position.z)))/radius);
@@ -62,7 +70,7 @@ public class thunder : MonoBehaviour {
         {
                 Destroy(child.gameObject);
         }
-        player.GetComponent<Movement>().stunned = false;
+        unStunnPlayer();
         Destroy(this.gameObject);
     }  
 

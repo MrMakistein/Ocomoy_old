@@ -99,15 +99,42 @@ public class SpawnController : MonoBehaviour {
                 winZoneIndex = a;
             }
         }
+        
+
+        List<int> list = new List<int>(new int[] { 1, 2, 3, 4, 5, 6});
+        list.RemoveAt(winZoneIndex);
+
 
         GameObject winZone = spawnAreaObjects[winZoneIndex];
         winZone.GetComponent<Areas>().setWinZone(); //set as winzone
         spawnAreaObjects.Remove(winZone); //exclude from SpawnAreas
         Destroy(winZone);
 
+        int rand = 0;
+        GameObject[] shrines = GameObject.FindGameObjectsWithTag("Shrine");
+        for (int i = 0; i < 2; i++)
+        {
+            rand = UnityEngine.Random.Range(0, list.Count);
+
+            GameObject emptyZone = spawnAreaObjects[rand];
+            emptyZone.GetComponent<Areas>().setWinZone();
+            spawnAreaObjects.Remove(emptyZone);
+            Destroy(emptyZone);
+
+
+
+            list.RemoveAt(rand);
+        }
+
+    
+
+
+
+
+
     }
 
-	public void DetermineCollectibles() {
+    public void DetermineCollectibles() {
 		chosenCollectibles = new List<GameObject>(); //List for all collectibles
 
 		//ITERATE OVER REMAINING ZONES
@@ -128,11 +155,12 @@ public class SpawnController : MonoBehaviour {
 
 			//ADD IT TO THE COLLECTIBLE LIST
 			chosenCollectibles.Add(interactivesInZone[r]); //add the game object to the collectibles List
-
+	
 			Destroy(zone); //then destroy the zone! (isn't needed anymore)
 		}
 
         collectibles = chosenCollectibles.ToArray(); //to array cuz what r lists
+        //Debug.Log("Number of Collectibles: " + collectibles.Length);
 
 
         GameObject[] signposts = GameObject.FindGameObjectsWithTag("Signpost");

@@ -74,8 +74,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276747627741412}
-  m_LocalRotation: {x: -0, y: 0.22479723, z: -0, w: 0.97440565}
-  m_LocalPosition: {x: 34.54185, y: 1.5617156, z: -8.295919}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -57.02, y: 11.0333805, z: -17.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224579500767883160}
@@ -213,7 +213,11 @@ MonoBehaviour:
     type: 2}
   uid: 0
   display: {fileID: 0}
-  CurrentType: 1
+  blizzardSound: {fileID: 82562052929896672, guid: 785c4276101818a40810556c3bf35e94,
+    type: 2}
+  thunderSound: {fileID: 82171477132920790, guid: a99eb72165813e84caddc5176380d823,
+    type: 2}
+  CurrentType: 3
 --- !u!114 &114746280875616406
 MonoBehaviour:
   m_ObjectHideFlags: 1
