@@ -334,49 +334,86 @@ public class Player : MonoBehaviour {
             hit_cooldown_timer = hit_cooldown;
             if (selectedClone == null)
             {
-                float dmg = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+                float velocity = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+                float dmg = 5;
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
-                    dmg = dmg / 5;
-                    while (dmg > 20)
+                    if (velocity < 10)
                     {
-                        dmg = dmg - 1;
+                        dmg = 2;
                     }
+                    if (velocity >= 10 && velocity < 20)
+                    {
+                        dmg = 4;
+                    }
+                    if (velocity >= 20)
+                    {
+                        dmg = 7;
+                    }
+
+
                     currentHealth = currentHealth - dmg;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 2)
                 {
-                    dmg = dmg / 4;
-                    while (dmg > 20)
+                    Debug.Log(velocity);
+
+                    if (velocity < 10)
                     {
-                        dmg = dmg - 1;
+                        dmg = 6;
                     }
-                    currentHealth = currentHealth - dmg*2f;
+                    if (velocity >= 10 && velocity < 20)
+                    {
+                        dmg = 10;
+                    }
+                    if (velocity >= 20)
+                    {
+                        dmg = 15;
+                    }
+
+                    currentHealth = currentHealth - dmg;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 3)
                 {
-                    dmg = dmg / 3;
+                    Debug.Log(velocity);
 
-                    while (dmg > 20)
+                    if (velocity < 4)
                     {
-                        dmg = dmg - 1;
+                        dmg = 12;
                     }
-                    currentHealth = currentHealth - dmg*4;
+                    if (velocity >= 5 && velocity < 14)
+                    {
+                        dmg = 17;
+                    }
+                    if (velocity >= 15)
+                    {
+                        dmg = 21;
+                    }
+                    currentHealth = currentHealth - dmg;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 4)
                 {
-                    dmg = dmg / 2;
-                    while (dmg > 20)
+                    Debug.Log(velocity);
+
+                    if (velocity < 3)
                     {
-                        dmg = dmg - 1;
+                        dmg = 14;
                     }
-                    currentHealth = currentHealth - dmg*8;
+                    if (velocity >= 4 && velocity < 11)
+                    {
+                        dmg = 19;
+                    }
+                    if (velocity >= 12)
+                    {
+                        dmg = 22;
+                    }
+                    currentHealth = currentHealth - dmg;
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
             }
@@ -393,7 +430,7 @@ public class Player : MonoBehaviour {
             col.gameObject.GetComponent<ThrowObject>().object_damage -= 1;
             if (col.gameObject.GetComponent<ThrowObject>().object_damage <= 0)
             {
-                Destroy(col.gameObject);
+                Destroy(col.gameObject, 0.1f);
             }
 
         }

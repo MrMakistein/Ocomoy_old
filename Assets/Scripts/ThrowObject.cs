@@ -8,7 +8,7 @@ public class ThrowObject : MonoBehaviour
     [HideInInspector]public int weight_class = 1;
     public static float weight_class_1_limit = 2;
     public static float weight_class_2_limit = 6;
-    public static float weight_class_3_limit = 10;
+    public static float weight_class_3_limit = 11;
     public float dmg_cooldown = 10;
     public float dmg_cooldown_max = 10;
     public int object_damage = 4;
