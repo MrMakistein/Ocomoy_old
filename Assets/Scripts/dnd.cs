@@ -27,7 +27,7 @@ public class dnd : MonoBehaviour
     private float currentWeightInfluence;
 
     //the force at which the pbject is beeing dragged to the cursor
-    public float forceStrenght = 120f;
+    public float forceStrenght = 400f;
 
 
     //dragging a object?
@@ -107,7 +107,11 @@ public class dnd : MonoBehaviour
     //value from 0 to 1 which indicates the distance from the mouse cursor to the object relativ to the drop distance
     float screenDistanceRel;
 
+    //used with values that use something screen related;
+    private float screenSizeMultiplier = 1;
 
+    long frames = 0;
+    float time = 0;
     //singelton
     public static dnd instance;
 
@@ -124,12 +128,26 @@ public class dnd : MonoBehaviour
 
         //Every screen dependent variable has to be scaled to fit any resolution
         initialDropDistance = ScreenSizeCompensation(initialDropDistance);
+        screenSizeMultiplier = ScreenSizeCompensation(screenSizeMultiplier);
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        //FPS
+        if(time > 1)
+        {
+            time = 0;
+
+            Debug.Log("FPS: " + frames);
+            frames = 0;
+        } else
+        {
+            frames++;
+            time += Time.deltaTime;
+        }
 
         //main if, if true --> object is beeing picked up.
         //
@@ -158,6 +176,7 @@ public class dnd : MonoBehaviour
                 }
             }
 
+            
 
             //while dragging
             else if (draggingObject != null)
@@ -185,7 +204,7 @@ public class dnd : MonoBehaviour
 
                     }
                 }
-
+                
 
                 pickUpScreenPos = currentCamera.WorldToScreenPoint(DrObj.position);
 
@@ -198,7 +217,7 @@ public class dnd : MonoBehaviour
                 }
 
                 //calculate the relative distance using screen coordinates
-                screenDistanceRel = Vector3.Distance(pickUpScreenPos, Input.mousePosition) / DropDistance;
+                screenDistanceRel = (Vector3.Distance(pickUpScreenPos, Input.mousePosition) / DropDistance);
 
                 //Apply force and change drag
                 if (wobbleDrag)
@@ -212,14 +231,15 @@ public class dnd : MonoBehaviour
                         {
                             DrObj.transform.position = new Vector3(DrObj.transform.position.x, Vector3.Lerp(DrObj.transform.position, MouseVector, Time.deltaTime * pickUpSpeed).y, DrObj.transform.position.z);
                         }
-                        DrObj.AddForce((MouseVector - DrObj.transform.position).normalized * forceStrenght, ForceMode.Force);
-                        DrObj.drag = (currentWeightInfluence * 1) / Vector3.Distance(DrObj.transform.position, MouseVector);
+                        DrObj.AddForce((Time.deltaTime * 140) * (MouseVector - DrObj.transform.position).normalized * forceStrenght / (screenSizeMultiplier), ForceMode.Force);
+                        DrObj.drag = (currentWeightInfluence * 1) / (Vector3.Distance(DrObj.transform.position, MouseVector));
                     }
                     else
                     {
-
-                        DrObj.AddForce((MouseVector - DrObj.transform.position).normalized * forceStrenght, ForceMode.Force);
-                        DrObj.drag = (currentWeightInfluence * 1) / Vector3.Distance(DrObj.transform.position, MouseVector);
+                        //screenSizeMultipier, because mouseVector uses pixel coordinates 
+                        //delta time to apply the same amount of force for each frame rate
+                        DrObj.AddForce((Time.deltaTime * 140 )* (MouseVector - DrObj.transform.position).normalized * forceStrenght / (screenSizeMultiplier), ForceMode.Force);
+                        DrObj.drag = (currentWeightInfluence * 1) / (Vector3.Distance(DrObj.transform.position, MouseVector));
                     }
 
                 }

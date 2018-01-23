@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 65464529244076972}
   - component: {fileID: 23414792856086818}
   - component: {fileID: 114163032464156280}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Shrine
   m_TagString: Shrine
   m_Icon: {fileID: 0}
@@ -1713,7 +1713,7 @@ MonoBehaviour:
   blessing_spawn_cooldown: 100
   blessing_spawn_cooldown_timer: 0
   shrine_id: 0
-  shrine_swap: 0
+  shrine_swap: 1
   altar_mesh: {fileID: 1784280494499130}
   spawn_mesh: {fileID: 1680559988111870}
   altar_orb: {fileID: 1766053979485806}

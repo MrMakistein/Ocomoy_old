@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     public bool reversed = false;
 
     //Used to adjust sliding-force
-    private float forceMultiplier = 10f;
+    private float forceMultiplier = 100f;
 
     //store initial values
     private float initalDrag;

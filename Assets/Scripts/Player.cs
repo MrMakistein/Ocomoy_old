@@ -338,15 +338,15 @@ public class Player : MonoBehaviour {
                 float dmg = 5;
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
-                    if (velocity < 10)
+                    if (velocity < 14)
                     {
                         dmg = 2;
                     }
-                    if (velocity >= 10 && velocity < 20)
+                    if (velocity >= 14 && velocity < 24)
                     {
                         dmg = 4;
                     }
-                    if (velocity >= 20)
+                    if (velocity >= 24)
                     {
                         dmg = 7;
                     }
@@ -360,15 +360,15 @@ public class Player : MonoBehaviour {
                 {
                     Debug.Log(velocity);
 
-                    if (velocity < 10)
+                    if (velocity < 8)
                     {
                         dmg = 6;
                     }
-                    if (velocity >= 10 && velocity < 20)
+                    if (velocity >= 8 && velocity < 18)
                     {
                         dmg = 10;
                     }
-                    if (velocity >= 20)
+                    if (velocity >= 18)
                     {
                         dmg = 15;
                     }
@@ -403,15 +403,15 @@ public class Player : MonoBehaviour {
 
                     if (velocity < 3)
                     {
-                        dmg = 14;
+                        dmg = 16;
                     }
                     if (velocity >= 4 && velocity < 11)
                     {
-                        dmg = 19;
+                        dmg = 20;
                     }
-                    if (velocity >= 12)
+                    if (velocity >= 11)
                     {
-                        dmg = 22;
+                        dmg = 24;
                     }
                     currentHealth = currentHealth - dmg;
                     healthBar.fillAmount = currentHealth / maxHealth;

@@ -5,10 +5,10 @@ using UnityEngine;
 public class ThrowObject : MonoBehaviour
 {
     public bool update_weight = true;
-    [HideInInspector]public int weight_class = 1;
-    public static float weight_class_1_limit = 2;
-    public static float weight_class_2_limit = 6;
-    public static float weight_class_3_limit = 11;
+    [HideInInspector]public int weight_class = 0;
+    public static float weight_class_1_limit = 3;
+    public static float weight_class_2_limit = 10;
+    public static float weight_class_3_limit = 18;
     public float dmg_cooldown = 10;
     public float dmg_cooldown_max = 10;
     public int object_damage = 4;
@@ -22,15 +22,15 @@ public class ThrowObject : MonoBehaviour
         initialMass = gameObject.GetComponent<Rigidbody>().mass;
         if (update_weight == true)
         {
-            if (gameObject.GetComponent<Rigidbody>().mass <= weight_class_1_limit)
+            if (gameObject.GetComponent<Rigidbody>().mass < weight_class_1_limit)
             {
                 weight_class = 1;
             }
-            else if (gameObject.GetComponent<Rigidbody>().mass <= weight_class_2_limit)
+            else if (gameObject.GetComponent<Rigidbody>().mass < weight_class_2_limit)
             {
                 weight_class = 2;
             }
-            else if (gameObject.GetComponent<Rigidbody>().mass <= weight_class_3_limit)
+            else if (gameObject.GetComponent<Rigidbody>().mass < weight_class_3_limit)
             {
                 weight_class = 3;
             }
@@ -82,15 +82,15 @@ public class ThrowObject : MonoBehaviour
         {
             initialMass = value;
             gameObject.GetComponent<Rigidbody>().mass = initialMass;
-            if (gameObject.GetComponent<Rigidbody>().mass <= weight_class_1_limit)
+            if (gameObject.GetComponent<Rigidbody>().mass < weight_class_1_limit)
             {
                 weight_class = 1;
             }
-            else if (gameObject.GetComponent<Rigidbody>().mass <= weight_class_2_limit)
+            else if (gameObject.GetComponent<Rigidbody>().mass < weight_class_2_limit)
             {
                 weight_class = 2;
             }
-            else if (gameObject.GetComponent<Rigidbody>().mass <= weight_class_3_limit)
+            else if (gameObject.GetComponent<Rigidbody>().mass < weight_class_3_limit)
             {
                 weight_class = 3;
             }

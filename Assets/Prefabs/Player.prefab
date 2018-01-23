@@ -116,6 +116,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -131,6 +132,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -148,6 +150,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -163,6 +166,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -258,7 +262,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
-  regenSpeed: 3
+  regenSpeed: 2
   clone_time: 20
   CloneAmount: 4
   cloneObj: {fileID: 1927385516458888, guid: a9c8e4307238eb345ab4e2a563f3239d, type: 2}
@@ -286,6 +290,8 @@ MonoBehaviour:
   Camera: {fileID: 0}
   m_Profile: {fileID: 11400000, guid: a70c798f38caef8418fd4b1944aa84d3, type: 2}
   collectibles: []
+  human_win_screen: {fileID: 0}
+  god_win_screen: {fileID: 0}
 --- !u!136 &136910657891155650
 CapsuleCollider:
   m_ObjectHideFlags: 1
