@@ -327,6 +327,7 @@ public class Player : MonoBehaviour {
         {
             if (c.thisCollider.gameObject.tag == "Clone")
             {
+                Debug.Log("Clone hit!");
                 selectedClone = c.thisCollider.gameObject;
             }
         }

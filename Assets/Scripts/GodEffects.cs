@@ -89,7 +89,7 @@ public class GodEffects : MonoBehaviour
         {
 			this.gameObject.SetActive (false); //deactivate god object (destroy after Sound has played)
 			//new calculated Position, to spawn the effect on the ground(with a slight offset)
-            SpawnEffect(CurrentType, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z));
+            SpawnEffect(CurrentType, new Vector3(this.gameObject.transform.position.x, 1.95f, this.gameObject.transform.position.z));
 			Destroy(this.gameObject);
         }
     }

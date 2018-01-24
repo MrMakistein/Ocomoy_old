@@ -25,7 +25,7 @@ public class customCursor : MonoBehaviour
 
     void Start()
     {
-        Vector2 hotSpot = new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
+        Vector2 hotSpot = new Vector2(0, 0); //new Vector2(cursorTexture.width / 2, cursorTexture.height / 2);
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
         c = Camera.main;
     }

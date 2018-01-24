@@ -113,7 +113,7 @@ public class Movement : MonoBehaviour
     {
         sliding = true;
         slideTimer = 0;
-        GetComponent<Rigidbody>().drag = 0;
+        GetComponent<Rigidbody>().drag = 0.3f;
     }
 
     public void SetSlow()
