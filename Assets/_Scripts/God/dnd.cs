@@ -96,7 +96,7 @@ public class dnd : MonoBehaviour
     // the rigidbody of the picked up object
     Rigidbody DrObj;
     //position of the mouse in world space
-    Vector3 MouseVector;
+    public Vector3 MouseVector;
 
     //true if you want to stop the dragging process
     bool stopDragging = false;

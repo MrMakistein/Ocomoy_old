@@ -15,13 +15,19 @@ public class customCursor : MonoBehaviour
 
     public GameObject LineRender;
     
-    Vector2 objectPoint2D = new Vector2();
-    Vector3 objectPosition = new Vector3();
+    public Vector2 objectPoint2D = new Vector2();
+    public Vector3 objectPosition = new Vector3();
     Camera c;
     float Distance;
     float relDistance;
     Color dragColor;
     float LineWidth;
+
+    public static customCursor instance;
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -44,13 +50,22 @@ public class customCursor : MonoBehaviour
             //thickness from 1 - 10
             LineWidth = 1 + 9.0f * (1.0f - relDistance);
 
-
+         
             //update params
             LineRender.SetActive(true);
             LineRender.GetComponent<UILineRenderer>().LineThickness = LineWidth;
             LineRender.GetComponent<UILineRenderer>().color = dragColor;
             LineRender.GetComponent<UILineRenderer>().Points[0] = objectPoint2D;
             LineRender.GetComponent<UILineRenderer>().Points[1] = Input.mousePosition;
+            
+            if (relDistance <= 0.003)
+            {
+                LineRender.SetActive(false);
+            }
+            else
+            {
+                LineRender.SetActive(true);
+            }
         }
         else
         {

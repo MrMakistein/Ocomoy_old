@@ -8,13 +8,17 @@ public class CollectibleOutOfReachFix : MonoBehaviour {
     public Vector3 middle_position;
     public Vector3 current_position;
     public Vector3 reset_position;
+    public Vector3 original_scale;
+    public Vector3 current_scale;
+    public float scale_factor = 1;
+
 
 
     public string pathName;
     public float time;
     public GameObject dissolveparticles;
     public GameObject reset_collectible;
-    public GameObject transitionObject;
+
 
     // Use this for initialization
     void Start () {
@@ -25,49 +29,70 @@ public class CollectibleOutOfReachFix : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKeyDown("space"))
+        //Shrink collectible when teleport off of platform
+        if (scale_factor < 1)
         {
-            print("space key was pressed");
+            current_scale.x = current_scale.x * scale_factor;
+            current_scale.y = current_scale.y * scale_factor;
+            current_scale.z = current_scale.z * scale_factor;
+            reset_collectible.transform.localScale = current_scale;
 
-          
-
-            var iTweenPath = this.GetComponent<iTweenPath>();
-            iTweenPath.GetPath("ObjectDissolve");
-            iTweenPath.nodes[0] = new Vector3(current_position.x, current_position.y, current_position.z);
-            iTweenPath.nodes[1] = new Vector3(original_position.x, original_position.y, original_position.z);
-            dissolveparticles.SetActive(true);
-            dissolveparticles.transform.position = current_position;
-            iTween.MoveTo(dissolveparticles, iTween.Hash("path", iTweenPath.GetPath(pathName), "easetype", iTween.EaseType.easeInOutSine, "time", time, "oncompleteTarget", this.gameObject, "oncomplete", "Finish"));
-
-
+            if (current_scale.x <= 0.02)
+            {
+                scale_factor = 1;
+            }
+            reset_collectible.GetComponent<InteractiveSettings>().collectibleOnFloor = true;
         }
+
+        //Scale collectible back to original size at end of teleportation
+        if (scale_factor > 1)
+        {
+            current_scale.x = current_scale.x * scale_factor;
+            current_scale.y = current_scale.y * scale_factor;
+            current_scale.z = current_scale.z * scale_factor;
+            reset_collectible.transform.localScale = current_scale;
+
+            if (current_scale.x >= original_scale.x)
+            {
+                scale_factor = 1;
+                reset_collectible.transform.localScale = original_scale;
+            }
+            reset_collectible.GetComponent<InteractiveSettings>().collectibleOnFloor = true;
+        }
+
 
 
 
         //Detect if collectible is at illegal position
         foreach (GameObject col in Player.instance.collectibles) {
-            if (!col.GetComponent<InteractiveSettings>().collectibleOnFloor){
+            if (col != null) { 
+                if (!col.GetComponent<InteractiveSettings>().collectibleOnFloor){
 
-                if (col.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0) && dnd.draggingObject == null) {
-                    Debug.Log(col.name);
+                    if (col.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0) && dnd.draggingObject == null) {
+                    
 
 
-                    Debug.Log("STOPPED");
-                    reset_collectible = col;
-                    reset_position = original_position;
-                    var iTweenPath = this.GetComponent<iTweenPath>();
-                    iTweenPath.nodes[0] = new Vector3(current_position.x, current_position.y, current_position.z);
-                    iTweenPath.nodes[1] = new Vector3(original_position.x, original_position.y, original_position.z);
-                    dissolveparticles.SetActive(true);
-                    dissolveparticles.transform.position = current_position;
-                    transitionObject = col;
-                    StartCoroutine("DissolveCollectible");
+                    
+                        reset_collectible = col;
+                        reset_position = original_position;
+                        var iTweenPath = this.GetComponent<iTweenPath>();
+                        current_position = col.transform.position;
+
+                        original_scale = col.transform.localScale;
+                        current_scale = original_scale;
+                        scale_factor = 0.94f;
+                        iTweenPath.nodes[0] = new Vector3(current_position.x, current_position.y, current_position.z);
+                        iTweenPath.nodes[1] = new Vector3(original_position.x, original_position.y, original_position.z);
+                        dissolveparticles.SetActive(true);
+                        dissolveparticles.transform.position = new Vector3(current_position.x, current_position.y, current_position.z);
+                        StartCoroutine("DissolveCollectible");
 
 
                    
 
 
-                    col.GetComponent<InteractiveSettings>().collectibleOnFloor = true;
+                        col.GetComponent<InteractiveSettings>().collectibleOnFloor = true;
+                    }
                 }
             }
         }
@@ -76,21 +101,32 @@ public class CollectibleOutOfReachFix : MonoBehaviour {
         if (dnd.draggingObject != null)
         {
             RaycastHit hit;
-            Ray landingRay = new Ray(new Vector3(current_position.x, current_position.y, current_position.z), Vector3.down);
+            RaycastHit hit2;
+            RaycastHit hit3;
+            RaycastHit hit4;
+            Ray landingRay = new Ray(new Vector3(current_position.x - 0.5f, current_position.y, current_position.z), Vector3.down);
+            Ray landingRay2 = new Ray(new Vector3(current_position.x + 0.5f, current_position.y, current_position.z), Vector3.down);
+            Ray landingRay3 = new Ray(new Vector3(current_position.x, current_position.y, current_position.z - 0.5f), Vector3.down);
+            Ray landingRay4 = new Ray(new Vector3(current_position.x, current_position.y, current_position.z + 0.5f), Vector3.down);
 
-       
-            current_position = dnd.draggingObject.transform.position;
+
+            //current_position = dnd.draggingObject.transform.position;
+            current_position = dnd.draggingObject.GetComponent<Collider>().bounds.center;
 
             float dist = Vector3.Distance(middle_position, current_position);
             if (dist >= 3)
             {
                
-                if (Physics.Raycast(landingRay, out hit, Mathf.Infinity))
+                if (Physics.Raycast(landingRay, out hit, Mathf.Infinity) && 
+                    Physics.Raycast(landingRay2, out hit2, Mathf.Infinity) &&
+                    Physics.Raycast(landingRay3, out hit3, Mathf.Infinity) &&
+                    Physics.Raycast(landingRay4, out hit4, Mathf.Infinity))
                 {
-                    if (hit.collider.tag == "isGround")
+                    if (hit.collider.tag == "isGround" && hit2.collider.tag == "isGround" && hit3.collider.tag == "isGround" && hit4.collider.tag == "isGround")
                     {
                         original_position = middle_position;
-                        middle_position = dnd.draggingObject.transform.position;
+                        //middle_position = dnd.draggingObject.transform.position;
+                        middle_position = dnd.draggingObject.GetComponent<Collider>().bounds.center;
 
 
 
@@ -103,39 +139,37 @@ public class CollectibleOutOfReachFix : MonoBehaviour {
             }
         }
 
-   
-
-
-
-
-
-
+  
     }
 
     IEnumerator DissolveCollectible()
     {
-
+        
+        //Start Particles
         dissolveparticles.GetComponent<ParticleSystem>().Play();
-        Debug.Log("d1");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.7f);
 
 
-        transitionObject.SetActive(false);
-        Debug.Log("d2");
-        yield return new WaitForSeconds(1f);
+        //Hide collectible
+        reset_collectible.SetActive(false);
+        yield return new WaitForSeconds(0.05f);
+
+        //Start path
+        iTween.MoveTo(dissolveparticles, iTween.Hash("path", iTweenPath.GetPath(pathName), "easetype", iTween.EaseType.easeInOutSine, "time", time, "oncompleteTarget", this.gameObject, "oncomplete", "Finish"));
+        yield return new WaitForSeconds(1.6f);
+
+        reset_collectible.transform.position = reset_position;
+        reset_collectible.SetActive(true);
+        scale_factor = 1.1f; //Scale collectible back up
 
 
-        iTween.MoveTo(dissolveparticles, iTween.Hash("path", iTweenPath.GetPath(pathName), "easetype", iTween.EaseType.linear, "time", time, "oncompleteTarget", this.gameObject, "oncomplete", "Finish"));
-        Debug.Log("d3");
-        yield return new WaitForSeconds(1f);
     }
 
 
     void Finish()
     {
-        transitionObject.SetActive(true);
         reset_collectible.transform.position = reset_position;
-        
+
     }
 
 
@@ -147,13 +181,12 @@ public class CollectibleOutOfReachFix : MonoBehaviour {
         {
 
             if (other.gameObject.GetComponent<InteractiveSettings>().isCollectible)
-            {
-                Debug.Log("coll");
+            
                 other.gameObject.GetComponent<InteractiveSettings>().collectibleOnFloor = false;
             }
         }
 
-    }
+    
 
     void OnTriggerEnter(Collider other)
     {

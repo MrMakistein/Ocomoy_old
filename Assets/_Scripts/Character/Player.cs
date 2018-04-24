@@ -364,8 +364,14 @@ public class Player : MonoBehaviour {
                 PlayerAudioSource.volume = 0.35f;
                 float velocity = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
                 float dmg = 5;
+
+                ComboManager.instance.combo_timer = 10;
+
+
+
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
+
                     PlayerAudioSource.pitch = 1.0f;
                     PlayerAudioSource.PlayOneShot(audio_clips[hit_rand]);
 
