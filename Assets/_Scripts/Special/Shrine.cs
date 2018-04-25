@@ -65,6 +65,7 @@ public class Shrine : MonoBehaviour {
         if (shrine_id == 1)
         {
             spawn_mesh.SetActive(true);
+            AudioManager.instance.spawn_position = spawn_mesh.transform.position;
         } else
         {
             altar_mesh.SetActive(true);

@@ -36,6 +36,12 @@ public class customCursor : MonoBehaviour
         c = Camera.main;
     }
 
+    public void UpdateCursor()
+    {
+        Vector2 hotSpot = new Vector2(0, 0);
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+    }
+
     private void OnGUI()
     {
         if(dnd.draggingObject != null && dnd.draggingObject.activeInHierarchy) { 

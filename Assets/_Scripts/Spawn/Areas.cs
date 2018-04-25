@@ -60,8 +60,11 @@ public class Areas : MonoBehaviour {
 
 	public void setWinZone(){ //for Player spawn and end goal
 		isWinZone = true;
-		this.GetComponent<Renderer> ().material.color = Color.green;
-		this.GetComponent<Renderer> ().material.color = new Color(0, 1, 0, 0.5f);
+       // AudioManager.instance.spawn_position = this.transform.position;
+        //Debug.Log(transform.position);
+        //Debug.Log(name);
+        //this.GetComponent<Renderer> ().material.color = Color.green;
+		//this.GetComponent<Renderer> ().material.color = new Color(0, 1, 0, 0.5f);
 	}
 
 	//getter for areaCollectibles (LIST)

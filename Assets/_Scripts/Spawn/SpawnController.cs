@@ -112,16 +112,16 @@ public class SpawnController : MonoBehaviour {
 
         int rand = 0;
         GameObject[] shrines = GameObject.FindGameObjectsWithTag("Shrine");
+
         for (int i = 0; i < 2; i++)
         {
             rand = UnityEngine.Random.Range(0, list.Count);
 
             GameObject emptyZone = spawnAreaObjects[rand];
             emptyZone.GetComponent<Areas>().setWinZone();
+            //AudioManager.instance.spawn_position = emptyZone.transform.position;
             spawnAreaObjects.Remove(emptyZone);
             Destroy(emptyZone);
-
-
 
             list.RemoveAt(rand);
         }

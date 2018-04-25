@@ -62,6 +62,7 @@ public class Player : MonoBehaviour {
     public GameObject[] collectibles;
     public GameObject human_win_screen;
     public GameObject god_win_screen;
+    public float collectible_distance;
 
     // Audio 
     public AudioClip[] audio_clips;
@@ -238,12 +239,12 @@ public class Player : MonoBehaviour {
         if (closest_collectible != null)
         {
             float intensity = 0;
-            float distance = Vector3.Distance(transform.position, closest_collectible.transform.position);
+            collectible_distance = Vector3.Distance(transform.position, closest_collectible.transform.position);
             //print(distance);
 
-            if (distance < 45f)
+            if (collectible_distance < 45f)
             {
-                intensity = + ((45 - distance) / 72);
+                intensity = + ((45 - collectible_distance) / 72);
                 if (intensity > 0.65f)
                 {
                     intensity = 0.65f;
@@ -364,14 +365,8 @@ public class Player : MonoBehaviour {
                 PlayerAudioSource.volume = 0.35f;
                 float velocity = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
                 float dmg = 5;
-
-                ComboManager.instance.combo_timer = 10;
-
-
-
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
-
                     PlayerAudioSource.pitch = 1.0f;
                     PlayerAudioSource.PlayOneShot(audio_clips[hit_rand]);
 
