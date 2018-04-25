@@ -10,7 +10,11 @@ public class InteractiveSettings : MonoBehaviour
     public float collectible_weight = 10;
     public bool isCollectible = false;
     public bool collectibleOnFloor = true;
-
+    public int combo_state = 0;
+    public GameObject combo_particles1;
+    public GameObject combo_particles2;
+    public GameObject combo_particles3;
+    public float combo_particle_reset_timer = 0;
 
 
     // Use this for initialization
@@ -40,4 +44,43 @@ public class InteractiveSettings : MonoBehaviour
         //GetComponent<Rigidbody> ().isKinematic = true; //don't fall through floor --> PROBLEM: can't pick up
 
     }
+
+    void Update()
+    {
+        
+        if (combo_particle_reset_timer > 0)
+        {
+            if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 3)
+            {
+                combo_particles1.SetActive(true);
+            }
+             else if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 4)
+            {
+                combo_particles2.SetActive(true);
+            }
+             else if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 5)
+            {
+                combo_particles3.SetActive(true);
+            }
+
+            combo_particle_reset_timer = combo_particle_reset_timer - 0.1f;
+            
+                if (combo_particle_reset_timer > 2.0 && combo_particle_reset_timer <= 2.2)
+                {
+                    combo_particles1.GetComponent<ComboParticles>().StopParticles();
+                    combo_particles2.GetComponent<ComboParticles>().StopParticles();
+                    combo_particles3.GetComponent<ComboParticles>().StopParticles();
+                    combo_particle_reset_timer = 2.0f;
+                }
+
+            if (combo_particle_reset_timer <= 0)
+            {
+                combo_particles1.SetActive(false);
+                combo_particles2.SetActive(false);
+                combo_particles3.SetActive(false);
+            }
+        }
+
+    }
+
 }

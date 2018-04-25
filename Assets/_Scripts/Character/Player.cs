@@ -63,6 +63,7 @@ public class Player : MonoBehaviour {
     public GameObject human_win_screen;
     public GameObject god_win_screen;
     public float collectible_distance;
+    public float combo_dmg_multiplier = 1;
 
     // Audio 
     public AudioClip[] audio_clips;
@@ -365,6 +366,7 @@ public class Player : MonoBehaviour {
                 PlayerAudioSource.volume = 0.35f;
                 float velocity = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
                 float dmg = 5;
+                ComboManager.instance.combo_timer = 10;
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
                     PlayerAudioSource.pitch = 1.0f;
@@ -384,7 +386,7 @@ public class Player : MonoBehaviour {
                     }
 
 
-                    currentHealth = currentHealth - dmg;
+                    currentHealth = currentHealth - (dmg * combo_dmg_multiplier);
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
@@ -406,7 +408,7 @@ public class Player : MonoBehaviour {
                         dmg = 15;
                     }
 
-                    currentHealth = currentHealth - dmg;
+                    currentHealth = currentHealth - (dmg * combo_dmg_multiplier);
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
@@ -427,7 +429,7 @@ public class Player : MonoBehaviour {
                     {
                         dmg = 21;
                     }
-                    currentHealth = currentHealth - dmg;
+                    currentHealth = currentHealth - (dmg * combo_dmg_multiplier);
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
 
@@ -448,7 +450,7 @@ public class Player : MonoBehaviour {
                     {
                         dmg = 24;
                     }
-                    currentHealth = currentHealth - dmg;
+                    currentHealth = currentHealth - (dmg * combo_dmg_multiplier);
                     healthBar.fillAmount = currentHealth / maxHealth;
                 }
             }
