@@ -39406,7 +39406,6 @@ GameObject:
   m_Component:
   - component: {fileID: 526441465}
   - component: {fileID: 526441466}
-  - component: {fileID: 526441464}
   - component: {fileID: 526441470}
   - component: {fileID: 526441467}
   - component: {fileID: 526441468}
@@ -39414,6 +39413,8 @@ GameObject:
   - component: {fileID: 526441471}
   - component: {fileID: 526441472}
   - component: {fileID: 526441473}
+  - component: {fileID: 526441474}
+  - component: {fileID: 526441464}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -39427,14 +39428,14 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 526441463}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 75acaf2aa4be9c74aa4c7bd428d27439, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.639
+  m_audioClip: {fileID: 8300000, guid: 43b81215f44a2fe4b81b38899c18a135, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -39528,17 +39529,21 @@ MonoBehaviour:
   clones: {fileID: 526441468}
   shield: {fileID: 526441469}
   drums: {fileID: 526441467}
-  altar: {fileID: 526441471}
+  altar: {fileID: 526441464}
   altarClip: {fileID: 8300000, guid: f2c25bf119c204144ae53b6bdd31d299, type: 3}
-  collect: {fileID: 526441472}
+  collect: {fileID: 526441474}
   end: {fileID: 526441473}
   basis: {fileID: 526441470}
-  muteMusic: 0
+  lifeLow: {fileID: 526441472}
+  vignette: {fileID: 526441471}
+  turnDownForWhat: 0
+  loudness: 0
   spawn_position: {x: 0, y: 0, z: 0}
   home_distance: 0
   health_percent: 0
   collectible_distance: 0
   endRad: 0
+  colRad: 0
 --- !u!82 &526441467
 AudioSource:
   m_ObjectHideFlags: 0
@@ -39868,11 +39873,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 158582ff6ede15a41b20ed36cee47df4, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 4dd2f2a30fc69f44db57aad83795ef97, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -39948,11 +39953,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1f616be58bc8b284fbd0232ccadb4735, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 230bd141d9c6b0c4aba527195ccb1851, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -40033,6 +40038,86 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &526441474
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526441463}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ceaf7627690ecce4bba8b108e7f698d8, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -42524,7 +42609,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8357f6225efce184984f056e352c01ba, type: 2}
+  - {fileID: 2100000, guid: eba7f02651761d840a762fb4fb7ee1f9, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -42623,7 +42708,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1071430041
+  randomSeed: 2135852497
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -44905,7 +44990,7 @@ ParticleSystem:
     separateAxes: 0
     range: {x: 0, y: 1}
   ColorBySpeedModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -55248,7 +55333,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 526441464}
+      objectReference: {fileID: 0}
     - target: {fileID: 224425944527074868, guid: 36836f9cf5ad04349bd01229675d1af9,
         type: 2}
       propertyPath: m_AnchorMax.x
@@ -71527,7 +71612,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2850f00ad948be54a9728d8f6e2efc2c, type: 2}
+  - {fileID: 2100000, guid: bda7e3bf280624346ba435154c7d45f5, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -71626,7 +71711,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1376523008
+  randomSeed: -1499921290
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -77225,7 +77310,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1480495029
+  randomSeed: -314792756
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -90129,7 +90214,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2850f00ad948be54a9728d8f6e2efc2c, type: 2}
+  - {fileID: 2100000, guid: bda7e3bf280624346ba435154c7d45f5, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -90228,7 +90313,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1911951424
+  randomSeed: -2143449783
   InitialModule:
     serializedVersion: 3
     enabled: 1

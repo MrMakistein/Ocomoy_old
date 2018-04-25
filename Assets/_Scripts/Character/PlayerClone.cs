@@ -14,7 +14,7 @@ public class PlayerClone : MonoBehaviour {
     private float expandTimer = 0;
     private float cloneTime;
     private float cloneTimer = 0;
-    private int cloneAmount = 0;
+    public int cloneAmount = 0;
 
     // Use this for initialization
 

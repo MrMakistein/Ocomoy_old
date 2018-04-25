@@ -182,10 +182,12 @@ public class Settings : MonoBehaviour {
 		musicEnabled = isEnabled;
 		if (musicEnabled)
         {
-            audioManager.GetComponent<AudioSource>().Play();
+            //audioManager.GetComponent<AudioSource>().Play();
+            AudioManager.instance.turnDownForWhat = false;
         } else
         {
-            audioManager.GetComponent<AudioSource>().Stop();
+            //audioManager.GetComponent<AudioSource>().Stop();
+            AudioManager.instance.turnDownForWhat = true;
         }
 	}
 
@@ -193,26 +195,29 @@ public class Settings : MonoBehaviour {
 		musicMode = mode;
 		switch (mode) {
 		case 0: //music variation 1
-                audioManager.GetComponent<AudioSource>().Stop();
+            /*    audioManager.GetComponent<AudioSource>().Stop();
 			audioManager.GetComponent<AudioSource>().clip = clips[1];
 			audioManager.GetComponent<AudioSource>().Play();
 
 			Debug.Log("m1");
 
-
+    */
 			break;
 		case 1: //music variation 2
+                /*
 			audioManager.GetComponent<AudioSource>().Stop();
             audioManager.GetComponent<AudioSource>().clip = clips[0];
             audioManager.GetComponent<AudioSource>().Play();
 
 			Debug.Log("m2");
-
+            */
 			break;
 
 		default:
+                /*
 			musicMode = 1; //set to variation 1 per default
 			Debug.Log ("'Something went wrong :('");
+            */
 			break;
 		}
 	}
