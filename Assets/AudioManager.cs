@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour {
     public AudioSource clones;
     public AudioSource shield;
     public AudioSource drums;
+    public AudioSource melody;
     public AudioSource altar;
     public AudioClip altarClip;
     public AudioSource collect;
@@ -15,6 +16,12 @@ public class AudioManager : MonoBehaviour {
     public AudioSource basis;
     public AudioSource lifeLow;
     public AudioSource vignette;
+
+    public float drumsVol; //oscillating drums
+    public float melodyVol; //oscillating melody
+
+    public float lifeLowTime; //time for lifeLow Sound
+    public float old_health;
 
     public bool turnDownForWhat; //mutes all background music according to loudness
     public float loudness; //controls loudness of music when turnDownForWhat = true;
@@ -36,13 +43,14 @@ public class AudioManager : MonoBehaviour {
 
     void Start () {
 
-        turnDownForWhat = false;
+        turnDownForWhat = true;
         clones.volume = 0;
         shield.volume = 0;
         end.volume = 0;
         lifeLow.volume = 0;
         loudness = 0;
         vignette.volume = 0;
+        
 
         colRad = 20;
         endRad = 25;
@@ -53,23 +61,51 @@ public class AudioManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Debug.Log("drums: " + drums.volume);
 
+        basis.volume = 1 * loudness;
+
+        if (turnDownForWhat)
+        {
+            loudness = 0;
+        }
+        else
+        {
+            loudness = 1;
+        }
+
+        drumsVol = Mathf.Sin(Time.frameCount / 400f) * loudness;
+        drums.volume = drumsVol;
+        //Debug.Log(drumsVol);
+
+        melodyVol = Mathf.Abs(Mathf.Cos(Time.frameCount / 500f)) * loudness;
+        melody.volume = melodyVol;
+        
+        //###LOW HEALTH###
+        old_health = health_percent;
         //Calculate Player Health Percent
         health_percent = Player.instance.currentHealth / Player.instance.maxHealth;
-        //Debug.Log("health: " + health_percent);
-        if (health_percent <= 0.25)
+        if (health_percent < old_health)
         {
-            lifeLow.volume = 1;
-        } else
+            //Debug.Log("Entered If");
+            lifeLowTime = 0;
+        }
+        if (health_percent <= 0.20)
+        {
+            lifeLowTime += Time.deltaTime / 6f;
+            lifeLow.volume = Mathf.Lerp(1 * loudness, 0, lifeLowTime);
+            old_health = health_percent;             
+        }
+        else
         {
             lifeLow.volume = 0;
         }
 
+       
+
         //hear vignette according to Distance between Player and closest collectible
         if (Player.instance.collectible_distance < endRad)
         {
-            vignette.volume = Mathf.Pow(1f - (Player.instance.collectible_distance - 2) / colRad, 2);
+            vignette.volume = Mathf.Pow(1f - (Player.instance.collectible_distance - 2) / colRad, 2)*loudness;
         }
         else
         {
@@ -86,10 +122,11 @@ public class AudioManager : MonoBehaviour {
             collect.Play();
             Player.collectSound = false;
         }
+
         //Audio events for shield
         if (Player.shieldActive)
         {
-            shield.volume = 1;
+            shield.volume = 1*loudness;
             drums.volume = 0;
             Player.shieldActive = false;
             stShield = stShield - (Time.deltaTime);
@@ -97,7 +134,8 @@ public class AudioManager : MonoBehaviour {
         if (stShield <= 0f)
         {
             shield.volume = 0;
-            drums.volume = 1;
+            drums.volume = drumsVol;
+            melody.volume = melodyVol;
             stShield = Player.instance.shield_duration - 1;
         }
 
@@ -105,7 +143,9 @@ public class AudioManager : MonoBehaviour {
         //Audio events for clones
         if (Player.clonesActive)
         {
-            clones.volume = 1;
+            clones.volume = 1 * loudness;
+            melody.volume = 0;
+            //Debug.Log("Clones Volume: "+ clones.volume);
             Player.clonesActive = false;
             stClones = Player.instance.clone_time;
             //Debug.Log("showtime"+showtime);
@@ -114,9 +154,12 @@ public class AudioManager : MonoBehaviour {
         if (stClones <= 0f || GameObject.FindGameObjectsWithTag("Clone").Length == 0)
         {
             clones.volume = 0;
+            melody.volume = melodyVol;
         }
         else
         {
+            clones.volume = 1 * loudness;
+            melody.volume = 0;
             stClones = stClones - (Time.deltaTime);
         }
 
@@ -127,35 +170,18 @@ public class AudioManager : MonoBehaviour {
         //melody at end of game
         if (Player.instance.collectibleCount == 3)
         {
-            drums.volume = 1 - Mathf.Pow(1.1f - (home_distance - 5) / endRad, 2);
+            drums.volume = drumsVol - Mathf.Pow(1.1f - (home_distance - 5) / endRad, 2);
+            drums.volume = melodyVol - Mathf.Pow(1.1f - (home_distance - 5) / endRad, 2);
             if (home_distance < endRad)
             {
-                end.volume = Mathf.Pow(1.1f - (home_distance - 5) / endRad, 2);
+                end.volume = Mathf.Pow(1.1f - (home_distance - 5) / endRad, 2)*loudness;
             }
             else
             {
                 end.volume =0;
-                drums.volume = 1;
+                drums.volume = drumsVol;
+                melody.volume = melodyVol;
             }
-            //Debug.Log("drums_volume: "+drums.volume);
-        }
-
-        if (turnDownForWhat)
-        {
-            basis.volume = loudness;
-            drums.volume = loudness;
-            shield.volume = loudness;
-            clones.volume = loudness;
-            end.volume = loudness;
-            lifeLow.volume = loudness;
-        } else
-        {
-               /* basis.volume = 1;
-                drums.volume = 1;
-                shield.volume = 1;
-                clones.volume = 1;
-                end.volume = 1;
-                lifeLow.volume = 1; */
-        }
+        }       
     }
 }
