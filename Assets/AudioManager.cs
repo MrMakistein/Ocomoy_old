@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("drums: " + drums.volume);
+        //Debug.Log("drums: " + drums.volume);
 
         //Calculate Player Health Percent
         health_percent = Player.instance.currentHealth / Player.instance.maxHealth;
@@ -137,7 +137,7 @@ public class AudioManager : MonoBehaviour {
                 end.volume =0;
                 drums.volume = 1;
             }
-            Debug.Log("drums_volume: "+drums.volume);
+            //Debug.Log("drums_volume: "+drums.volume);
         }
 
         if (turnDownForWhat)

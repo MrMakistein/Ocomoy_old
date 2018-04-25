@@ -53,17 +53,20 @@ public class InteractiveSettings : MonoBehaviour
             if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 3)
             {
                 combo_particles1.SetActive(true);
+                combo_particles1.GetComponent<ComboParticles>().StartParticles();
             }
              else if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 4)
             {
                 combo_particles2.SetActive(true);
+                combo_particles2.GetComponent<ComboParticles>().StartParticles();
             }
              else if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 5)
             {
                 combo_particles3.SetActive(true);
+                combo_particles3.GetComponent<ComboParticles>().StartParticles();
             }
 
-            combo_particle_reset_timer = combo_particle_reset_timer - 0.1f;
+            combo_particle_reset_timer = combo_particle_reset_timer - 0.01f;
             
                 if (combo_particle_reset_timer > 2.0 && combo_particle_reset_timer <= 2.2)
                 {

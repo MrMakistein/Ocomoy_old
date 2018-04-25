@@ -20,4 +20,11 @@ public class ComboParticles : MonoBehaviour {
     {
         particle_system.GetComponent<ParticleSystem>().Stop(true);
     }
+
+    public void StartParticles()
+    {
+        if (!particle_system.GetComponent<ParticleSystem>().isPlaying) { 
+             particle_system.GetComponent<ParticleSystem>().Play(true);
+            }
+    }
 }
