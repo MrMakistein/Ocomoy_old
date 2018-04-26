@@ -18,9 +18,9 @@ public class ComboManager : MonoBehaviour {
     void Start () {
         ComboManager.instance = this;
     }
-	
-	
-	void Update () {
+
+    void FixedUpdate()
+    {
 
         if (combo_timer == 10) // Increase Combo Level
         {
@@ -33,7 +33,7 @@ public class ComboManager : MonoBehaviour {
 
         }
 
-		if (combo_timer > 0) // Decrease Combo Timer
+        if (combo_timer > 0) // Decrease Combo Timer
         {
             combo_timer = combo_timer - combo_time_limit;
         }
@@ -48,9 +48,21 @@ public class ComboManager : MonoBehaviour {
 
         if (dnd.draggingObject != null && combo_level >= 3)
         {
-            dnd.draggingObject.GetComponent<InteractiveSettings>().combo_particle_reset_timer = 2.5f;
+            if (dnd.draggingObject.tag == "Interactive")
+            {
+                dnd.draggingObject.GetComponent<InteractiveSettings>().combo_particle_reset_timer = 2.311f;
+            }
+
         }
 
+
+
+    }
+
+
+    void Update () {
+
+       
 
 
 	}

@@ -235,8 +235,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1654462985553370}
-  m_LocalRotation: {x: -0, y: 0.4756434, z: -0, w: 0.87963825}
-  m_LocalPosition: {x: 30.35, y: 0.43000007, z: 80.47}
+  m_LocalRotation: {x: -0, y: 0.69384885, z: -0, w: 0.72012067}
+  m_LocalPosition: {x: -72.31, y: 0.43000007, z: 93.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4290051678308940}
@@ -245,7 +245,7 @@ Transform:
   - {fileID: 4597328809697344}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 56.802002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 87.871, z: 0}
 --- !u!4 &4213161589057524
 Transform:
   m_ObjectHideFlags: 1
@@ -514,6 +514,9 @@ MonoBehaviour:
   dmg_cooldown_max: 10
   object_damage: 5
   isclone: 0
+  combo_kill_timer: 0
+  combo_kill_speed: 0
+  mesh: {fileID: 1818442926721008}
 --- !u!114 &114297438691073896
 MonoBehaviour:
   m_ObjectHideFlags: 1

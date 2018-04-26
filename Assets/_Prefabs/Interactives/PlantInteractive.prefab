@@ -840,7 +840,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1486442749361308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.973736, y: 0.639187, z: 42.64943}
+  m_LocalPosition: {x: -1.1764488, y: 0.6391871, z: -9.328776}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4551501328932872}
@@ -1643,6 +1643,9 @@ MonoBehaviour:
   dmg_cooldown_max: 10
   object_damage: 2
   isclone: 0
+  combo_kill_timer: 0
+  combo_kill_speed: 0
+  mesh: {fileID: 1148439360068700}
 --- !u!114 &114647806315001110
 MonoBehaviour:
   m_ObjectHideFlags: 1

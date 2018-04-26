@@ -23,8 +23,9 @@ public class ComboParticles : MonoBehaviour {
 
     public void StartParticles()
     {
-        if (!particle_system.GetComponent<ParticleSystem>().isPlaying) { 
-             particle_system.GetComponent<ParticleSystem>().Play(true);
-            }
+        if (!particle_system.GetComponent<ParticleSystem>().isPlaying)
+        { 
+         particle_system.GetComponent<ParticleSystem>().Play(true);
+        }
     }
 }

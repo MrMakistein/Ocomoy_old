@@ -314,8 +314,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966201623961726}
-  m_LocalRotation: {x: -0, y: 0.75547, z: -0, w: 0.6551834}
-  m_LocalPosition: {x: -39.67, y: 1.2873414, z: -24.3}
+  m_LocalRotation: {x: -0, y: -0.057266556, z: -0, w: 0.99835896}
+  m_LocalPosition: {x: -71.57, y: 1.2873414, z: -11.64}
   m_LocalScale: {x: 1.0000007, y: 1, z: 1.0000007}
   m_Children:
   - {fileID: 4198263937526018}
@@ -324,7 +324,7 @@ Transform:
   - {fileID: 4627350840834896}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 98.133, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -6.5660005, z: 0}
 --- !u!4 &4627350840834896
 Transform:
   m_ObjectHideFlags: 1
@@ -559,6 +559,9 @@ MonoBehaviour:
   dmg_cooldown_max: 10
   object_damage: 4
   isclone: 0
+  combo_kill_timer: 0
+  combo_kill_speed: 0
+  mesh: {fileID: 1423025632575870}
 --- !u!198 &198085388373274794
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 114682814732030976}
   - component: {fileID: 65181056694905998}
   - component: {fileID: 23395983063185104}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: PRE_int_Bucket
   m_TagString: Interactive
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4916256535171138}
   - component: {fileID: 33645366639044154}
   - component: {fileID: 23099387552007480}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MSH_int_Bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,8 +277,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866267387517338}
-  m_LocalRotation: {x: 0.26646563, y: -0.6678712, z: -0.6333436, w: 0.2860422}
-  m_LocalPosition: {x: -52.3, y: 0.8, z: -19.7}
+  m_LocalRotation: {x: -0, y: 0.08110108, z: -0, w: 0.9967059}
+  m_LocalPosition: {x: -6.76, y: 0.39434147, z: 14.22}
   m_LocalScale: {x: 0.69294995, y: 0.69295, z: 0.69294995}
   m_Children:
   - {fileID: 4916256535171138}
@@ -287,7 +287,7 @@ Transform:
   - {fileID: 4204337318434290}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -43.911003, y: -92.714005, z: -85.562004}
+  m_LocalEulerAnglesHint: {x: -43.911003, y: 9.304001, z: -85.562004}
 --- !u!4 &4536934021502402
 Transform:
   m_ObjectHideFlags: 1
@@ -559,6 +559,9 @@ MonoBehaviour:
   dmg_cooldown_max: 10
   object_damage: 5
   isclone: 0
+  combo_kill_timer: 0
+  combo_kill_speed: 0
+  mesh: {fileID: 1894671540561476}
 --- !u!198 &198100265589597086
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -15,7 +15,7 @@ public class InteractiveSettings : MonoBehaviour
     public GameObject combo_particles2;
     public GameObject combo_particles3;
     public float combo_particle_reset_timer = 0;
-
+    
 
     // Use this for initialization
     void Start()
@@ -45,9 +45,8 @@ public class InteractiveSettings : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        
         if (combo_particle_reset_timer > 0)
         {
             if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 3)
@@ -55,26 +54,27 @@ public class InteractiveSettings : MonoBehaviour
                 combo_particles1.SetActive(true);
                 combo_particles1.GetComponent<ComboParticles>().StartParticles();
             }
-             else if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 4)
+            else if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 4)
             {
                 combo_particles2.SetActive(true);
                 combo_particles2.GetComponent<ComboParticles>().StartParticles();
             }
-             else if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 5)
+            else if (combo_particle_reset_timer >= 2.3f && ComboManager.instance.combo_level == 5)
             {
                 combo_particles3.SetActive(true);
                 combo_particles3.GetComponent<ComboParticles>().StartParticles();
+                
             }
 
             combo_particle_reset_timer = combo_particle_reset_timer - 0.01f;
-            
-                if (combo_particle_reset_timer > 2.0 && combo_particle_reset_timer <= 2.2)
-                {
-                    combo_particles1.GetComponent<ComboParticles>().StopParticles();
-                    combo_particles2.GetComponent<ComboParticles>().StopParticles();
-                    combo_particles3.GetComponent<ComboParticles>().StopParticles();
-                    combo_particle_reset_timer = 2.0f;
-                }
+
+            if (combo_particle_reset_timer > 2.0 && combo_particle_reset_timer <= 2.29)
+            {
+                combo_particles1.GetComponent<ComboParticles>().StopParticles();
+                combo_particles2.GetComponent<ComboParticles>().StopParticles();
+                combo_particles3.GetComponent<ComboParticles>().StopParticles();
+                combo_particle_reset_timer = 2.0f;
+            }
 
             if (combo_particle_reset_timer <= 0)
             {
@@ -83,6 +83,13 @@ public class InteractiveSettings : MonoBehaviour
                 combo_particles3.SetActive(false);
             }
         }
+    }
+
+
+    void Update()
+    {
+        
+        
 
     }
 

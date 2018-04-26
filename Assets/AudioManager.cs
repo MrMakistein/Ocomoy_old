@@ -58,9 +58,11 @@ public class AudioManager : MonoBehaviour {
         stShield = Player.instance.shield_duration -1;
         
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+
+   
+    void Update () {
 
         basis.volume = 1 * loudness;
 

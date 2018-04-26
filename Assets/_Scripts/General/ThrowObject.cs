@@ -13,12 +13,16 @@ public class ThrowObject : MonoBehaviour
     public float dmg_cooldown_max = 10;
     public int object_damage = 4;
     public bool isclone = false;
+    public float combo_kill_timer = 0;
+    public float combo_kill_speed;
     Vector3 finalDirection;
     private float initialMass;
+    public GameObject mesh;
 
     // Use this for initialization
     void Start()
     {
+        combo_kill_speed = 0.08f;
         initialMass = gameObject.GetComponent<Rigidbody>().mass;
         if (update_weight == true)
         {
@@ -41,6 +45,38 @@ public class ThrowObject : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        if (dnd.draggingObject != null)
+        {
+            dnd.draggingObject.GetComponent<ThrowObject>().dmg_cooldown = dmg_cooldown_max;
+        }
+
+        if (combo_kill_timer > 0)
+        {
+
+            if (combo_kill_timer <= 10)
+            {
+                mesh.SetActive(false);
+                this.GetComponent<BoxCollider>().enabled = false;
+            }
+
+            combo_kill_timer = combo_kill_timer - combo_kill_speed;
+            if (combo_kill_timer <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        // Dmg cooldown gradually goes back to 0 
+        if (dmg_cooldown > 0)
+        {
+            dmg_cooldown -= Time.deltaTime * 10;
+
+        }
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -51,17 +87,7 @@ public class ThrowObject : MonoBehaviour
          */
 
         // If no object is selected the dmg_cooldown for the interactive object is reset to the maximum
-        if (dnd.draggingObject != null)
-        {
-            dnd.draggingObject.GetComponent<ThrowObject>().dmg_cooldown = dmg_cooldown_max;
-        }
-
-        // Dmg cooldown gradually goes back to 0 
-        if (dmg_cooldown > 0)
-        {
-            dmg_cooldown -= Time.deltaTime * 10;
-
-        }
+       
 
         if (InitialMass != GetComponent<Rigidbody>().mass && !Player.slowEffect)
         {

@@ -367,6 +367,11 @@ public class Player : MonoBehaviour {
                 float velocity = col.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
                 float dmg = 5;
                 ComboManager.instance.combo_timer = 10;
+                //dnd.draggingObject.
+
+
+
+
                 if (col.gameObject.GetComponent<ThrowObject>().weight_class == 1)
                 {
                     PlayerAudioSource.pitch = 1.0f;
@@ -465,10 +470,26 @@ public class Player : MonoBehaviour {
 
             //Object Damage
             col.gameObject.GetComponent<ThrowObject>().object_damage -= 1;
-            if (col.gameObject.GetComponent<ThrowObject>().object_damage <= 0)
+
+            if (ComboManager.instance.combo_level >= 3) //Set Damage to 0 if object is burning
             {
-                Destroy(col.gameObject, 0.1f);
+                col.gameObject.GetComponent<ThrowObject>().object_damage = 0;
             }
+
+            // Destroy broken objects with the correct time delay to fade out the particles
+            if (col.gameObject.GetComponent<ThrowObject>().object_damage <= 0 && col.gameObject.GetComponent<ThrowObject>().combo_kill_timer <= 0)
+            {
+                if (ComboManager.instance.combo_level >= 3)
+                {
+                    col.gameObject.GetComponent<ThrowObject>().combo_kill_timer = 10;
+                } else
+                {
+                    col.gameObject.GetComponent<ThrowObject>().combo_kill_timer = 0.2f;
+                }
+                //Destroy(col.gameObject, 0.1f);
+
+            }
+            
 
         }
         //searching again the array to double check. uses a lamda function, where also I have no idea wtf that is, but it is basically a find index 

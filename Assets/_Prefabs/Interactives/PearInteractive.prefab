@@ -553,6 +553,9 @@ MonoBehaviour:
   dmg_cooldown_max: 10
   object_damage: 2
   isclone: 0
+  combo_kill_timer: 0
+  combo_kill_speed: 0
+  mesh: {fileID: 1953627607076170}
 --- !u!114 &114412702551348036
 MonoBehaviour:
   m_ObjectHideFlags: 1
